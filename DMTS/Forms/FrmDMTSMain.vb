@@ -84,7 +84,7 @@ Public Class FrmDMTSMain
     End Sub
 
     Private Sub ViewEditTransactionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewEditTransactionsToolStripMenuItem.Click
-
+        FrmViewTrans.Show()
     End Sub
 
     Private Sub FileLoaderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileLoaderToolStripMenuItem.Click
