@@ -419,7 +419,7 @@ Partial Class FrmDistrict
         Me.DistrictBNavDeleteItem.Image = CType(resources.GetObject("DistrictBNavDeleteItem.Image"), System.Drawing.Image)
         Me.DistrictBNavDeleteItem.Name = "DistrictBNavDeleteItem"
         Me.DistrictBNavDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.DistrictBNavDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.DistrictBNavDeleteItem.Size = New System.Drawing.Size(23, 20)
         Me.DistrictBNavDeleteItem.Text = "Delete"
         '
         'ToolStripSeparator4
@@ -433,7 +433,7 @@ Partial Class FrmDistrict
         Me.DistrictBNavSaveItem.Enabled = False
         Me.DistrictBNavSaveItem.Image = CType(resources.GetObject("DistrictBNavSaveItem.Image"), System.Drawing.Image)
         Me.DistrictBNavSaveItem.Name = "DistrictBNavSaveItem"
-        Me.DistrictBNavSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.DistrictBNavSaveItem.Size = New System.Drawing.Size(23, 20)
         Me.DistrictBNavSaveItem.Text = "Save Data"
         '
         'DistrictBNavCancel
@@ -443,7 +443,7 @@ Partial Class FrmDistrict
         Me.DistrictBNavCancel.Image = CType(resources.GetObject("DistrictBNavCancel.Image"), System.Drawing.Image)
         Me.DistrictBNavCancel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DistrictBNavCancel.Name = "DistrictBNavCancel"
-        Me.DistrictBNavCancel.Size = New System.Drawing.Size(23, 22)
+        Me.DistrictBNavCancel.Size = New System.Drawing.Size(23, 20)
         Me.DistrictBNavCancel.Text = "Cancel Operation"
         '
         'GroupControl1

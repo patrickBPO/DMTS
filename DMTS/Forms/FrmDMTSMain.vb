@@ -102,4 +102,8 @@ Public Class FrmDMTSMain
     Private Sub CountryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CountryToolStripMenuItem.Click
         FrmCountry.Show()
     End Sub
+
+    Private Sub CardTypeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CardTypeToolStripMenuItem.Click
+        FrmCardType.Show()
+    End Sub
 End Class

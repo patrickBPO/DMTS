@@ -108,7 +108,7 @@ Partial Class FrmCountry
         Me.CountryBNavAddNewItem.Name = "CountryBNavAddNewItem"
         Me.CountryBNavAddNewItem.RightToLeftAutoMirrorImage = True
         Me.CountryBNavAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.CountryBNavAddNewItem.Text = "Add new"
+        Me.CountryBNavAddNewItem.Text = "Add New Country"
         '
         'CountryBindingSource
         '
@@ -135,7 +135,7 @@ Partial Class FrmCountry
         Me.CountryBNavDeleteItem.Image = CType(resources.GetObject("CountryBNavDeleteItem.Image"), System.Drawing.Image)
         Me.CountryBNavDeleteItem.Name = "CountryBNavDeleteItem"
         Me.CountryBNavDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.CountryBNavDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.CountryBNavDeleteItem.Size = New System.Drawing.Size(23, 20)
         Me.CountryBNavDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
@@ -217,7 +217,7 @@ Partial Class FrmCountry
         Me.CountryBNavSaveItem.Enabled = False
         Me.CountryBNavSaveItem.Image = CType(resources.GetObject("CountryBNavSaveItem.Image"), System.Drawing.Image)
         Me.CountryBNavSaveItem.Name = "CountryBNavSaveItem"
-        Me.CountryBNavSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.CountryBNavSaveItem.Size = New System.Drawing.Size(23, 20)
         Me.CountryBNavSaveItem.Text = "Save Data"
         '
         'CountryBNavCancel
@@ -227,7 +227,7 @@ Partial Class FrmCountry
         Me.CountryBNavCancel.Image = Global.DMTS.My.Resources.Resources.Undo
         Me.CountryBNavCancel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CountryBNavCancel.Name = "CountryBNavCancel"
-        Me.CountryBNavCancel.Size = New System.Drawing.Size(23, 22)
+        Me.CountryBNavCancel.Size = New System.Drawing.Size(23, 20)
         Me.CountryBNavCancel.Text = "Cancel Operation"
         '
         'CountryDataGridView
@@ -240,6 +240,7 @@ Partial Class FrmCountry
         Me.CountryDataGridView.DataSource = Me.CountryBindingSource
         Me.CountryDataGridView.Location = New System.Drawing.Point(16, 62)
         Me.CountryDataGridView.Name = "CountryDataGridView"
+        Me.CountryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.CountryDataGridView.Size = New System.Drawing.Size(244, 220)
         Me.CountryDataGridView.TabIndex = 12
         '

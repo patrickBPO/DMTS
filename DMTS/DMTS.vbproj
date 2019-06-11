@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{ED220512-166F-4FB9-AA13-9471B5159C5A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>DMTS.FrmCountry</StartupObject>
+    <StartupObject>DMTS.FrmCardType</StartupObject>
     <RootNamespace>DMTS</RootNamespace>
     <AssemblyName>DMTS</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -127,6 +127,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\CardTypeDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CardTypeDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\Country.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +141,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DistrictDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCardType.Designer.vb">
+      <DependentUpon>FrmCardType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCardType.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmCountry.Designer.vb">
       <DependentUpon>FrmCountry.vb</DependentUpon>
@@ -202,6 +213,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\FrmCardType.resx">
+      <DependentUpon>FrmCardType.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCountry.resx">
       <DependentUpon>FrmCountry.vb</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +249,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Data\CardTypeDS.xsc">
+      <DependentUpon>CardTypeDS.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CardTypeDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CardTypeDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\CardTypeDS.xss">
+      <DependentUpon>CardTypeDS.xsd</DependentUpon>
+    </None>
     <None Include="Data\Country.xsc">
       <DependentUpon>Country.xsd</DependentUpon>
     </None>
