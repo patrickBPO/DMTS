@@ -235,7 +235,7 @@ Partial Public Class DistrictDS
         MyBase.Tables.Add(Me.tablecountry)
         Me.tabledistrict = New districtDataTable()
         MyBase.Tables.Add(Me.tabledistrict)
-        Me.relationcountry_district = New Global.System.Data.DataRelation("country_district", New Global.System.Data.DataColumn() {Me.tablecountry.country_rec_noColumn}, New Global.System.Data.DataColumn() {Me.tabledistrict.country_rec_noColumn}, false)
+        Me.relationcountry_district = New Global.System.Data.DataRelation("country_district", New Global.System.Data.DataColumn() {Me.tablecountry.country_rec_noColumn}, New Global.System.Data.DataColumn() {Me.tabledistrict._Country_rec_noColumn}, false)
         Me.Relations.Add(Me.relationcountry_district)
     End Sub
     
@@ -594,11 +594,11 @@ Partial Public Class DistrictDS
     Partial Public Class districtDataTable
         Inherits Global.System.Data.TypedTableBase(Of districtRow)
         
-        Private columndistrict_rec_no As Global.System.Data.DataColumn
-        
         Private columndescription As Global.System.Data.DataColumn
         
-        Private columncountry_rec_no As Global.System.Data.DataColumn
+        Private _columnDistrict_rec_no As Global.System.Data.DataColumn
+        
+        Private _columnCountry_rec_no As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -637,14 +637,6 @@ Partial Public Class DistrictDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property district_rec_noColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndistrict_rec_no
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property descriptionColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columndescription
@@ -653,9 +645,17 @@ Partial Public Class DistrictDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property country_rec_noColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property _District_rec_noColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columncountry_rec_no
+                Return Me._columnDistrict_rec_no
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property _Country_rec_noColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me._columnCountry_rec_no
             End Get
         End Property
         
@@ -698,7 +698,7 @@ Partial Public Class DistrictDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overloads Function AdddistrictRow(ByVal description As String, ByVal parentcountryRowBycountry_district As countryRow) As districtRow
             Dim rowdistrictRow As districtRow = CType(Me.NewRow,districtRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, description, Nothing}
+            Dim columnValuesArray() As Object = New Object() {description, Nothing, Nothing}
             If (Not (parentcountryRowBycountry_district) Is Nothing) Then
                 columnValuesArray(2) = parentcountryRowBycountry_district(0)
             End If
@@ -724,26 +724,34 @@ Partial Public Class DistrictDS
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columndistrict_rec_no = MyBase.Columns("district_rec_no")
             Me.columndescription = MyBase.Columns("description")
-            Me.columncountry_rec_no = MyBase.Columns("country_rec_no")
+            Me._columnDistrict_rec_no = MyBase.Columns("District_rec_no")
+            Me._columnCountry_rec_no = MyBase.Columns("Country_rec_no")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
-            Me.columndistrict_rec_no = New Global.System.Data.DataColumn("district_rec_no", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndistrict_rec_no)
             Me.columndescription = New Global.System.Data.DataColumn("description", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndescription)
-            Me.columncountry_rec_no = New Global.System.Data.DataColumn("country_rec_no", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncountry_rec_no)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columndistrict_rec_no}, false))
-            Me.columndistrict_rec_no.AutoIncrement = true
-            Me.columndistrict_rec_no.AutoIncrementSeed = -1
-            Me.columndistrict_rec_no.AutoIncrementStep = -1
-            Me.columndistrict_rec_no.Unique = true
+            Me._columnDistrict_rec_no = New Global.System.Data.DataColumn("District_rec_no", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me._columnDistrict_rec_no.ExtendedProperties.Add("Generator_ColumnPropNameInRow", "_District_rec_no")
+            Me._columnDistrict_rec_no.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "_District_rec_noColumn")
+            Me._columnDistrict_rec_no.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnDistrict_rec_no")
+            Me._columnDistrict_rec_no.ExtendedProperties.Add("Generator_UserColumnName", "District_rec_no")
+            MyBase.Columns.Add(Me._columnDistrict_rec_no)
+            Me._columnCountry_rec_no = New Global.System.Data.DataColumn("Country_rec_no", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me._columnCountry_rec_no.ExtendedProperties.Add("Generator_ColumnPropNameInRow", "_Country_rec_no")
+            Me._columnCountry_rec_no.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "_Country_rec_noColumn")
+            Me._columnCountry_rec_no.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnCountry_rec_no")
+            Me._columnCountry_rec_no.ExtendedProperties.Add("Generator_UserColumnName", "Country_rec_no")
+            MyBase.Columns.Add(Me._columnCountry_rec_no)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint2", New Global.System.Data.DataColumn() {Me._columnDistrict_rec_no}, false))
             Me.columndescription.MaxLength = 765
+            Me._columnDistrict_rec_no.AutoIncrement = true
+            Me._columnDistrict_rec_no.AutoIncrementSeed = -1
+            Me._columnDistrict_rec_no.AutoIncrementStep = -1
+            Me._columnDistrict_rec_no.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -970,21 +978,6 @@ Partial Public Class DistrictDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property district_rec_no() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tabledistrict.district_rec_noColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'district_rec_no' in table 'district' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tabledistrict.district_rec_noColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property description() As String
             Get
                 Try 
@@ -1000,16 +993,31 @@ Partial Public Class DistrictDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property country_rec_no() As Integer
+        Public Property _District_rec_no() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tabledistrict.country_rec_noColumn),Integer)
+                    Return CType(Me(Me.tabledistrict._District_rec_noColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'country_rec_no' in table 'district' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'District_rec_no' in table 'district' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tabledistrict.country_rec_noColumn) = value
+                Me(Me.tabledistrict._District_rec_noColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property _Country_rec_no() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tabledistrict._Country_rec_noColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Country_rec_no' in table 'district' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledistrict._Country_rec_noColumn) = value
             End Set
         End Property
         
@@ -1026,18 +1034,6 @@ Partial Public Class DistrictDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Isdistrict_rec_noNull() As Boolean
-            Return Me.IsNull(Me.tabledistrict.district_rec_noColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Setdistrict_rec_noNull()
-            Me(Me.tabledistrict.district_rec_noColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsdescriptionNull() As Boolean
             Return Me.IsNull(Me.tabledistrict.descriptionColumn)
         End Function
@@ -1050,14 +1046,26 @@ Partial Public Class DistrictDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Iscountry_rec_noNull() As Boolean
-            Return Me.IsNull(Me.tabledistrict.country_rec_noColumn)
+        Public Function Is_District_rec_noNull() As Boolean
+            Return Me.IsNull(Me.tabledistrict._District_rec_noColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Setcountry_rec_noNull()
-            Me(Me.tabledistrict.country_rec_noColumn) = Global.System.Convert.DBNull
+        Public Sub Set_District_rec_noNull()
+            Me(Me.tabledistrict._District_rec_noColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Is_Country_rec_noNull() As Boolean
+            Return Me.IsNull(Me.tabledistrict._Country_rec_noColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Set_Country_rec_noNull()
+            Me(Me.tabledistrict._Country_rec_noColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1476,9 +1484,9 @@ Namespace DistrictDSTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "district"
-            tableMapping.ColumnMappings.Add("district_rec_no", "district_rec_no")
             tableMapping.ColumnMappings.Add("description", "description")
-            tableMapping.ColumnMappings.Add("country_rec_no", "country_rec_no")
+            tableMapping.ColumnMappings.Add("District_rec_no", "District_rec_no")
+            tableMapping.ColumnMappings.Add("Country_rec_no", "Country_rec_no")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -1515,7 +1523,7 @@ Namespace DistrictDSTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT * FROM `district`"
+            Me._commandCollection(0).CommandText = "SELECT District_rec_no, description, Country_rec_no FROM district"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

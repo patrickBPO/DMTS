@@ -204,7 +204,6 @@ Partial Class FrmDistrict
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -278,6 +277,7 @@ Partial Class FrmDistrict
         Me.DistrictDataGridView.Location = New System.Drawing.Point(24, 75)
         Me.DistrictDataGridView.MultiSelect = False
         Me.DistrictDataGridView.Name = "DistrictDataGridView"
+        Me.DistrictDataGridView.ReadOnly = True
         Me.DistrictDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DistrictDataGridView.Size = New System.Drawing.Size(243, 220)
         Me.DistrictDataGridView.TabIndex = 5
@@ -357,7 +357,6 @@ Partial Class FrmDistrict
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"

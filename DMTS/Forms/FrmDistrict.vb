@@ -18,19 +18,21 @@ Public Class FrmDistrict
     Private Sub DistrictBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles DistrictBNavSaveItem.Click
         Me.Validate()
         Me.DistrictBindingSource.EndEdit()
+        '- Below will record the position of last record added
+        LastPosition(DistrictBindingSource, DistrictDataGridView, "District_rec_no", 0)
+
         Me.DistrictTableAdapter.Update(Me.DistrictDS.district)
-        'RefreshDatagrid(DistrictTableAdapter, DistrictDS.district)
-        'Me.TableAdapterManager.UpdateAll(Me.DistrictDS)
         DoSave(DistrictBNavEditItem,
               DistrictBNavAddNewItem,
               DistrictBNavSaveItem,
               DistrictBNavDeleteItem,
               DistrictBNavCancel)
         DistrictDataGridView.ReadOnly = True
-        DistrictDataGridView.AllowUserToAddRows = False
-        'Dim cm As CurrencyManager = DirectCast(BindingContext(DistrictDataGridView.DataSource), CurrencyManager)
-        'cm.Refresh()
-        'Me.DistrictTableAdapter.Fill(Me.DistrictDS.district) '-- Refresh Grid
+        'DistrictDataGridView.AllowUserToAddRows = False
+        Me.DistrictTableAdapter.Fill(DistrictDS.district) '-- Refresh Grid
+
+        '- Below will move the cursor to the last recorded position
+        LastPosition(DistrictBindingSource, DistrictDataGridView, "District_rec_no", 1)
     End Sub
 
     Private Sub DistrictBNavAddNewItem_Click(sender As Object, e As EventArgs) Handles DistrictBNavAddNewItem.Click
@@ -67,12 +69,13 @@ Public Class FrmDistrict
               DistrictBNavDeleteItem,
               DistrictBNavCancel)
         DistrictDataGridView.ReadOnly = True
-        DistrictDataGridView.AllowUserToAddRows = False
+        Me.DistrictTableAdapter.Fill(DistrictDS.district) '-- Refresh Grid
+        'DistrictDataGridView.AllowUserToAddRows = False
     End Sub
 
     Private Sub DistrictBNavDeleteItem_Click(sender As Object, e As EventArgs) Handles DistrictBNavDeleteItem.Click
         If MessageBox.Show("Are you sure you want to delete this record?", "Delete record", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes Then
-            Me.DistrictBindingSource.RemoveCurrent()
+            'Me.DistrictBindingSource.RemoveCurrent()
 
             Try
                 Me.Validate()
@@ -85,6 +88,9 @@ Public Class FrmDistrict
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
+        Else
+            DistrictBindingSource.ResetCurrentItem()
+            RefreshDatagrid(DistrictTableAdapter, DistrictDS.district)
         End If
         'RefreshDatagrid(DistrictTableAdapter, DistrictDS.district)
 

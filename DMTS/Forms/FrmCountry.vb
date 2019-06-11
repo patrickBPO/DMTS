@@ -27,6 +27,8 @@ Public Class FrmCountry
              CountryBNavCancel)
         CountryDataGridView.ReadOnly = False
         CountryDataGridView.Focus()
+
+        'CountryDataGridView.AllowUserToAddRows = False
     End Sub
 
     Private Sub CountryDataGridView_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles CountryDataGridView.CellEndEdit
@@ -41,13 +43,17 @@ Public Class FrmCountry
     Private Sub CountryDataGridView_EditingControlShowing(sender As Object, e As DataGridViewEditingControlShowingEventArgs) Handles CountryDataGridView.EditingControlShowing
         If TypeOf e.Control Is TextBox Then
             DirectCast(e.Control, TextBox).CharacterCasing = CharacterCasing.Upper
-            DirectCast(e.Control, TextBox).ForeColor = Color.Blue
+            'DirectCast(e.Control, TextBox).ForeColor = Color.Blue
         End If
     End Sub
 
     Private Sub CountryBNavSaveItem_Click(sender As Object, e As EventArgs) Handles CountryBNavSaveItem.Click
+
         Me.Validate()
         Me.CountryBindingSource.EndEdit()
+        '- Below will record the position of last record added
+        LastPosition(CountryBindingSource, CountryDataGridView, "country_rec_no", 0)
+
         Me.CountryTableAdapter.Update(Country._Country)
         DoSave(CountryBNavEditItem,
               CountryBNavAddNewItem,
@@ -55,17 +61,20 @@ Public Class FrmCountry
               CountryBNavDeleteItem,
               CountryBNavCancel)
         CountryDataGridView.ReadOnly = True
-        CountryDataGridView.AllowUserToAddRows = False
-        'Me.DistrictTableAdapter.Fill(Me.DistrictDS.district) '-- Refresh Grid
+        Me.CountryTableAdapter.Fill(Me.Country._Country) '-- Refresh Grid
+
+        '- Below will move the cursor to the last recorded position
+        LastPosition(CountryBindingSource, CountryDataGridView, "country_rec_no", 1)
+
     End Sub
 
     Private Sub CountryBNavDeleteItem_Click(sender As Object, e As EventArgs) Handles CountryBNavDeleteItem.Click
         If MessageBox.Show("Are you sure you want to delete this record?", "Delete record", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes Then
 
             Try
-                Me.CountryBindingSource.RemoveCurrent()
                 Me.Validate()
                 Me.CountryBindingSource.EndEdit()
+                'Me.CountryBindingSource.RemoveCurrent()
                 'Me.TableAdapterManager.UpdateAll(Me.CountryDS)
                 Me.CountryTableAdapter.Update(Country._Country)
 
@@ -76,6 +85,7 @@ Public Class FrmCountry
             End Try
         Else
             CountryBindingSource.ResetCurrentItem()
+            RefreshDatagrid(CountryTableAdapter, Country._Country)
         End If
         'RefreshDatagrid(CountryTableAdapter, CountryDS.Country)
 
@@ -98,7 +108,8 @@ Public Class FrmCountry
               CountryBNavDeleteItem,
               CountryBNavCancel)
         CountryDataGridView.ReadOnly = True
-        CountryDataGridView.AllowUserToAddRows = False
+        RefreshDatagrid(CountryTableAdapter, Country._Country)
+        'CountryDataGridView.AllowUserToAddRows = False
     End Sub
 
     Private Sub CountryBNavAddNewItem_Click(sender As Object, e As EventArgs) Handles CountryBNavAddNewItem.Click
@@ -108,7 +119,7 @@ Public Class FrmCountry
               CountryBNavDeleteItem,
               CountryBNavCancel)
         CountryDataGridView.ReadOnly = False '- Edit
-        CountryDataGridView.AllowUserToAddRows = True '- Add
+        'CountryDataGridView.AllowUserToAddRows = True '- Add
         'CountryDataGridView.AllowUserToDeleteRows = False '- Delete
         CountryDataGridView.Focus()
         CountryDataGridView.Rows((CountryDataGridView.Rows.Count - 1)).Selected = True

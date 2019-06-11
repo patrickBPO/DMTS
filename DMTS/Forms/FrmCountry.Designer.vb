@@ -135,7 +135,7 @@ Partial Class FrmCountry
         Me.CountryBNavDeleteItem.Image = CType(resources.GetObject("CountryBNavDeleteItem.Image"), System.Drawing.Image)
         Me.CountryBNavDeleteItem.Name = "CountryBNavDeleteItem"
         Me.CountryBNavDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.CountryBNavDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavDeleteItem.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
@@ -167,6 +167,7 @@ Partial Class FrmCountry
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -217,7 +218,7 @@ Partial Class FrmCountry
         Me.CountryBNavSaveItem.Enabled = False
         Me.CountryBNavSaveItem.Image = CType(resources.GetObject("CountryBNavSaveItem.Image"), System.Drawing.Image)
         Me.CountryBNavSaveItem.Name = "CountryBNavSaveItem"
-        Me.CountryBNavSaveItem.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavSaveItem.Text = "Save Data"
         '
         'CountryBNavCancel
@@ -227,7 +228,7 @@ Partial Class FrmCountry
         Me.CountryBNavCancel.Image = Global.DMTS.My.Resources.Resources.Undo
         Me.CountryBNavCancel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CountryBNavCancel.Name = "CountryBNavCancel"
-        Me.CountryBNavCancel.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavCancel.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavCancel.Text = "Cancel Operation"
         '
         'CountryDataGridView

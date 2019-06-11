@@ -3,16 +3,21 @@ Public Class FrmCardType
     Private Sub Card_typeBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CardTypeBNavSaveItem.Click
         Me.Validate()
         Me.Card_typeBindingSource.EndEdit()
+        '- Below will record the position of last record added
+        LastPosition(Card_typeBindingSource, Card_typeDataGridView, "ct_rec_no", 0)
+
         Me.Card_typeTableAdapter.Update(Me.CardTypeDS.card_type)
-        Me.Validate()
-        'Me.cardtypeTableAdapter.Update(cardtype._cardtype)
+
         DoSave(CardTypeBNavEditItem,
               CardTypeBNavAddNewItem,
               CardTypeBNavSaveItem,
               CardTypeBNavDeleteItem,
               CardTypeBNavCancel)
         Card_typeDataGridView.ReadOnly = True
-        Card_typeDataGridView.AllowUserToAddRows = False
+        Me.Card_typeTableAdapter.Fill(CardTypeDS.card_type) '-- Refresh Grid
+
+        '- Below will move the cursor to the last recorded position
+        LastPosition(Card_typeBindingSource, Card_typeDataGridView, "ct_rec_no", 1)
     End Sub
 
     Private Sub FrmCardType_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -49,9 +54,9 @@ Public Class FrmCardType
         If MessageBox.Show("Are you sure you want to delete this record?", "Delete record", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes Then
 
             Try
-                Me.Card_typeBindingSource.RemoveCurrent()
                 Me.Validate()
                 Me.Card_typeBindingSource.EndEdit()
+                'Me.Card_typeBindingSource.RemoveCurrent()
                 'Me.TableAdapterManager.UpdateAll(Me.cardtypeDS)
                 Me.Card_typeTableAdapter.Update(CardTypeDS.card_type)
 
@@ -62,8 +67,8 @@ Public Class FrmCardType
             End Try
         Else
             Card_typeBindingSource.ResetCurrentItem()
+            RefreshDatagrid(Card_typeTableAdapter, CardTypeDS.card_type)
         End If
-        'RefreshDatagrid(cardtypeTableAdapter, cardtypeDS.cardtype)
 
         DoDelete(CardTypeBNavEditItem,
               CardTypeBNavAddNewItem,
@@ -84,7 +89,8 @@ Public Class FrmCardType
               CardTypeBNavDeleteItem,
               CardTypeBNavCancel)
         Card_typeDataGridView.ReadOnly = True
-        card_typeDataGridView.AllowUserToAddRows = False
+        RefreshDatagrid(Card_typeTableAdapter, CardTypeDS.card_type)
+        'card_typeDataGridView.AllowUserToAddRows = False
     End Sub
 
     Private Sub TxtCTSearch_TextChanged(sender As Object, e As EventArgs) Handles TxtCTSearch.TextChanged
