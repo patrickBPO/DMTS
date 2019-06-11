@@ -450,10 +450,10 @@ Public Class FrmFParser
     End Sub
 
     Private Sub FrmFParser_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        FrmDMTSMain.Show()
+        'FrmDMTSMain.Show()
     End Sub
 
     Private Sub FrmFParser_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        FrmDMTSMain.Hide()
+        'FrmDMTSMain.Hide()
     End Sub
 End Class

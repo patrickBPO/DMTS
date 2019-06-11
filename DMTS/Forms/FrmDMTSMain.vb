@@ -94,4 +94,12 @@ Public Class FrmDMTSMain
     Private Sub FileConverterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileConverterToolStripMenuItem.Click
         FrmFParser.Show()
     End Sub
+
+    Private Sub DistrictToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DistrictToolStripMenuItem.Click
+        FrmDistrict.Show()
+    End Sub
+
+    Private Sub CountryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CountryToolStripMenuItem.Click
+        FrmCountry.Show()
+    End Sub
 End Class

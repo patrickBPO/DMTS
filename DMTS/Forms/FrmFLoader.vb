@@ -395,10 +395,10 @@ Public Class FrmFLoader
     End Sub
 
     Private Sub frmFLoader_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-        FrmDMTSMain.Show()
+        'FrmDMTSMain.Show()
     End Sub
 
     Private Sub frmFLoader_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-        FrmDMTSMain.Hide()
+        'FrmDMTSMain.Hide()
     End Sub
 End Class

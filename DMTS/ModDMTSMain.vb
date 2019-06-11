@@ -80,7 +80,8 @@ Module ModDMTSMain
 
             If FrmDMTSLogin.LoginSucceeded = True Then
                 OpenMainform = FrmDMTSMain
-                OpenMainform.showdialog()
+                OpenMainform.ShowDialog()
+                'OpenMainform.show
             End If
 
         Catch ex As Exception

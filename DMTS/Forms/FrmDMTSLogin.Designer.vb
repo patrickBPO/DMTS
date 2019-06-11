@@ -75,6 +75,7 @@ Partial Class FrmDMTSLogin
         Me.TxtPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(253, Byte), Integer), CType(CType(216, Byte), Integer))
         Me.TxtPassword.Location = New System.Drawing.Point(270, 78)
         Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(36)
         Me.TxtPassword.Size = New System.Drawing.Size(100, 20)
         Me.TxtPassword.TabIndex = 4
         '
@@ -104,6 +105,7 @@ Partial Class FrmDMTSLogin
         '
         'FrmDMTSLogin
         '
+        Me.AcceptButton = Me.CmdLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

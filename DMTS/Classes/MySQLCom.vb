@@ -1,6 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class MySQLCom
+    Public Shared ConnStr As String = "server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
+            persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
+            database=dmts;defaultcommandtimeout=180"
     Public Structure InsStruct
         Dim FH As String
         Dim CPD As String
@@ -76,4 +79,91 @@ Public Class MySQLCom
         End Try
 
     End Function
+    'Public Shared Sub refreshDatagrid(ByRef DGV As DataGridView, ByVal TabName As String, ByVal ConnectString As String,
+    '                                  ByRef DS As DataSet, ByRef TableAdapter As Object, ByRef DatTable As DataTable)
+    '    Dim con As MySqlConnection = New MySqlConnection(ConnectString)
+    '    Dim sql As MySqlCommand = New MySqlCommand("SELECT * FROM " & TabName, con)
+
+    '    con.Open()
+    '    TableAdapter.Adapter.SelectCommand = sql
+    '    TableAdapter.Fill(DS, DatTable)
+    '    DGV.DataSource = DS
+    '    DGV.DataMember = TabName
+    '    con.Close()
+
+    '    'Dim ds As DataSet = New DataSet()
+    '    'Dim DataAdapter1 As MySqlDataAdapter = New MySqlDataAdapter()
+    '    'con.Open()
+    '    'DataAdapter1.SelectCommand = sql
+    '    'DataAdapter1.Fill(ds, TabName)
+    '    'DGV.DataSource = ds
+    '    'DGV.DataMember = TabName
+    '    'con.Close()
+
+    'End Sub
+    Public Shared Sub RefreshDatagrid(ByRef TableAdapter As Object, ByRef DatTable As DataTable)
+        TableAdapter.Fill(DatTable) '-- Refresh Grid
+
+    End Sub
+    Public Shared Sub DoEdit(ByRef EditBtn As ToolStripButton,
+                             ByRef AddBtn As ToolStripButton,
+                             ByRef SaveBtn As ToolStripButton,
+                             ByRef DelBtn As ToolStripButton,
+                             ByRef CanBtn As ToolStripButton)
+
+        SaveBtn.Enabled = True
+        EditBtn.Enabled = False
+        AddBtn.Enabled = False
+        DelBtn.Enabled = True
+        CanBtn.Enabled = True
+    End Sub
+    Public Shared Sub DoAdd(ByRef EditBtn As ToolStripButton,
+                             ByRef AddBtn As ToolStripButton,
+                             ByRef SaveBtn As ToolStripButton,
+                             ByRef DelBtn As ToolStripButton,
+                             ByRef CanBtn As ToolStripButton)
+
+        SaveBtn.Enabled = True
+        EditBtn.Enabled = False
+        AddBtn.Enabled = False
+        DelBtn.Enabled = False
+        CanBtn.Enabled = True
+    End Sub
+    Public Shared Sub DoSave(ByRef EditBtn As ToolStripButton,
+                             ByRef AddBtn As ToolStripButton,
+                             ByRef SaveBtn As ToolStripButton,
+                             ByRef DelBtn As ToolStripButton,
+                             ByRef CanBtn As ToolStripButton)
+
+        SaveBtn.Enabled = False
+        EditBtn.Enabled = True
+        AddBtn.Enabled = True
+        DelBtn.Enabled = False
+        CanBtn.Enabled = False
+    End Sub
+    Public Shared Sub DoCancel(ByRef EditBtn As ToolStripButton,
+                             ByRef AddBtn As ToolStripButton,
+                             ByRef SaveBtn As ToolStripButton,
+                             ByRef DelBtn As ToolStripButton,
+                             ByRef CanBtn As ToolStripButton)
+
+        SaveBtn.Enabled = False
+        EditBtn.Enabled = True
+        AddBtn.Enabled = True
+        DelBtn.Enabled = False
+        CanBtn.Enabled = False
+    End Sub
+
+    Public Shared Sub DoDelete(ByRef EditBtn As ToolStripButton,
+                             ByRef AddBtn As ToolStripButton,
+                             ByRef SaveBtn As ToolStripButton,
+                             ByRef DelBtn As ToolStripButton,
+                             ByRef CanBtn As ToolStripButton)
+
+        SaveBtn.Enabled = False
+        EditBtn.Enabled = True
+        AddBtn.Enabled = True
+        DelBtn.Enabled = False
+        CanBtn.Enabled = False
+    End Sub
 End Class

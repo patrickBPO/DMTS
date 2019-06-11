@@ -1,13 +1,20 @@
 ﻿Imports System.Data.Odbc
 Imports System.Data.Sql
 Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
 
 Public Class FrmDMTSLogin
     Public LoginSucceeded As Boolean
-    Dim MyConString As String = "DSN=dmts;"
-    Dim MyConnection As New OdbcConnection(MyConString)
-    Dim MyCommand As New OdbcCommand()
-    Dim MyDataReader As OdbcDataReader
+    'Dim MyConString As String = "DSN=dmts;"
+    'Dim MyConnection As New OdbcConnection(MyConString)
+    'Dim MyCommand As New OdbcCommand()
+    'Dim MyDataReader As OdbcDataReader
+    Dim MyConString As String = "server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
+            persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
+            database=dmts;defaultcommandtimeout=180"
+    Dim MyConnection As New MySqlConnection(MyConString)
+    Dim MyCommand As New MySqlCommand()
+    Dim MyDataReader As MySqlDataReader
     Dim OpenDatabase As Boolean
 
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
@@ -32,21 +39,22 @@ Public Class FrmDMTSLogin
         RecordCnt = 0
 
         Try
-            MyConnection.Open()
+            If MyConnection.State = ConnectionState.Closed Then
+                MyConnection.Open()
+            End If
 
             MyCommand.Connection = MyConnection
-            MyCommand.CommandText = "Select * from user_admin where user_name='" & LoginUserName & "' and password='" & LoginUserPassword & "'"
+            MyCommand.CommandText = "Select * from user_admin where ua_user_name='" & LoginUserName & "' and ua_password=md5('" & LoginUserPassword & "')"
 
             ' Console.WriteLine("Total Rows:" & MyCommand.ExecuteScalar())
-
 
             MyDataReader = MyCommand.ExecuteReader
             While MyDataReader.Read
                 RecordCnt = RecordCnt + 1
 
                 Console.WriteLine("id = " &
-                    CStr(MyDataReader("user_id")) & "  user_name = " &
-                    CStr(MyDataReader("user_name")))
+                    CStr(MyDataReader("ua_rec_no")) & "  ua_user_name = " &
+                    CStr(MyDataReader("ua_user_name")))
                 Return True
             End While
 
@@ -61,7 +69,9 @@ Public Class FrmDMTSLogin
                 Return False
             End If
         Catch ex As Exception
+            MyDataReader.Close()
             Console.WriteLine(ex.ToString)
+            Return False
         End Try
     End Function
 
