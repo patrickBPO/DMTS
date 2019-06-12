@@ -45,9 +45,6 @@ Partial Class FrmDistrict
         Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.DistrictBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DistrictDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DistrictBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
@@ -73,6 +70,8 @@ Partial Class FrmDistrict
         Me.TxtCSearch = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.District_rec_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         DescriptionLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -204,6 +203,7 @@ Partial Class FrmDistrict
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -272,7 +272,7 @@ Partial Class FrmDistrict
         Me.DistrictDataGridView.AutoGenerateColumns = False
         Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
         Me.DistrictDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DistrictDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
+        Me.DistrictDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.District_rec_no, Me.DataGridViewTextBoxColumn2})
         Me.DistrictDataGridView.DataSource = Me.DistrictBindingSource
         Me.DistrictDataGridView.Location = New System.Drawing.Point(24, 75)
         Me.DistrictDataGridView.MultiSelect = False
@@ -281,27 +281,6 @@ Partial Class FrmDistrict
         Me.DistrictDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DistrictDataGridView.Size = New System.Drawing.Size(243, 220)
         Me.DistrictDataGridView.TabIndex = 5
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "district_rec_no"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "district_rec_no"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "description"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "District"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 200
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "country_rec_no"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "country_rec_no"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Visible = False
         '
         'DistrictBindingNavigator
         '
@@ -357,6 +336,7 @@ Partial Class FrmDistrict
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -513,6 +493,22 @@ Partial Class FrmDistrict
         '
         Me.ToolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         '
+        'District_rec_no
+        '
+        Me.District_rec_no.DataPropertyName = "District_rec_no"
+        Me.District_rec_no.HeaderText = "District_rec_no"
+        Me.District_rec_no.Name = "District_rec_no"
+        Me.District_rec_no.ReadOnly = True
+        Me.District_rec_no.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "description"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "District"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 200
+        '
         'FrmDistrict
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -582,7 +578,6 @@ Partial Class FrmDistrict
     Friend WithEvents DistrictBNavEditItem As ToolStripButton
     Friend WithEvents DistrictBNavCancel As ToolStripButton
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents TxtSearch As TextBox
@@ -590,4 +585,6 @@ Partial Class FrmDistrict
     Friend WithEvents TxtCSearch As TextBox
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents ToolTip2 As ToolTip
+    Friend WithEvents District_rec_no As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
 End Class

@@ -167,7 +167,6 @@ Partial Class FrmCountry
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -241,6 +240,7 @@ Partial Class FrmCountry
         Me.CountryDataGridView.DataSource = Me.CountryBindingSource
         Me.CountryDataGridView.Location = New System.Drawing.Point(16, 62)
         Me.CountryDataGridView.Name = "CountryDataGridView"
+        Me.CountryDataGridView.ReadOnly = True
         Me.CountryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.CountryDataGridView.Size = New System.Drawing.Size(244, 220)
         Me.CountryDataGridView.TabIndex = 12

@@ -177,6 +177,7 @@ Public Class MySQLCom
                     Dim CurrRec As Int32
                     CurrRec = DirectCast(DgBindingSource.Current, DataRowView).Item(PrimaryKey)
                     GPosition = DgBindingSource.Find(PrimaryKey, CurrRec)
+                    'GPosition = DgBindingSource.Position
                     DgBindingSource.Position = GPosition '- Record the position of last record added
 
                 Case 1 '- Move Cursor to recorded Position

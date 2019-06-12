@@ -19,7 +19,8 @@ Public Class FrmDistrict
         Me.Validate()
         Me.DistrictBindingSource.EndEdit()
         '- Below will record the position of last record added
-        LastPosition(DistrictBindingSource, DistrictDataGridView, "District_rec_no", 0)
+        'LastPosition(DistrictBindingSource, DistrictDataGridView, "District_rec_no", 0)
+        GPosition = DistrictBindingSource.Position
 
         Me.DistrictTableAdapter.Update(Me.DistrictDS.district)
         DoSave(DistrictBNavEditItem,
@@ -32,7 +33,8 @@ Public Class FrmDistrict
         Me.DistrictTableAdapter.Fill(DistrictDS.district) '-- Refresh Grid
 
         '- Below will move the cursor to the last recorded position
-        LastPosition(DistrictBindingSource, DistrictDataGridView, "District_rec_no", 1)
+        'LastPosition(DistrictBindingSource, DistrictDataGridView, "District_rec_no", 1)
+        DistrictBindingSource.Position = GPosition - 1
     End Sub
 
     Private Sub DistrictBNavAddNewItem_Click(sender As Object, e As EventArgs) Handles DistrictBNavAddNewItem.Click
@@ -75,7 +77,7 @@ Public Class FrmDistrict
 
     Private Sub DistrictBNavDeleteItem_Click(sender As Object, e As EventArgs) Handles DistrictBNavDeleteItem.Click
         If MessageBox.Show("Are you sure you want to delete this record?", "Delete record", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = Windows.Forms.DialogResult.Yes Then
-            'Me.DistrictBindingSource.RemoveCurrent()
+            Me.DistrictBindingSource.RemoveCurrent()
 
             Try
                 Me.Validate()

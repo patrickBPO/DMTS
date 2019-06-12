@@ -213,6 +213,9 @@
   <metadata name="DistrictBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
+  <metadata name="District_rec_no.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="DistrictBindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>349, 56</value>
   </metadata>
@@ -271,17 +274,17 @@
   <data name="DistrictBNavEditItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPjZBbSNNRHMfP/muXcDlsLpWC+RAI9RD0KBXM
-        9pAvipEk+RRRlCBdIH0pLOlCQebE0dKJljWnTtS5jV3AS0VjVrI5YXQzUkbNFrFNXTO3b2d5XmRq+8CB
-        w+98vr9zzo9kQqVcnu9UKD625edfY6XM6ejoKHW1tHw1FhSgKzcXD3JynikIEbPjramqKsnzer1hn88H
-        p0aDVtrkjkSCu9nZr0uysvKYtjkLw8Inc7YyvHoxiomJcTh69GgqKkq9AhqZbJYqvDVzAzydotrYCEHE
-        yGHBdgDet6OYmZmBx+VCp1KJe3K5mqnpGBrERwImshLp45Bw8JCwEERNhfBPDcPj8eCN271cqVJJmb6e
-        uurte+JW7nu4j4c/dtrASrA6SPdWAUK9EozZ1XGtVnuK6es5tpeIYhbOHekniFv5SNhSYULDQkSNBMFW
-        Lq67vFvJ9HSCA0Ld4gBBbISPpJ2Gh2jYLMQSbTJ9myQdN3adZWo679pE55doYHGQhh00bEotAZZNPPzo
-        Iph6KGtiajq1pw/tC45Vx6NGGnYSJOj0V4e24beZw89ugtlHUjPVuDV7AxrrLp0ITfYjZKugN+6k/+b/
-        m8Gv5wSBdvF0WbFsB1M3Rn396rlvLy34bOrGfM9xrNCJhw0Ec+2C4MVyaSHTNqetsb7+i0UPv0GLT/3N
-        mDfdQuDp/pjmgryYKVujV99v9vc+xri6Ifl+QP1hsuumrvmK6ig7/i9cTU2N80x56cmKwwcLWC1DCPkL
-        70AlFDXriaQAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPjZBdSNNRGIfP/sttoSk2lxsFehEIdRF0KRXM
+        dpE3ipEkeRVRlCB9QHpTWCJFQbaJo6UTV9acbkP9u419gGZFY1aypTD6MlKkZovYpq6Z269jnhvZNB84
+        cHjP83vPOS/ZCtUymdxTVPSxQy6/xkpbp6urq9zb1vbVolDAUFCAe/n5T4oIkbDjzampKSsMBAKRyclJ
+        eLRatNMmt3JycDs391VZdnYh0zZmfkj0aMZZgZfPRzA29gzuXiNaS0pWXwGtVDpNFcGamQF/t7g+PkwQ
+        tXCYdx5A4M0Ipqam4Pd60a1U4o5MpmFqOqYmyZE5nixH+zkk3QIk7QQxvhjBiSH4/X689vmWqlWqPKav
+        p6F2+56Eg/se6Rfgj4s2cBCsDNC9IwvhvhyMujQJnU53iunrObaXiON2zhc1EyQcQiSdq2FCwyLELASh
+        di6hv7xbyfR0QlaRfsFKEB8WIuWi4UEatomwSJsEWkjKfWPXWaam87ZDfH6RBhYGaNhNw/zqysISL8AP
+        A8HEfWkrU9OpP31oX2i0NhGz0LCHIEmnvzK4Db9tHH72EEw/yLNRjVuzM9DccOlEeNyMsLOK3riT/lv4
+        bwa/nhLMdUreVZRKdzA1M5rrV899e2HHZ74Hs73HsUwnHjERzHRmhS5W5hUzbWM6mhsbv9iNCJp0+GRW
+        Y5Zvwdzj/XHtBVkpUzbHqLmrDvY9xKi6KfXeqvkwbripV19RHWXH/4Wrq6vznKksP1l1+KCC1bYIIX8B
+        6polEOUG3x8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="DistrictBNavDeleteItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
