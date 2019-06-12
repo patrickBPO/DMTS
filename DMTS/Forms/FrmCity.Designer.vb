@@ -28,38 +28,34 @@ Partial Class FrmCity
         Dim Label1 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
         Dim Label4 As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCity))
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCity))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TxtCSearch = New System.Windows.Forms.TextBox()
-        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TxtDSearch = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
-        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.CityDataGridView = New System.Windows.Forms.DataGridView()
+        Me.CityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CityDS = New DMTS.CityDS()
         Me.CityBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.CityBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
-        Me.CityDataGridView = New System.Windows.Forms.DataGridView()
-        Me.CityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CityDS = New DMTS.CityDS()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.TxtDSearch = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtCSearch = New System.Windows.Forms.TextBox()
+        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.CityTableAdapter = New DMTS.CityDSTableAdapters.cityTableAdapter()
         Me.TableAdapterManager = New DMTS.CityDSTableAdapters.TableAdapterManager()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CountryTableAdapter = New DMTS.CityDSTableAdapters.countryTableAdapter()
         Me.CountryDataGridView = New System.Windows.Forms.DataGridView()
@@ -73,6 +69,16 @@ Partial Class FrmCity
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CityrecnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptionDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DistrictrecnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CountryrecnoDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CityBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CityDataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Label2 = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
@@ -82,16 +88,71 @@ Partial Class FrmCity
         Me.GroupBox2.SuspendLayout()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
-        CType(Me.CityBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.CityBindingNavigator.SuspendLayout()
         CType(Me.CityDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CityDS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CityBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CityBindingNavigator.SuspendLayout()
         CType(Me.CountryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CountryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DistrictBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DistrictDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CityBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CityDataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label2.ForeColor = System.Drawing.Color.Maroon
+        Label2.Location = New System.Drawing.Point(15, 14)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(59, 17)
+        Label2.TabIndex = 10
+        Label2.Text = "Search"
+        '
+        'DescriptionLabel
+        '
+        DescriptionLabel.AutoSize = True
+        DescriptionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DescriptionLabel.Location = New System.Drawing.Point(10, 39)
+        DescriptionLabel.Name = "DescriptionLabel"
+        DescriptionLabel.Size = New System.Drawing.Size(64, 17)
+        DescriptionLabel.TabIndex = 3
+        DescriptionLabel.Text = "Country"
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label1.ForeColor = System.Drawing.Color.Maroon
+        Label1.Location = New System.Drawing.Point(15, 14)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(59, 17)
+        Label1.TabIndex = 10
+        Label1.Text = "Search"
+        '
+        'Label3
+        '
+        Label3.AutoSize = True
+        Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label3.Location = New System.Drawing.Point(14, 39)
+        Label3.Name = "Label3"
+        Label3.Size = New System.Drawing.Size(59, 17)
+        Label3.TabIndex = 3
+        Label3.Text = "District"
+        '
+        'Label4
+        '
+        Label4.AutoSize = True
+        Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label4.ForeColor = System.Drawing.Color.Maroon
+        Label4.Location = New System.Drawing.Point(8, 45)
+        Label4.Name = "Label4"
+        Label4.Size = New System.Drawing.Size(59, 17)
+        Label4.TabIndex = 8
+        Label4.Text = "Search"
         '
         'GroupBox1
         '
@@ -106,48 +167,6 @@ Partial Class FrmCity
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.ForeColor = System.Drawing.Color.Maroon
-        Label2.Location = New System.Drawing.Point(15, 14)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(59, 17)
-        Label2.TabIndex = 10
-        Label2.Text = "Search"
-        '
-        'TxtCSearch
-        '
-        Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TxtCSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtCSearch.Location = New System.Drawing.Point(76, 11)
-        Me.TxtCSearch.Name = "TxtCSearch"
-        Me.TxtCSearch.Size = New System.Drawing.Size(207, 20)
-        Me.TxtCSearch.TabIndex = 9
-        '
-        'DescriptionLabel
-        '
-        DescriptionLabel.AutoSize = True
-        DescriptionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DescriptionLabel.Location = New System.Drawing.Point(10, 39)
-        DescriptionLabel.Name = "DescriptionLabel"
-        DescriptionLabel.Size = New System.Drawing.Size(64, 17)
-        DescriptionLabel.TabIndex = 3
-        DescriptionLabel.Text = "Country"
-        '
-        'DescriptionTextBox
-        '
-        Me.DescriptionTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.DescriptionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DescriptionTextBox.ForeColor = System.Drawing.Color.ForestGreen
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(76, 37)
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.ReadOnly = True
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(207, 21)
-        Me.DescriptionTextBox.TabIndex = 4
-        Me.DescriptionTextBox.Text = "COUNTRY"
-        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.GroupControl1)
@@ -161,50 +180,9 @@ Partial Class FrmCity
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label1.ForeColor = System.Drawing.Color.Maroon
-        Label1.Location = New System.Drawing.Point(15, 14)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(59, 17)
-        Label1.TabIndex = 10
-        Label1.Text = "Search"
-        '
-        'TxtDSearch
-        '
-        Me.TxtDSearch.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TxtDSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtDSearch.Location = New System.Drawing.Point(76, 11)
-        Me.TxtDSearch.Name = "TxtDSearch"
-        Me.TxtDSearch.Size = New System.Drawing.Size(207, 20)
-        Me.TxtDSearch.TabIndex = 9
-        '
-        'Label3
-        '
-        Label3.AutoSize = True
-        Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label3.Location = New System.Drawing.Point(14, 39)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(59, 17)
-        Label3.TabIndex = 3
-        Label3.Text = "District"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.Color.ForestGreen
-        Me.TextBox2.Location = New System.Drawing.Point(76, 37)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(207, 21)
-        Me.TextBox2.TabIndex = 4
-        Me.TextBox2.Text = "DISTRICT"
-        '
         'GroupControl1
         '
+        Me.GroupControl1.Controls.Add(Me.CityDataGridView1)
         Me.GroupControl1.Controls.Add(Me.CityDataGridView)
         Me.GroupControl1.Controls.Add(Label4)
         Me.GroupControl1.Controls.Add(Me.CityBindingNavigator)
@@ -216,25 +194,37 @@ Partial Class FrmCity
         Me.GroupControl1.TabIndex = 11
         Me.GroupControl1.Text = "GroupControl1"
         '
-        'Label4
+        'CityDataGridView
         '
-        Label4.AutoSize = True
-        Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label4.ForeColor = System.Drawing.Color.Maroon
-        Label4.Location = New System.Drawing.Point(8, 45)
-        Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(59, 17)
-        Label4.TabIndex = 8
-        Label4.Text = "Search"
+        Me.CityDataGridView.AllowUserToAddRows = False
+        Me.CityDataGridView.AutoGenerateColumns = False
+        Me.CityDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CityDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.CityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CityDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CityrecnoDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn1, Me.DistrictrecnoDataGridViewTextBoxColumn, Me.CountryrecnoDataGridViewTextBoxColumn1})
+        Me.CityDataGridView.DataSource = Me.CityBindingSource
+        Me.CityDataGridView.Location = New System.Drawing.Point(11, 71)
+        Me.CityDataGridView.Name = "CityDataGridView"
+        Me.CityDataGridView.ReadOnly = True
+        Me.CityDataGridView.Size = New System.Drawing.Size(295, 220)
+        Me.CityDataGridView.TabIndex = 10
         '
-        'TxtSearch
+        'CityBindingSource
         '
-        Me.TxtSearch.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtSearch.Location = New System.Drawing.Point(69, 42)
-        Me.TxtSearch.Name = "TxtSearch"
-        Me.TxtSearch.Size = New System.Drawing.Size(187, 21)
-        Me.TxtSearch.TabIndex = 7
+        Me.CityBindingSource.DataMember = "city"
+        Me.CityBindingSource.DataSource = Me.CityDS
+        '
+        'CityDS
+        '
+        Me.CityDS.DataSetName = "CityDS"
+        Me.CityDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CityBindingNavigator
         '
@@ -253,6 +243,31 @@ Partial Class FrmCity
         Me.CityBindingNavigator.Size = New System.Drawing.Size(322, 25)
         Me.CityBindingNavigator.TabIndex = 10
         Me.CityBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
         '
@@ -286,16 +301,9 @@ Partial Class FrmCity
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
@@ -318,26 +326,8 @@ Partial Class FrmCity
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
         '
         'CityBindingNavigatorSaveItem
         '
@@ -347,37 +337,56 @@ Partial Class FrmCity
         Me.CityBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CityBindingNavigatorSaveItem.Text = "Save Data"
         '
-        'CityDataGridView
+        'TxtSearch
         '
-        Me.CityDataGridView.AllowUserToAddRows = False
-        Me.CityDataGridView.AutoGenerateColumns = False
-        Me.CityDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 9.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DodgerBlue
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CityDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.CityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CityDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.CityDataGridView.DataSource = Me.CityBindingSource
-        Me.CityDataGridView.Location = New System.Drawing.Point(11, 71)
-        Me.CityDataGridView.Name = "CityDataGridView"
-        Me.CityDataGridView.ReadOnly = True
-        Me.CityDataGridView.Size = New System.Drawing.Size(295, 220)
-        Me.CityDataGridView.TabIndex = 10
+        Me.TxtSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtSearch.Location = New System.Drawing.Point(69, 42)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(187, 21)
+        Me.TxtSearch.TabIndex = 7
         '
-        'CityBindingSource
+        'TxtDSearch
         '
-        Me.CityBindingSource.DataMember = "city"
-        Me.CityBindingSource.DataSource = Me.CityDS
+        Me.TxtDSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtDSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtDSearch.Location = New System.Drawing.Point(76, 11)
+        Me.TxtDSearch.Name = "TxtDSearch"
+        Me.TxtDSearch.Size = New System.Drawing.Size(207, 20)
+        Me.TxtDSearch.TabIndex = 9
         '
-        'CityDS
+        'TextBox2
         '
-        Me.CityDS.DataSetName = "CityDS"
-        Me.CityDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.ForeColor = System.Drawing.Color.ForestGreen
+        Me.TextBox2.Location = New System.Drawing.Point(76, 37)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(207, 21)
+        Me.TextBox2.TabIndex = 4
+        Me.TextBox2.Text = "DISTRICT"
+        '
+        'TxtCSearch
+        '
+        Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtCSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCSearch.Location = New System.Drawing.Point(76, 11)
+        Me.TxtCSearch.Name = "TxtCSearch"
+        Me.TxtCSearch.Size = New System.Drawing.Size(207, 20)
+        Me.TxtCSearch.TabIndex = 9
+        '
+        'DescriptionTextBox
+        '
+        Me.DescriptionTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.DescriptionTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DescriptionTextBox.ForeColor = System.Drawing.Color.ForestGreen
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(76, 37)
+        Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.ReadOnly = True
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(207, 21)
+        Me.DescriptionTextBox.TabIndex = 4
+        Me.DescriptionTextBox.Text = "COUNTRY"
         '
         'CityTableAdapter
         '
@@ -388,38 +397,6 @@ Partial Class FrmCity
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.cityTableAdapter = Me.CityTableAdapter
         Me.TableAdapterManager.UpdateOrder = DMTS.CityDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "City_rec_no"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "City_rec_no"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Description"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "City"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 250
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "District_rec_no"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "District"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Visible = False
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Country_rec_no"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Country"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Visible = False
         '
         'CountryBindingSource
         '
@@ -436,7 +413,7 @@ Partial Class FrmCity
         Me.CountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CountryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CountryrecnoDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn})
         Me.CountryDataGridView.DataSource = Me.CountryBindingSource
-        Me.CountryDataGridView.Location = New System.Drawing.Point(463, 164)
+        Me.CountryDataGridView.Location = New System.Drawing.Point(428, 32)
         Me.CountryDataGridView.Name = "CountryDataGridView"
         Me.CountryDataGridView.Size = New System.Drawing.Size(300, 220)
         Me.CountryDataGridView.TabIndex = 9
@@ -480,7 +457,7 @@ Partial Class FrmCity
         Me.DistrictDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DistrictDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
         Me.DistrictDataGridView.DataSource = Me.DistrictBindingSource
-        Me.DistrictDataGridView.Location = New System.Drawing.Point(544, 32)
+        Me.DistrictDataGridView.Location = New System.Drawing.Point(438, 229)
         Me.DistrictDataGridView.Name = "DistrictDataGridView"
         Me.DistrictDataGridView.Size = New System.Drawing.Size(300, 220)
         Me.DistrictDataGridView.TabIndex = 9
@@ -503,11 +480,79 @@ Partial Class FrmCity
         Me.DataGridViewTextBoxColumn9.HeaderText = "Country_rec_no"
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         '
+        'CityrecnoDataGridViewTextBoxColumn
+        '
+        Me.CityrecnoDataGridViewTextBoxColumn.DataPropertyName = "City_rec_no"
+        Me.CityrecnoDataGridViewTextBoxColumn.HeaderText = "City_rec_no"
+        Me.CityrecnoDataGridViewTextBoxColumn.Name = "CityrecnoDataGridViewTextBoxColumn"
+        Me.CityrecnoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DescriptionDataGridViewTextBoxColumn1
+        '
+        Me.DescriptionDataGridViewTextBoxColumn1.DataPropertyName = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn1.HeaderText = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn1.Name = "DescriptionDataGridViewTextBoxColumn1"
+        Me.DescriptionDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DistrictrecnoDataGridViewTextBoxColumn
+        '
+        Me.DistrictrecnoDataGridViewTextBoxColumn.DataPropertyName = "District_rec_no"
+        Me.DistrictrecnoDataGridViewTextBoxColumn.HeaderText = "District_rec_no"
+        Me.DistrictrecnoDataGridViewTextBoxColumn.Name = "DistrictrecnoDataGridViewTextBoxColumn"
+        Me.DistrictrecnoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CountryrecnoDataGridViewTextBoxColumn1
+        '
+        Me.CountryrecnoDataGridViewTextBoxColumn1.DataPropertyName = "Country_rec_no"
+        Me.CountryrecnoDataGridViewTextBoxColumn1.HeaderText = "Country_rec_no"
+        Me.CountryrecnoDataGridViewTextBoxColumn1.Name = "CountryrecnoDataGridViewTextBoxColumn1"
+        Me.CountryrecnoDataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'CityBindingSource1
+        '
+        Me.CityBindingSource1.DataMember = "district_city"
+        Me.CityBindingSource1.DataSource = Me.DistrictBindingSource
+        '
+        'CityDataGridView1
+        '
+        Me.CityDataGridView1.AutoGenerateColumns = False
+        Me.CityDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CityDataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.CityDataGridView1.DataSource = Me.CityBindingSource1
+        Me.CityDataGridView1.Location = New System.Drawing.Point(21, 69)
+        Me.CityDataGridView1.Name = "CityDataGridView1"
+        Me.CityDataGridView1.Size = New System.Drawing.Size(300, 220)
+        Me.CityDataGridView1.TabIndex = 9
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "City_rec_no"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "City_rec_no"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Description"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Description"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "District_rec_no"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "District_rec_no"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Country_rec_no"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Country_rec_no"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
         'FrmCity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(902, 496)
+        Me.ClientSize = New System.Drawing.Size(902, 516)
         Me.Controls.Add(Me.DistrictDataGridView)
         Me.Controls.Add(Me.CountryDataGridView)
         Me.Controls.Add(Me.GroupBox1)
@@ -521,16 +566,18 @@ Partial Class FrmCity
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         Me.GroupControl1.PerformLayout()
-        CType(Me.CityBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.CityBindingNavigator.ResumeLayout(False)
-        Me.CityBindingNavigator.PerformLayout()
         CType(Me.CityDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CityBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CityDS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CityBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.CityBindingNavigator.ResumeLayout(False)
+        Me.CityBindingNavigator.PerformLayout()
         CType(Me.CountryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CountryDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DistrictBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DistrictDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CityBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CityDataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -561,10 +608,6 @@ Partial Class FrmCity
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents CityBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents CityDataGridView As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents CountryBindingSource As BindingSource
     Friend WithEvents CountryTableAdapter As CityDSTableAdapters.countryTableAdapter
     Friend WithEvents CountryDataGridView As DataGridView
@@ -578,4 +621,14 @@ Partial Class FrmCity
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents CityrecnoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DescriptionDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DistrictrecnoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CountryrecnoDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents CityDataGridView1 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents CityBindingSource1 As BindingSource
 End Class

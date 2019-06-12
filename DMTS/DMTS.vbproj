@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{ED220512-166F-4FB9-AA13-9471B5159C5A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>DMTS.FrmCountry</StartupObject>
+    <StartupObject>DMTS.FrmCity</StartupObject>
     <RootNamespace>DMTS</RootNamespace>
     <AssemblyName>DMTS</AssemblyName>
     <FileAlignment>512</FileAlignment>
