@@ -27,6 +27,7 @@ Partial Class FrmDistrict
         Dim Label1 As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDistrict))
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.CountryBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -45,6 +46,8 @@ Partial Class FrmDistrict
         Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.DistrictBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DistrictDataGridView = New System.Windows.Forms.DataGridView()
+        Me.District_rec_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DistrictBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
@@ -70,8 +73,6 @@ Partial Class FrmDistrict
         Me.TxtCSearch = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.District_rec_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         DescriptionLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -271,6 +272,14 @@ Partial Class FrmDistrict
         Me.DistrictDataGridView.AllowUserToAddRows = False
         Me.DistrictDataGridView.AutoGenerateColumns = False
         Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DistrictDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DistrictDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DistrictDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.District_rec_no, Me.DataGridViewTextBoxColumn2})
         Me.DistrictDataGridView.DataSource = Me.DistrictBindingSource
@@ -281,6 +290,22 @@ Partial Class FrmDistrict
         Me.DistrictDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DistrictDataGridView.Size = New System.Drawing.Size(243, 220)
         Me.DistrictDataGridView.TabIndex = 5
+        '
+        'District_rec_no
+        '
+        Me.District_rec_no.DataPropertyName = "District_rec_no"
+        Me.District_rec_no.HeaderText = "District_rec_no"
+        Me.District_rec_no.Name = "District_rec_no"
+        Me.District_rec_no.ReadOnly = True
+        Me.District_rec_no.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "description"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "District"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 200
         '
         'DistrictBindingNavigator
         '
@@ -492,22 +517,6 @@ Partial Class FrmDistrict
         'ToolTip2
         '
         Me.ToolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        '
-        'District_rec_no
-        '
-        Me.District_rec_no.DataPropertyName = "District_rec_no"
-        Me.District_rec_no.HeaderText = "District_rec_no"
-        Me.District_rec_no.Name = "District_rec_no"
-        Me.District_rec_no.ReadOnly = True
-        Me.District_rec_no.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "description"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "District"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 200
         '
         'FrmDistrict
         '

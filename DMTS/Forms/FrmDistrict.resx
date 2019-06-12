@@ -274,17 +274,17 @@
   <data name="DistrictBNavEditItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPjZBdSNNRGIfP/sttoSk2lxsFehEIdRF0KRXM
-        dpE3ipEkeRVRlCB9QHpTWCJFQbaJo6UTV9acbkP9u419gGZFY1aypTD6MlKkZovYpq6Z269jnhvZNB84
-        cHjP83vPOS/ZCtUymdxTVPSxQy6/xkpbp6urq9zb1vbVolDAUFCAe/n5T4oIkbDjzampKSsMBAKRyclJ
-        eLRatNMmt3JycDs391VZdnYh0zZmfkj0aMZZgZfPRzA29gzuXiNaS0pWXwGtVDpNFcGamQF/t7g+PkwQ
-        tXCYdx5A4M0Ipqam4Pd60a1U4o5MpmFqOqYmyZE5nixH+zkk3QIk7QQxvhjBiSH4/X689vmWqlWqPKav
-        p6F2+56Eg/se6Rfgj4s2cBCsDNC9IwvhvhyMujQJnU53iunrObaXiON2zhc1EyQcQiSdq2FCwyLELASh
-        di6hv7xbyfR0QlaRfsFKEB8WIuWi4UEatomwSJsEWkjKfWPXWaam87ZDfH6RBhYGaNhNw/zqysISL8AP
-        A8HEfWkrU9OpP31oX2i0NhGz0LCHIEmnvzK4Db9tHH72EEw/yLNRjVuzM9DccOlEeNyMsLOK3riT/lv4
-        bwa/nhLMdUreVZRKdzA1M5rrV899e2HHZ74Hs73HsUwnHjERzHRmhS5W5hUzbWM6mhsbv9iNCJp0+GRW
-        Y5Zvwdzj/XHtBVkpUzbHqLmrDvY9xKi6KfXeqvkwbripV19RHWXH/4Wrq6vznKksP1l1+KCC1bYIIX8B
-        6polEOUG3x8AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPjZBdSNNRGIfP/svNcCk2l0qBXgRCXQRdSgWz
+        XeSNYiRJXkUUNZA+IL0prBFFQWsTR2tOXFlzuok63dgHaVokWtnWBtKXkTJqtoht6pq5/TrmuZFN2wMH
+        Du95fu855yWZUCuRFLlLSj7qioqusFLmtLe3V463tHy1FBfDUFCAu/n5j0sIyWbHm1NXV1Ho9XrDPp8P
+        bo0GrbTJTZEIt3JzX1bk5BQybWPmBwQPZx1VeDE2jNHRZ3B1GaEsK1t9BTRi8QxVeGtmGjwdwobYIEHE
+        wmHesQ/e18Pw+/3wjI+jQyrFbYlEzdRUTM3ZhwJWshzp4ZBw8ZCwEUStpZieGoDH48GriYmlWpksj+nr
+        aazfuitu576He3j446QN7AQrfXRvz0KoW4QRpzqu1WpPMH09R3YTYczGTUTMBHE7HwnHapjQsABRC0Gw
+        lYvrL+6UMj2VYK9Av9BLEBvkI+mk4X4aHhJgkTZ5qyBJ17Udp5mayhud8OwiDSz00bCLhq2rKwtLVh5+
+        GAim7omVTE2l4eSBPcGR+njUQsNuggSd/kr/Fvwe4vCzk2Dmft4Q1bg1Ow2KxgvHQpNmhBw19Mbt9N/8
+        fzP49YQg0Jb9rqpcvI2p6VFfvXzm23MbPls7Mdd1FMt04mETwWxbVvB8dV4p0zZGp2hq+mIzYtqkxSez
+        CnPWGwg82hvTnJOUM2VzjOo7qunuB3iqbE6+71V/mDRc16suyQ6z4//CyeVy96nqyuM1B/cXs1qGEPIX
+        4U4lCEpE5lIAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="DistrictBNavDeleteItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CityDS" targetNamespace="http://tempuri.org/CityDS.xsd" xmlns:mstns="http://tempuri.org/CityDS.xsd" xmlns="http://tempuri.org/CityDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" PropertyReference="ApplicationSettings.DMTS.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="countryTableAdapter" GeneratorDataComponentClassName="countryTableAdapter" Name="country" UserDataComponentName="countryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `country`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="country_rec_no" DataSetColumn="country_rec_no" />
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="districtTableAdapter" GeneratorDataComponentClassName="districtTableAdapter" Name="district" UserDataComponentName="districtTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `district`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="District_rec_no" DataSetColumn="District_rec_no" />
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+              <Mapping SourceColumn="Country_rec_no" DataSetColumn="Country_rec_no" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cityTableAdapter" GeneratorDataComponentClassName="cityTableAdapter" Name="city" UserDataComponentName="cityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM city
+WHERE        (City_rec_no = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="City_rec_no" DataSourceName="dmts.city" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="City_rec_no" Precision="0" Scale="0" Size="0" SourceColumn="City_rec_no" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO city
+                         (Description, District_rec_no)
+VALUES        (?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="Description" DataSourceName="dmts.city" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="Description" Precision="0" Scale="0" Size="1024" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="District_rec_no" DataSourceName="dmts.city" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="District_rec_no" Precision="0" Scale="0" Size="0" SourceColumn="District_rec_no" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `city`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       city
+SET                Description = ?, District_rec_no = ?
+WHERE        (City_rec_no = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param1" ColumnName="Description" DataSourceName="dmts.city" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="Description" Precision="0" Scale="0" Size="1024" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param2" ColumnName="District_rec_no" DataSourceName="dmts.city" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="District_rec_no" Precision="0" Scale="0" Size="0" SourceColumn="District_rec_no" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Param3" ColumnName="City_rec_no" DataSourceName="dmts.city" DataTypeServer="integer" DbType="Int32" Direction="Input" ParameterName="Original_City_rec_no" Precision="0" Scale="0" Size="0" SourceColumn="City_rec_no" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="City_rec_no" DataSetColumn="City_rec_no" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="District_rec_no" DataSetColumn="District_rec_no" />
+              <Mapping SourceColumn="Country_rec_no" DataSetColumn="Country_rec_no" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CityDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CityDS" msprop:Generator_UserDSName="CityDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="country" msprop:Generator_TableClassName="countryDataTable" msprop:Generator_TableVarName="tablecountry" msprop:Generator_TablePropName="country" msprop:Generator_RowDeletingName="countryRowDeleting" msprop:Generator_RowChangingName="countryRowChanging" msprop:Generator_RowEvHandlerName="countryRowChangeEventHandler" msprop:Generator_RowDeletedName="countryRowDeleted" msprop:Generator_UserTableName="country" msprop:Generator_RowChangedName="countryRowChanged" msprop:Generator_RowEvArgName="countryRowChangeEvent" msprop:Generator_RowClassName="countryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="country_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncountry_rec_no" msprop:Generator_ColumnPropNameInRow="country_rec_no" msprop:Generator_ColumnPropNameInTable="country_rec_noColumn" msprop:Generator_UserColumnName="country_rec_no" type="xs:int" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="180" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="district" msprop:Generator_TableClassName="districtDataTable" msprop:Generator_TableVarName="tabledistrict" msprop:Generator_TablePropName="district" msprop:Generator_RowDeletingName="districtRowDeleting" msprop:Generator_RowChangingName="districtRowChanging" msprop:Generator_RowEvHandlerName="districtRowChangeEventHandler" msprop:Generator_RowDeletedName="districtRowDeleted" msprop:Generator_UserTableName="district" msprop:Generator_RowChangedName="districtRowChanged" msprop:Generator_RowEvArgName="districtRowChangeEvent" msprop:Generator_RowClassName="districtRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="District_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDistrict_rec_no" msprop:Generator_ColumnPropNameInRow="District_rec_no" msprop:Generator_ColumnPropNameInTable="District_rec_noColumn" msprop:Generator_UserColumnName="District_rec_no" type="xs:int" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="765" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Country_rec_no" msprop:Generator_ColumnVarNameInTable="columnCountry_rec_no" msprop:Generator_ColumnPropNameInRow="Country_rec_no" msprop:Generator_ColumnPropNameInTable="Country_rec_noColumn" msprop:Generator_UserColumnName="Country_rec_no" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="city" msprop:Generator_TableClassName="cityDataTable" msprop:Generator_TableVarName="tablecity" msprop:Generator_TablePropName="city" msprop:Generator_RowDeletingName="cityRowDeleting" msprop:Generator_RowChangingName="cityRowChanging" msprop:Generator_RowEvHandlerName="cityRowChangeEventHandler" msprop:Generator_RowDeletedName="cityRowDeleted" msprop:Generator_UserTableName="city" msprop:Generator_RowChangedName="cityRowChanged" msprop:Generator_RowEvArgName="cityRowChangeEvent" msprop:Generator_RowClassName="cityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="City_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCity_rec_no" msprop:Generator_ColumnPropNameInRow="City_rec_no" msprop:Generator_ColumnPropNameInTable="City_rec_noColumn" msprop:Generator_UserColumnName="City_rec_no" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="District_rec_no" msprop:Generator_ColumnVarNameInTable="columnDistrict_rec_no" msprop:Generator_ColumnPropNameInRow="District_rec_no" msprop:Generator_ColumnPropNameInTable="District_rec_noColumn" msprop:Generator_UserColumnName="District_rec_no" type="xs:int" />
+              <xs:element name="Country_rec_no" msprop:Generator_ColumnVarNameInTable="columnCountry_rec_no" msprop:Generator_ColumnPropNameInRow="Country_rec_no" msprop:Generator_ColumnPropNameInTable="Country_rec_noColumn" msprop:Generator_UserColumnName="Country_rec_no" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:country" />
+      <xs:field xpath="mstns:country_rec_no" />
+    </xs:unique>
+    <xs:unique name="district_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:district" />
+      <xs:field xpath="mstns:District_rec_no" />
+    </xs:unique>
+    <xs:unique name="city_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:city" />
+      <xs:field xpath="mstns:City_rec_no" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="country_district" msdata:parent="country" msdata:child="district" msdata:parentkey="country_rec_no" msdata:childkey="Country_rec_no" msprop:Generator_UserChildTable="district" msprop:Generator_ChildPropName="GetdistrictRows" msprop:Generator_UserRelationName="country_district" msprop:Generator_ParentPropName="countryRow" msprop:Generator_RelationVarName="relationcountry_district" msprop:Generator_UserParentTable="country" />
+      <msdata:Relationship name="district_city" msdata:parent="district" msdata:child="city" msdata:parentkey="District_rec_no" msdata:childkey="District_rec_no" msprop:Generator_UserChildTable="city" msprop:Generator_ChildPropName="GetcityRows" msprop:Generator_UserRelationName="district_city" msprop:Generator_ParentPropName="districtRow" msprop:Generator_RelationVarName="relationdistrict_city" msprop:Generator_UserParentTable="district" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

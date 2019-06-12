@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmCountry
+Partial Class FrmMerchant
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,9 +23,8 @@ Partial Class FrmCountry
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMerchant))
         Dim Label2 As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCountry))
-        Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
         Me.CountryBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.CountryBNavAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -43,45 +42,22 @@ Partial Class FrmCountry
         Me.CountryBNavEditItem = New System.Windows.Forms.ToolStripButton()
         Me.CountryBNavSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.CountryBNavCancel = New System.Windows.Forms.ToolStripButton()
+        Me.CountryTableAdapter = New DMTS.CountryTableAdapters.CountryTableAdapter()
+        Me.TableAdapterManager = New DMTS.CountryTableAdapters.TableAdapterManager()
+        Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
         Me.CountryDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TxtCSearch = New System.Windows.Forms.TextBox()
-        Me.CountryTableAdapter = New DMTS.CountryTableAdapters.CountryTableAdapter()
-        Me.TableAdapterManager = New DMTS.CountryTableAdapters.TableAdapterManager()
         Label2 = New System.Windows.Forms.Label()
-        CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl2.SuspendLayout()
         CType(Me.CountryBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CountryBindingNavigator.SuspendLayout()
         CType(Me.CountryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Country, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl2.SuspendLayout()
         CType(Me.CountryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label2.ForeColor = System.Drawing.Color.Maroon
-        Label2.Location = New System.Drawing.Point(13, 38)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(59, 17)
-        Label2.TabIndex = 12
-        Label2.Text = "Search"
-        '
-        'GroupControl2
-        '
-        Me.GroupControl2.Controls.Add(Me.CountryBindingNavigator)
-        Me.GroupControl2.Controls.Add(Me.CountryDataGridView)
-        Me.GroupControl2.Controls.Add(Label2)
-        Me.GroupControl2.Controls.Add(Me.TxtCSearch)
-        Me.GroupControl2.Location = New System.Drawing.Point(12, 12)
-        Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.ShowCaption = False
-        Me.GroupControl2.Size = New System.Drawing.Size(278, 299)
-        Me.GroupControl2.TabIndex = 9
-        Me.GroupControl2.Text = "GroupControl2"
         '
         'CountryBindingNavigator
         '
@@ -98,7 +74,7 @@ Partial Class FrmCountry
         Me.CountryBindingNavigator.Name = "CountryBindingNavigator"
         Me.CountryBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
         Me.CountryBindingNavigator.Size = New System.Drawing.Size(274, 25)
-        Me.CountryBindingNavigator.TabIndex = 10
+        Me.CountryBindingNavigator.TabIndex = 11
         Me.CountryBindingNavigator.Text = "BindingNavigator1"
         '
         'CountryBNavAddNewItem
@@ -135,7 +111,7 @@ Partial Class FrmCountry
         Me.CountryBNavDeleteItem.Image = CType(resources.GetObject("CountryBNavDeleteItem.Image"), System.Drawing.Image)
         Me.CountryBNavDeleteItem.Name = "CountryBNavDeleteItem"
         Me.CountryBNavDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.CountryBNavDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavDeleteItem.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
@@ -218,7 +194,7 @@ Partial Class FrmCountry
         Me.CountryBNavSaveItem.Enabled = False
         Me.CountryBNavSaveItem.Image = CType(resources.GetObject("CountryBNavSaveItem.Image"), System.Drawing.Image)
         Me.CountryBNavSaveItem.Name = "CountryBNavSaveItem"
-        Me.CountryBNavSaveItem.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavSaveItem.Text = "Save Data"
         '
         'CountryBNavCancel
@@ -228,8 +204,31 @@ Partial Class FrmCountry
         Me.CountryBNavCancel.Image = Global.DMTS.My.Resources.Resources.Undo
         Me.CountryBNavCancel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CountryBNavCancel.Name = "CountryBNavCancel"
-        Me.CountryBNavCancel.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavCancel.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavCancel.Text = "Cancel Operation"
+        '
+        'CountryTableAdapter
+        '
+        Me.CountryTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CountryTableAdapter = Me.CountryTableAdapter
+        Me.TableAdapterManager.UpdateOrder = DMTS.CountryTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'GroupControl2
+        '
+        Me.GroupControl2.Controls.Add(Me.CountryDataGridView)
+        Me.GroupControl2.Controls.Add(Me.CountryBindingNavigator)
+        Me.GroupControl2.Controls.Add(Label2)
+        Me.GroupControl2.Controls.Add(Me.TxtCSearch)
+        Me.GroupControl2.Location = New System.Drawing.Point(12, 12)
+        Me.GroupControl2.Name = "GroupControl2"
+        Me.GroupControl2.ShowCaption = False
+        Me.GroupControl2.Size = New System.Drawing.Size(278, 299)
+        Me.GroupControl2.TabIndex = 12
+        Me.GroupControl2.Text = "GroupControl2"
         '
         'CountryDataGridView
         '
@@ -262,6 +261,17 @@ Partial Class FrmCountry
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
         Me.DataGridViewTextBoxColumn2.Width = 200
         '
+        'Label2
+        '
+        Label2.AutoSize = True
+        Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label2.ForeColor = System.Drawing.Color.Maroon
+        Label2.Location = New System.Drawing.Point(13, 38)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(59, 17)
+        Label2.TabIndex = 12
+        Label2.Text = "Search"
+        '
         'TxtCSearch
         '
         Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
@@ -271,45 +281,32 @@ Partial Class FrmCountry
         Me.TxtCSearch.Size = New System.Drawing.Size(186, 21)
         Me.TxtCSearch.TabIndex = 11
         '
-        'CountryTableAdapter
-        '
-        Me.CountryTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CountryTableAdapter = Me.CountryTableAdapter
-        Me.TableAdapterManager.UpdateOrder = DMTS.CountryTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'FrmCountry
+        'FrmMerchant
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(320, 329)
+        Me.ClientSize = New System.Drawing.Size(303, 320)
         Me.Controls.Add(Me.GroupControl2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "FrmCountry"
-        Me.Text = "Country Maintenance"
-        CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl2.ResumeLayout(False)
-        Me.GroupControl2.PerformLayout()
+        Me.Name = "FrmMerchant"
+        Me.Text = "Merchant Maintenance"
         CType(Me.CountryBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CountryBindingNavigator.ResumeLayout(False)
         Me.CountryBindingNavigator.PerformLayout()
         CType(Me.CountryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Country, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl2.ResumeLayout(False)
+        Me.GroupControl2.PerformLayout()
         CType(Me.CountryDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
-    Friend WithEvents TxtCSearch As TextBox
-    Friend WithEvents Country As Country
-    Friend WithEvents CountryBindingSource As BindingSource
-    Friend WithEvents CountryTableAdapter As CountryTableAdapters.CountryTableAdapter
-    Friend WithEvents TableAdapterManager As CountryTableAdapters.TableAdapterManager
+
     Friend WithEvents CountryBindingNavigator As BindingNavigator
     Friend WithEvents CountryBNavAddNewItem As ToolStripButton
+    Friend WithEvents CountryBindingSource As BindingSource
+    Friend WithEvents Country As Country
     Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
     Friend WithEvents CountryBNavDeleteItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
@@ -320,10 +317,14 @@ Partial Class FrmCountry
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents CountryBNavEditItem As ToolStripButton
     Friend WithEvents CountryBNavSaveItem As ToolStripButton
+    Friend WithEvents CountryBNavCancel As ToolStripButton
+    Friend WithEvents CountryTableAdapter As CountryTableAdapters.CountryTableAdapter
+    Friend WithEvents TableAdapterManager As CountryTableAdapters.TableAdapterManager
+    Friend WithEvents GroupControl2 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents CountryDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents CountryBNavCancel As ToolStripButton
-    Friend WithEvents CountryBNavEditItem As ToolStripButton
+    Friend WithEvents TxtCSearch As TextBox
 End Class

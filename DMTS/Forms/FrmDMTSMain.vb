@@ -106,4 +106,8 @@ Public Class FrmDMTSMain
     Private Sub CardTypeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CardTypeToolStripMenuItem.Click
         FrmCardType.Show()
     End Sub
+
+    Private Sub MerchantToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MerchantToolStripMenuItem.Click
+        FrmMerchant.Show()
+    End Sub
 End Class

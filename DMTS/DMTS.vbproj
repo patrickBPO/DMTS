@@ -132,6 +132,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CardTypeDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\CityDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CityDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\Country.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,10 +147,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DistrictDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\MerchantDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerchantDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCardType.Designer.vb">
       <DependentUpon>FrmCardType.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCardType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCity.Designer.vb">
+      <DependentUpon>FrmCity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCity.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmCountry.Designer.vb">
@@ -188,6 +204,12 @@
       <DependentUpon>FrmDMTSMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmMerchant.Designer.vb">
+      <DependentUpon>FrmMerchant.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMerchant.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmViewTrans.Designer.vb">
       <DependentUpon>FrmViewTrans.vb</DependentUpon>
     </Compile>
@@ -216,6 +238,9 @@
     <EmbeddedResource Include="Forms\FrmCardType.resx">
       <DependentUpon>FrmCardType.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCity.resx">
+      <DependentUpon>FrmCity.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCountry.resx">
       <DependentUpon>FrmCountry.vb</DependentUpon>
     </EmbeddedResource>
@@ -236,6 +261,9 @@
     <EmbeddedResource Include="Forms\FrmDMTSMain.resx">
       <DependentUpon>FrmDMTSMain.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMerchant.resx">
+      <DependentUpon>FrmMerchant.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmViewTrans.resx">
       <DependentUpon>FrmViewTrans.vb</DependentUpon>
@@ -260,6 +288,17 @@
     <None Include="Data\CardTypeDS.xss">
       <DependentUpon>CardTypeDS.xsd</DependentUpon>
     </None>
+    <None Include="Data\CityDS.xsc">
+      <DependentUpon>CityDS.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CityDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CityDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\CityDS.xss">
+      <DependentUpon>CityDS.xsd</DependentUpon>
+    </None>
     <None Include="Data\Country.xsc">
       <DependentUpon>Country.xsd</DependentUpon>
     </None>
@@ -281,6 +320,17 @@
     </None>
     <None Include="Data\DistrictDS.xss">
       <DependentUpon>DistrictDS.xsd</DependentUpon>
+    </None>
+    <None Include="Data\MerchantDS.xsc">
+      <DependentUpon>MerchantDS.xsd</DependentUpon>
+    </None>
+    <None Include="Data\MerchantDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MerchantDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\MerchantDS.xss">
+      <DependentUpon>MerchantDS.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
