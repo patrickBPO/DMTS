@@ -28,34 +28,35 @@ Partial Class FrmCity
         Dim Label1 As System.Windows.Forms.Label
         Dim Label3 As System.Windows.Forms.Label
         Dim Label4 As System.Windows.Forms.Label
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCity))
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
-        Me.CityDataGridView = New System.Windows.Forms.DataGridView()
-        Me.CityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DistrictBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TxtCountry = New System.Windows.Forms.TextBox()
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CityDS = New DMTS.CityDS()
-        Me.TxtSearch = New System.Windows.Forms.TextBox()
-        Me.TxtDSearch = New System.Windows.Forms.TextBox()
-        Me.TxtCSearch = New System.Windows.Forms.TextBox()
-        Me.CityTableAdapter = New DMTS.CityDSTableAdapters.cityTableAdapter()
-        Me.TableAdapterManager = New DMTS.CityDSTableAdapters.TableAdapterManager()
-        Me.CountryTableAdapter = New DMTS.CityDSTableAdapters.countryTableAdapter()
-        Me.CountryDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DistrictTableAdapter = New DMTS.CityDSTableAdapters.districtTableAdapter()
         Me.DistrictDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DistrictBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CountryDataGridView = New System.Windows.Forms.DataGridView()
+        Me.CountryrecnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TxtDistrict = New System.Windows.Forms.TextBox()
+        Me.TxtCSearch = New System.Windows.Forms.TextBox()
+        Me.TxtDSearch = New System.Windows.Forms.TextBox()
+        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.CityBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.CityBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
@@ -71,13 +72,18 @@ Partial Class FrmCity
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.CityBNavSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.CityBNavCancel = New System.Windows.Forms.ToolStripButton()
-        Me.TxtCountry = New System.Windows.Forms.TextBox()
-        Me.CountryrecnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TxtDistrict = New System.Windows.Forms.TextBox()
+        Me.CityDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TxtSearch = New System.Windows.Forms.TextBox()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CityTableAdapter = New DMTS.CityDSTableAdapters.cityTableAdapter()
+        Me.TableAdapterManager = New DMTS.CityDSTableAdapters.TableAdapterManager()
+        Me.CountryTableAdapter = New DMTS.CityDSTableAdapters.countryTableAdapter()
+        Me.DistrictTableAdapter = New DMTS.CityDSTableAdapters.districtTableAdapter()
         Label2 = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
@@ -85,17 +91,17 @@ Partial Class FrmCity
         Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl1.SuspendLayout()
-        CType(Me.CityDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DistrictBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CountryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CityDS, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CountryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DistrictDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DistrictBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CountryDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl1.SuspendLayout()
         CType(Me.CityBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CityBindingNavigator.SuspendLayout()
+        CType(Me.CityBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CityDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -155,6 +161,7 @@ Partial Class FrmCity
         '
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.GroupControl1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(21, 3)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(653, 600)
@@ -179,6 +186,172 @@ Partial Class FrmCity
         Me.GroupBox2.TabIndex = 11
         Me.GroupBox2.TabStop = False
         '
+        'TxtCountry
+        '
+        Me.TxtCountry.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCountry.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CountryBindingSource, "description", True))
+        Me.TxtCountry.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCountry.Location = New System.Drawing.Point(74, 43)
+        Me.TxtCountry.Name = "TxtCountry"
+        Me.TxtCountry.ReadOnly = True
+        Me.TxtCountry.Size = New System.Drawing.Size(185, 21)
+        Me.TxtCountry.TabIndex = 12
+        '
+        'CountryBindingSource
+        '
+        Me.CountryBindingSource.DataMember = "country"
+        Me.CountryBindingSource.DataSource = Me.CityDS
+        '
+        'CityDS
+        '
+        Me.CityDS.DataSetName = "CityDS"
+        Me.CityDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DistrictDataGridView
+        '
+        Me.DistrictDataGridView.AllowUserToAddRows = False
+        Me.DistrictDataGridView.AllowUserToDeleteRows = False
+        Me.DistrictDataGridView.AutoGenerateColumns = False
+        Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.LightGreen
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DistrictDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        Me.DistrictDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DistrictDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
+        Me.DistrictDataGridView.DataSource = Me.DistrictBindingSource
+        Me.DistrictDataGridView.Location = New System.Drawing.Point(13, 315)
+        Me.DistrictDataGridView.Name = "DistrictDataGridView"
+        Me.DistrictDataGridView.ReadOnly = True
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DistrictDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        Me.DistrictDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle12
+        Me.DistrictDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DistrictDataGridView.Size = New System.Drawing.Size(244, 254)
+        Me.DistrictDataGridView.TabIndex = 9
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "District_rec_no"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "District_rec_no"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Visible = False
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "description"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "District"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 200
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Country_rec_no"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Country_rec_no"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Visible = False
+        '
+        'DistrictBindingSource
+        '
+        Me.DistrictBindingSource.DataMember = "country_district"
+        Me.DistrictBindingSource.DataSource = Me.CountryBindingSource
+        '
+        'CountryDataGridView
+        '
+        Me.CountryDataGridView.AllowUserToAddRows = False
+        Me.CountryDataGridView.AllowUserToDeleteRows = False
+        Me.CountryDataGridView.AllowUserToOrderColumns = True
+        Me.CountryDataGridView.AutoGenerateColumns = False
+        Me.CountryDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.LightGreen
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CountryDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        Me.CountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CountryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CountryrecnoDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn})
+        Me.CountryDataGridView.DataSource = Me.CountryBindingSource
+        Me.CountryDataGridView.Location = New System.Drawing.Point(15, 66)
+        Me.CountryDataGridView.Name = "CountryDataGridView"
+        Me.CountryDataGridView.ReadOnly = True
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CountryDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        Me.CountryDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle15
+        Me.CountryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.CountryDataGridView.Size = New System.Drawing.Size(244, 191)
+        Me.CountryDataGridView.TabIndex = 9
+        '
+        'CountryrecnoDataGridViewTextBoxColumn
+        '
+        Me.CountryrecnoDataGridViewTextBoxColumn.DataPropertyName = "country_rec_no"
+        Me.CountryrecnoDataGridViewTextBoxColumn.HeaderText = "country_rec_no"
+        Me.CountryrecnoDataGridViewTextBoxColumn.Name = "CountryrecnoDataGridViewTextBoxColumn"
+        Me.CountryrecnoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.CountryrecnoDataGridViewTextBoxColumn.Visible = False
+        '
+        'DescriptionDataGridViewTextBoxColumn
+        '
+        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "description"
+        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Country"
+        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
+        Me.DescriptionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescriptionDataGridViewTextBoxColumn.Width = 200
+        '
+        'TxtDistrict
+        '
+        Me.TxtDistrict.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtDistrict.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DistrictBindingSource, "description", True))
+        Me.TxtDistrict.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
+        Me.TxtDistrict.Location = New System.Drawing.Point(71, 288)
+        Me.TxtDistrict.Name = "TxtDistrict"
+        Me.TxtDistrict.ReadOnly = True
+        Me.TxtDistrict.Size = New System.Drawing.Size(185, 21)
+        Me.TxtDistrict.TabIndex = 12
+        '
+        'TxtCSearch
+        '
+        Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtCSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCSearch.Location = New System.Drawing.Point(74, 15)
+        Me.TxtCSearch.Name = "TxtCSearch"
+        Me.TxtCSearch.Size = New System.Drawing.Size(185, 21)
+        Me.TxtCSearch.TabIndex = 9
+        '
+        'TxtDSearch
+        '
+        Me.TxtDSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtDSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtDSearch.Location = New System.Drawing.Point(71, 263)
+        Me.TxtDSearch.Name = "TxtDSearch"
+        Me.TxtDSearch.Size = New System.Drawing.Size(185, 21)
+        Me.TxtDSearch.TabIndex = 9
+        '
         'GroupControl1
         '
         Me.GroupControl1.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
@@ -192,184 +365,6 @@ Partial Class FrmCity
         Me.GroupControl1.Size = New System.Drawing.Size(326, 567)
         Me.GroupControl1.TabIndex = 11
         Me.GroupControl1.Text = "CITY LISTING"
-        '
-        'CityDataGridView
-        '
-        Me.CityDataGridView.AllowUserToAddRows = False
-        Me.CityDataGridView.AutoGenerateColumns = False
-        Me.CityDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Tahoma", 9.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.SteelBlue
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CityDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.CityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CityDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
-        Me.CityDataGridView.DataSource = Me.CityBindingSource
-        Me.CityDataGridView.Location = New System.Drawing.Point(21, 86)
-        Me.CityDataGridView.Name = "CityDataGridView"
-        Me.CityDataGridView.ReadOnly = True
-        Me.CityDataGridView.Size = New System.Drawing.Size(294, 473)
-        Me.CityDataGridView.TabIndex = 9
-        '
-        'CityBindingSource
-        '
-        Me.CityBindingSource.DataMember = "district_city"
-        Me.CityBindingSource.DataSource = Me.DistrictBindingSource
-        '
-        'DistrictBindingSource
-        '
-        Me.DistrictBindingSource.DataMember = "country_district"
-        Me.DistrictBindingSource.DataSource = Me.CountryBindingSource
-        '
-        'CountryBindingSource
-        '
-        Me.CountryBindingSource.DataMember = "country"
-        Me.CountryBindingSource.DataSource = Me.CityDS
-        '
-        'CityDS
-        '
-        Me.CityDS.DataSetName = "CityDS"
-        Me.CityDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TxtSearch
-        '
-        Me.TxtSearch.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtSearch.Location = New System.Drawing.Point(78, 59)
-        Me.TxtSearch.Name = "TxtSearch"
-        Me.TxtSearch.Size = New System.Drawing.Size(237, 21)
-        Me.TxtSearch.TabIndex = 7
-        '
-        'TxtDSearch
-        '
-        Me.TxtDSearch.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TxtDSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtDSearch.Location = New System.Drawing.Point(71, 263)
-        Me.TxtDSearch.Name = "TxtDSearch"
-        Me.TxtDSearch.Size = New System.Drawing.Size(185, 20)
-        Me.TxtDSearch.TabIndex = 9
-        '
-        'TxtCSearch
-        '
-        Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TxtCSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtCSearch.Location = New System.Drawing.Point(74, 15)
-        Me.TxtCSearch.Name = "TxtCSearch"
-        Me.TxtCSearch.Size = New System.Drawing.Size(185, 20)
-        Me.TxtCSearch.TabIndex = 9
-        '
-        'CityTableAdapter
-        '
-        Me.CityTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.cityTableAdapter = Me.CityTableAdapter
-        Me.TableAdapterManager.UpdateOrder = DMTS.CityDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'CountryTableAdapter
-        '
-        Me.CountryTableAdapter.ClearBeforeFill = True
-        '
-        'CountryDataGridView
-        '
-        Me.CountryDataGridView.AllowUserToAddRows = False
-        Me.CountryDataGridView.AllowUserToDeleteRows = False
-        Me.CountryDataGridView.AllowUserToOrderColumns = True
-        Me.CountryDataGridView.AutoGenerateColumns = False
-        Me.CountryDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGreen
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.DarkGreen
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CountryDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.CountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CountryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CountryrecnoDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn})
-        Me.CountryDataGridView.DataSource = Me.CountryBindingSource
-        Me.CountryDataGridView.Location = New System.Drawing.Point(15, 66)
-        Me.CountryDataGridView.Name = "CountryDataGridView"
-        Me.CountryDataGridView.ReadOnly = True
-        Me.CountryDataGridView.Size = New System.Drawing.Size(244, 191)
-        Me.CountryDataGridView.TabIndex = 9
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "country_rec_no"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "country_rec_no"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "description"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "description"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DistrictTableAdapter
-        '
-        Me.DistrictTableAdapter.ClearBeforeFill = True
-        '
-        'DistrictDataGridView
-        '
-        Me.DistrictDataGridView.AllowUserToAddRows = False
-        Me.DistrictDataGridView.AllowUserToDeleteRows = False
-        Me.DistrictDataGridView.AutoGenerateColumns = False
-        Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGreen
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.DarkGreen
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DistrictDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DistrictDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DistrictDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
-        Me.DistrictDataGridView.DataSource = Me.DistrictBindingSource
-        Me.DistrictDataGridView.Location = New System.Drawing.Point(13, 315)
-        Me.DistrictDataGridView.Name = "DistrictDataGridView"
-        Me.DistrictDataGridView.ReadOnly = True
-        Me.DistrictDataGridView.Size = New System.Drawing.Size(244, 254)
-        Me.DistrictDataGridView.TabIndex = 9
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "City_rec_no"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "City_rec_no"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Description"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "City"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 250
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "District_rec_no"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "District_rec_no"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Visible = False
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Country_rec_no"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Country_rec_no"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Visible = False
         '
         'CityBindingNavigator
         '
@@ -388,6 +383,11 @@ Partial Class FrmCity
         Me.CityBindingNavigator.Size = New System.Drawing.Size(322, 25)
         Me.CityBindingNavigator.TabIndex = 10
         Me.CityBindingNavigator.Text = "BindingNavigator1"
+        '
+        'CityBindingSource
+        '
+        Me.CityBindingSource.DataMember = "district_city"
+        Me.CityBindingSource.DataSource = Me.DistrictBindingSource
         '
         'ToolStripLabel1
         '
@@ -425,7 +425,6 @@ Partial Class FrmCity
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -514,68 +513,110 @@ Partial Class FrmCity
         Me.CityBNavCancel.Size = New System.Drawing.Size(23, 22)
         Me.CityBNavCancel.Text = "Cancel Operation"
         '
-        'TxtCountry
+        'CityDataGridView
         '
-        Me.TxtCountry.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtCountry.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CountryBindingSource, "description", True))
-        Me.TxtCountry.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCountry.Location = New System.Drawing.Point(74, 43)
-        Me.TxtCountry.Name = "TxtCountry"
-        Me.TxtCountry.ReadOnly = True
-        Me.TxtCountry.Size = New System.Drawing.Size(185, 21)
-        Me.TxtCountry.TabIndex = 12
-        Me.TxtCountry.Text = "COUNTRY"
+        Me.CityDataGridView.AllowUserToAddRows = False
+        Me.CityDataGridView.AutoGenerateColumns = False
+        Me.CityDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.Color.LightGreen
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Tahoma", 9.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CityDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
+        Me.CityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CityDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.CityDataGridView.DataSource = Me.CityBindingSource
+        Me.CityDataGridView.Location = New System.Drawing.Point(21, 86)
+        Me.CityDataGridView.Name = "CityDataGridView"
+        Me.CityDataGridView.ReadOnly = True
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CityDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        Me.CityDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle18
+        Me.CityDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.CityDataGridView.Size = New System.Drawing.Size(294, 473)
+        Me.CityDataGridView.TabIndex = 9
         '
-        'CountryrecnoDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn1
         '
-        Me.CountryrecnoDataGridViewTextBoxColumn.DataPropertyName = "country_rec_no"
-        Me.CountryrecnoDataGridViewTextBoxColumn.HeaderText = "country_rec_no"
-        Me.CountryrecnoDataGridViewTextBoxColumn.Name = "CountryrecnoDataGridViewTextBoxColumn"
-        Me.CountryrecnoDataGridViewTextBoxColumn.ReadOnly = True
-        Me.CountryrecnoDataGridViewTextBoxColumn.Visible = False
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "City_rec_no"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "City_rec_no"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
         '
-        'DescriptionDataGridViewTextBoxColumn
+        'DataGridViewTextBoxColumn2
         '
-        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "description"
-        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Country"
-        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
-        Me.DescriptionDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DescriptionDataGridViewTextBoxColumn.Width = 200
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Description"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "City"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 250
         '
-        'DataGridViewTextBoxColumn7
+        'DataGridViewTextBoxColumn3
         '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "District_rec_no"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "District_rec_no"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Visible = False
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "District_rec_no"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "District_rec_no"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Visible = False
         '
-        'DataGridViewTextBoxColumn8
+        'DataGridViewTextBoxColumn4
         '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "description"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "District"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 200
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Country_rec_no"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Country_rec_no"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Visible = False
         '
-        'DataGridViewTextBoxColumn9
+        'TxtSearch
         '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Country_rec_no"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Country_rec_no"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
+        Me.TxtSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtSearch.Location = New System.Drawing.Point(78, 59)
+        Me.TxtSearch.Name = "TxtSearch"
+        Me.TxtSearch.Size = New System.Drawing.Size(237, 21)
+        Me.TxtSearch.TabIndex = 7
         '
-        'TxtDistrict
+        'DataGridViewTextBoxColumn5
         '
-        Me.TxtDistrict.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtDistrict.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.DistrictBindingSource, "description", True))
-        Me.TxtDistrict.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold)
-        Me.TxtDistrict.Location = New System.Drawing.Point(71, 288)
-        Me.TxtDistrict.Name = "TxtDistrict"
-        Me.TxtDistrict.ReadOnly = True
-        Me.TxtDistrict.Size = New System.Drawing.Size(185, 21)
-        Me.TxtDistrict.TabIndex = 12
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "country_rec_no"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "country_rec_no"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "description"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "description"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'CityTableAdapter
+        '
+        Me.CityTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.cityTableAdapter = Me.CityTableAdapter
+        Me.TableAdapterManager.UpdateOrder = DMTS.CityDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'CountryTableAdapter
+        '
+        Me.CountryTableAdapter.ClearBeforeFill = True
+        '
+        'DistrictTableAdapter
+        '
+        Me.DistrictTableAdapter.ClearBeforeFill = True
         '
         'FrmCity
         '
@@ -589,19 +630,19 @@ Partial Class FrmCity
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.CountryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CityDS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DistrictDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DistrictBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CountryDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         Me.GroupControl1.PerformLayout()
-        CType(Me.CityDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CityBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DistrictBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CountryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CityDS, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CountryDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DistrictDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CityBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CityBindingNavigator.ResumeLayout(False)
         Me.CityBindingNavigator.PerformLayout()
+        CType(Me.CityBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CityDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

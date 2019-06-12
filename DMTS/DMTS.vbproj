@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{ED220512-166F-4FB9-AA13-9471B5159C5A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>DMTS.FrmCity</StartupObject>
+    <StartupObject>Sub Main</StartupObject>
     <RootNamespace>DMTS</RootNamespace>
     <AssemblyName>DMTS</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -127,6 +127,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ClsControls.vb" />
     <Compile Include="Data\CardTypeDS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

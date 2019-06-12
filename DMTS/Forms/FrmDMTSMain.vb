@@ -110,4 +110,8 @@ Public Class FrmDMTSMain
     Private Sub MerchantToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MerchantToolStripMenuItem.Click
         FrmMerchant.Show()
     End Sub
+
+    Private Sub CityToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CityToolStripMenuItem.Click
+        FrmCity.Show()
+    End Sub
 End Class

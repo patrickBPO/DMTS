@@ -1,4 +1,4 @@
-﻿Imports DMTS.MySQLCom
+﻿Imports DMTS.ClsControls
 Public Class FrmCardType
     Private Sub Card_typeBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CardTypeBNavSaveItem.Click
         Me.Validate()

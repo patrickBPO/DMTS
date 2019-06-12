@@ -1086,6 +1086,7 @@ Partial Public Class CityDS
             Me.columnDescription.MaxLength = 1020
             Me.columnDistrict_rec_no.AllowDBNull = false
             Me.columnCountry_rec_no.AllowDBNull = false
+            Me.columnCountry_rec_no.DefaultValue = CType(0,Integer)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

@@ -101,7 +101,7 @@ WHERE        (City_rec_no = ?)</CommandText>
   <xs:element name="CityDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CityDS" msprop:Generator_UserDSName="CityDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="country" msprop:Generator_TableClassName="countryDataTable" msprop:Generator_TableVarName="tablecountry" msprop:Generator_TablePropName="country" msprop:Generator_RowDeletingName="countryRowDeleting" msprop:Generator_RowChangingName="countryRowChanging" msprop:Generator_RowEvHandlerName="countryRowChangeEventHandler" msprop:Generator_RowDeletedName="countryRowDeleted" msprop:Generator_UserTableName="country" msprop:Generator_RowChangedName="countryRowChanged" msprop:Generator_RowEvArgName="countryRowChangeEvent" msprop:Generator_RowClassName="countryRow">
+        <xs:element name="country" msprop:Generator_TableClassName="countryDataTable" msprop:Generator_TableVarName="tablecountry" msprop:Generator_RowChangedName="countryRowChanged" msprop:Generator_TablePropName="country" msprop:Generator_RowDeletingName="countryRowDeleting" msprop:Generator_RowChangingName="countryRowChanging" msprop:Generator_RowEvHandlerName="countryRowChangeEventHandler" msprop:Generator_RowDeletedName="countryRowDeleted" msprop:Generator_RowClassName="countryRow" msprop:Generator_UserTableName="country" msprop:Generator_RowEvArgName="countryRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="country_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncountry_rec_no" msprop:Generator_ColumnPropNameInRow="country_rec_no" msprop:Generator_ColumnPropNameInTable="country_rec_noColumn" msprop:Generator_UserColumnName="country_rec_no" type="xs:int" minOccurs="0" />
@@ -115,7 +115,7 @@ WHERE        (City_rec_no = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="district" msprop:Generator_TableClassName="districtDataTable" msprop:Generator_TableVarName="tabledistrict" msprop:Generator_TablePropName="district" msprop:Generator_RowDeletingName="districtRowDeleting" msprop:Generator_RowChangingName="districtRowChanging" msprop:Generator_RowEvHandlerName="districtRowChangeEventHandler" msprop:Generator_RowDeletedName="districtRowDeleted" msprop:Generator_UserTableName="district" msprop:Generator_RowChangedName="districtRowChanged" msprop:Generator_RowEvArgName="districtRowChangeEvent" msprop:Generator_RowClassName="districtRow">
+        <xs:element name="district" msprop:Generator_TableClassName="districtDataTable" msprop:Generator_TableVarName="tabledistrict" msprop:Generator_RowChangedName="districtRowChanged" msprop:Generator_TablePropName="district" msprop:Generator_RowDeletingName="districtRowDeleting" msprop:Generator_RowChangingName="districtRowChanging" msprop:Generator_RowEvHandlerName="districtRowChangeEventHandler" msprop:Generator_RowDeletedName="districtRowDeleted" msprop:Generator_RowClassName="districtRow" msprop:Generator_UserTableName="district" msprop:Generator_RowEvArgName="districtRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="District_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnDistrict_rec_no" msprop:Generator_ColumnPropNameInRow="District_rec_no" msprop:Generator_ColumnPropNameInTable="District_rec_noColumn" msprop:Generator_UserColumnName="District_rec_no" type="xs:int" minOccurs="0" />
@@ -130,7 +130,7 @@ WHERE        (City_rec_no = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="city" msprop:Generator_TableClassName="cityDataTable" msprop:Generator_TableVarName="tablecity" msprop:Generator_TablePropName="city" msprop:Generator_RowDeletingName="cityRowDeleting" msprop:Generator_RowChangingName="cityRowChanging" msprop:Generator_RowEvHandlerName="cityRowChangeEventHandler" msprop:Generator_RowDeletedName="cityRowDeleted" msprop:Generator_UserTableName="city" msprop:Generator_RowChangedName="cityRowChanged" msprop:Generator_RowEvArgName="cityRowChangeEvent" msprop:Generator_RowClassName="cityRow">
+        <xs:element name="city" msprop:Generator_TableClassName="cityDataTable" msprop:Generator_TableVarName="tablecity" msprop:Generator_RowChangedName="cityRowChanged" msprop:Generator_TablePropName="city" msprop:Generator_RowDeletingName="cityRowDeleting" msprop:Generator_RowChangingName="cityRowChanging" msprop:Generator_RowEvHandlerName="cityRowChangeEventHandler" msprop:Generator_RowDeletedName="cityRowDeleted" msprop:Generator_RowClassName="cityRow" msprop:Generator_UserTableName="city" msprop:Generator_RowEvArgName="cityRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="City_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCity_rec_no" msprop:Generator_ColumnPropNameInRow="City_rec_no" msprop:Generator_ColumnPropNameInTable="City_rec_noColumn" msprop:Generator_UserColumnName="City_rec_no" type="xs:int" minOccurs="0" />
@@ -142,7 +142,7 @@ WHERE        (City_rec_no = ?)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="District_rec_no" msprop:Generator_ColumnVarNameInTable="columnDistrict_rec_no" msprop:Generator_ColumnPropNameInRow="District_rec_no" msprop:Generator_ColumnPropNameInTable="District_rec_noColumn" msprop:Generator_UserColumnName="District_rec_no" type="xs:int" />
-              <xs:element name="Country_rec_no" msprop:Generator_ColumnVarNameInTable="columnCountry_rec_no" msprop:Generator_ColumnPropNameInRow="Country_rec_no" msprop:Generator_ColumnPropNameInTable="Country_rec_noColumn" msprop:Generator_UserColumnName="Country_rec_no" type="xs:int" />
+              <xs:element name="Country_rec_no" msprop:Generator_ColumnVarNameInTable="columnCountry_rec_no" msprop:Generator_ColumnPropNameInRow="Country_rec_no" msprop:Generator_ColumnPropNameInTable="Country_rec_noColumn" msprop:Generator_UserColumnName="Country_rec_no" type="xs:int" default="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -163,8 +163,8 @@ WHERE        (City_rec_no = ?)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="country_district" msdata:parent="country" msdata:child="district" msdata:parentkey="country_rec_no" msdata:childkey="Country_rec_no" msprop:Generator_UserChildTable="district" msprop:Generator_ChildPropName="GetdistrictRows" msprop:Generator_UserRelationName="country_district" msprop:Generator_ParentPropName="countryRow" msprop:Generator_RelationVarName="relationcountry_district" msprop:Generator_UserParentTable="country" />
-      <msdata:Relationship name="district_city" msdata:parent="district" msdata:child="city" msdata:parentkey="District_rec_no" msdata:childkey="District_rec_no" msprop:Generator_UserChildTable="city" msprop:Generator_ChildPropName="GetcityRows" msprop:Generator_UserRelationName="district_city" msprop:Generator_ParentPropName="districtRow" msprop:Generator_RelationVarName="relationdistrict_city" msprop:Generator_UserParentTable="district" />
+      <msdata:Relationship name="country_district" msdata:parent="country" msdata:child="district" msdata:parentkey="country_rec_no" msdata:childkey="Country_rec_no" msprop:Generator_UserChildTable="district" msprop:Generator_ChildPropName="GetdistrictRows" msprop:Generator_UserRelationName="country_district" msprop:Generator_RelationVarName="relationcountry_district" msprop:Generator_UserParentTable="country" msprop:Generator_ParentPropName="countryRow" />
+      <msdata:Relationship name="district_city" msdata:parent="district" msdata:child="city" msdata:parentkey="District_rec_no" msdata:childkey="District_rec_no" msprop:Generator_UserChildTable="city" msprop:Generator_ChildPropName="GetcityRows" msprop:Generator_UserRelationName="district_city" msprop:Generator_RelationVarName="relationdistrict_city" msprop:Generator_UserParentTable="district" msprop:Generator_ParentPropName="districtRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

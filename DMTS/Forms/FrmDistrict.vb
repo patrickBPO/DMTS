@@ -1,4 +1,4 @@
-﻿Imports DMTS.MySQLCom
+﻿Imports DMTS.ClsControls
 Public Class FrmDistrict
     Private Sub CountryBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CountryBindingNavigatorSaveItem.Click
         Me.Validate()
