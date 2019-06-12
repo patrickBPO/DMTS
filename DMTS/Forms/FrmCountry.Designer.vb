@@ -64,7 +64,7 @@ Partial Class FrmCountry
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Label2.ForeColor = System.Drawing.Color.Maroon
-        Label2.Location = New System.Drawing.Point(13, 38)
+        Label2.Location = New System.Drawing.Point(13, 64)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(59, 17)
         Label2.TabIndex = 12
@@ -72,16 +72,17 @@ Partial Class FrmCountry
         '
         'GroupControl2
         '
+        Me.GroupControl2.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GroupControl2.AppearanceCaption.Options.UseFont = True
         Me.GroupControl2.Controls.Add(Me.CountryBindingNavigator)
         Me.GroupControl2.Controls.Add(Me.CountryDataGridView)
         Me.GroupControl2.Controls.Add(Label2)
         Me.GroupControl2.Controls.Add(Me.TxtCSearch)
         Me.GroupControl2.Location = New System.Drawing.Point(12, 12)
         Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.ShowCaption = False
-        Me.GroupControl2.Size = New System.Drawing.Size(278, 299)
+        Me.GroupControl2.Size = New System.Drawing.Size(278, 321)
         Me.GroupControl2.TabIndex = 9
-        Me.GroupControl2.Text = "GroupControl2"
+        Me.GroupControl2.Text = "COUNTRY LISTING"
         '
         'CountryBindingNavigator
         '
@@ -90,7 +91,7 @@ Partial Class FrmCountry
         Me.CountryBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.CountryBindingNavigator.DeleteItem = Me.CountryBNavDeleteItem
         Me.CountryBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.CountryBNavAddNewItem, Me.CountryBNavEditItem, Me.CountryBNavDeleteItem, Me.CountryBNavSaveItem, Me.CountryBNavCancel})
-        Me.CountryBindingNavigator.Location = New System.Drawing.Point(2, 2)
+        Me.CountryBindingNavigator.Location = New System.Drawing.Point(2, 20)
         Me.CountryBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.CountryBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.CountryBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -135,7 +136,7 @@ Partial Class FrmCountry
         Me.CountryBNavDeleteItem.Image = CType(resources.GetObject("CountryBNavDeleteItem.Image"), System.Drawing.Image)
         Me.CountryBNavDeleteItem.Name = "CountryBNavDeleteItem"
         Me.CountryBNavDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.CountryBNavDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavDeleteItem.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavDeleteItem.Text = "Delete"
         '
         'BindingNavigatorMoveFirstItem
@@ -167,7 +168,6 @@ Partial Class FrmCountry
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
-        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -218,7 +218,7 @@ Partial Class FrmCountry
         Me.CountryBNavSaveItem.Enabled = False
         Me.CountryBNavSaveItem.Image = CType(resources.GetObject("CountryBNavSaveItem.Image"), System.Drawing.Image)
         Me.CountryBNavSaveItem.Name = "CountryBNavSaveItem"
-        Me.CountryBNavSaveItem.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavSaveItem.Text = "Save Data"
         '
         'CountryBNavCancel
@@ -228,7 +228,7 @@ Partial Class FrmCountry
         Me.CountryBNavCancel.Image = Global.DMTS.My.Resources.Resources.Undo
         Me.CountryBNavCancel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CountryBNavCancel.Name = "CountryBNavCancel"
-        Me.CountryBNavCancel.Size = New System.Drawing.Size(23, 20)
+        Me.CountryBNavCancel.Size = New System.Drawing.Size(23, 22)
         Me.CountryBNavCancel.Text = "Cancel Operation"
         '
         'CountryDataGridView
@@ -239,7 +239,7 @@ Partial Class FrmCountry
         Me.CountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CountryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.CountryDataGridView.DataSource = Me.CountryBindingSource
-        Me.CountryDataGridView.Location = New System.Drawing.Point(16, 62)
+        Me.CountryDataGridView.Location = New System.Drawing.Point(16, 86)
         Me.CountryDataGridView.Name = "CountryDataGridView"
         Me.CountryDataGridView.ReadOnly = True
         Me.CountryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -266,7 +266,7 @@ Partial Class FrmCountry
         '
         Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.TxtCSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtCSearch.Location = New System.Drawing.Point(74, 35)
+        Me.TxtCSearch.Location = New System.Drawing.Point(74, 59)
         Me.TxtCSearch.Name = "TxtCSearch"
         Me.TxtCSearch.Size = New System.Drawing.Size(186, 21)
         Me.TxtCSearch.TabIndex = 11
@@ -285,7 +285,7 @@ Partial Class FrmCountry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(320, 329)
+        Me.ClientSize = New System.Drawing.Size(320, 343)
         Me.Controls.Add(Me.GroupControl2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmCountry"

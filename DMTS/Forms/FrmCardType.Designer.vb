@@ -45,12 +45,12 @@ Partial Class FrmCardType
         Me.CardTypeBNavSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.CardTypeBNavCancel = New System.Windows.Forms.ToolStripButton()
         Me.Card_typeDataGridView = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TxtCTSearch = New System.Windows.Forms.TextBox()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TxtCTSearch = New System.Windows.Forms.TextBox()
         Label2 = New System.Windows.Forms.Label()
         CType(Me.CardTypeDS, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Card_typeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -241,27 +241,6 @@ Partial Class FrmCardType
         Me.Card_typeDataGridView.Size = New System.Drawing.Size(293, 220)
         Me.Card_typeDataGridView.TabIndex = 1
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Label2)
-        Me.GroupBox1.Controls.Add(Me.TxtCTSearch)
-        Me.GroupBox1.Controls.Add(Me.Card_typeDataGridView)
-        Me.GroupBox1.Controls.Add(Me.Card_typeBindingNavigator)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(340, 316)
-        Me.GroupBox1.TabIndex = 2
-        Me.GroupBox1.TabStop = False
-        '
-        'TxtCTSearch
-        '
-        Me.TxtCTSearch.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TxtCTSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TxtCTSearch.Location = New System.Drawing.Point(80, 53)
-        Me.TxtCTSearch.Name = "TxtCTSearch"
-        Me.TxtCTSearch.Size = New System.Drawing.Size(232, 20)
-        Me.TxtCTSearch.TabIndex = 13
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "ct_rec_no"
@@ -287,6 +266,29 @@ Partial Class FrmCardType
         Me.DataGridViewTextBoxColumn2.HeaderText = "Code"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.Width = 50
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Label2)
+        Me.GroupBox1.Controls.Add(Me.TxtCTSearch)
+        Me.GroupBox1.Controls.Add(Me.Card_typeDataGridView)
+        Me.GroupBox1.Controls.Add(Me.Card_typeBindingNavigator)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(340, 316)
+        Me.GroupBox1.TabIndex = 2
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "CARD TYPE LISTING"
+        '
+        'TxtCTSearch
+        '
+        Me.TxtCTSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtCTSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtCTSearch.Location = New System.Drawing.Point(80, 53)
+        Me.TxtCTSearch.Name = "TxtCTSearch"
+        Me.TxtCTSearch.Size = New System.Drawing.Size(232, 20)
+        Me.TxtCTSearch.TabIndex = 13
         '
         'FrmCardType
         '

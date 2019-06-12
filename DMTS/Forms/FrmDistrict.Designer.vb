@@ -104,7 +104,7 @@ Partial Class FrmDistrict
         Label1.AutoSize = True
         Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Label1.ForeColor = System.Drawing.Color.Maroon
-        Label1.Location = New System.Drawing.Point(19, 52)
+        Label1.Location = New System.Drawing.Point(19, 70)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(59, 17)
         Label1.TabIndex = 8
@@ -314,7 +314,7 @@ Partial Class FrmDistrict
         Me.DistrictBindingNavigator.CountItem = Me.ToolStripLabel1
         Me.DistrictBindingNavigator.DeleteItem = Nothing
         Me.DistrictBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.DistrictBNavAddNewItem, Me.DistrictBNavEditItem, Me.DistrictBNavDeleteItem, Me.ToolStripSeparator4, Me.DistrictBNavSaveItem, Me.DistrictBNavCancel})
-        Me.DistrictBindingNavigator.Location = New System.Drawing.Point(2, 2)
+        Me.DistrictBindingNavigator.Location = New System.Drawing.Point(2, 20)
         Me.DistrictBindingNavigator.MoveFirstItem = Me.ToolStripButton3
         Me.DistrictBindingNavigator.MoveLastItem = Me.ToolStripButton6
         Me.DistrictBindingNavigator.MoveNextItem = Me.ToolStripButton5
@@ -423,7 +423,7 @@ Partial Class FrmDistrict
         Me.DistrictBNavDeleteItem.Image = CType(resources.GetObject("DistrictBNavDeleteItem.Image"), System.Drawing.Image)
         Me.DistrictBNavDeleteItem.Name = "DistrictBNavDeleteItem"
         Me.DistrictBNavDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.DistrictBNavDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.DistrictBNavDeleteItem.Size = New System.Drawing.Size(23, 22)
         Me.DistrictBNavDeleteItem.Text = "Delete"
         '
         'ToolStripSeparator4
@@ -437,7 +437,7 @@ Partial Class FrmDistrict
         Me.DistrictBNavSaveItem.Enabled = False
         Me.DistrictBNavSaveItem.Image = CType(resources.GetObject("DistrictBNavSaveItem.Image"), System.Drawing.Image)
         Me.DistrictBNavSaveItem.Name = "DistrictBNavSaveItem"
-        Me.DistrictBNavSaveItem.Size = New System.Drawing.Size(23, 20)
+        Me.DistrictBNavSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.DistrictBNavSaveItem.Text = "Save Data"
         '
         'DistrictBNavCancel
@@ -447,21 +447,22 @@ Partial Class FrmDistrict
         Me.DistrictBNavCancel.Image = CType(resources.GetObject("DistrictBNavCancel.Image"), System.Drawing.Image)
         Me.DistrictBNavCancel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DistrictBNavCancel.Name = "DistrictBNavCancel"
-        Me.DistrictBNavCancel.Size = New System.Drawing.Size(23, 20)
+        Me.DistrictBNavCancel.Size = New System.Drawing.Size(23, 22)
         Me.DistrictBNavCancel.Text = "Cancel Operation"
         '
         'GroupControl1
         '
+        Me.GroupControl1.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GroupControl1.AppearanceCaption.Options.UseFont = True
         Me.GroupControl1.Controls.Add(Label1)
         Me.GroupControl1.Controls.Add(Me.TxtSearch)
         Me.GroupControl1.Controls.Add(Me.DistrictDataGridView)
         Me.GroupControl1.Controls.Add(Me.DistrictBindingNavigator)
         Me.GroupControl1.Location = New System.Drawing.Point(15, 101)
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.ShowCaption = False
         Me.GroupControl1.Size = New System.Drawing.Size(292, 300)
         Me.GroupControl1.TabIndex = 7
-        Me.GroupControl1.Text = "GroupControl1"
+        Me.GroupControl1.Text = "DISTRICT LISTING"
         '
         'TxtSearch
         '
