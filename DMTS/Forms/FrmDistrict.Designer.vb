@@ -27,7 +27,7 @@ Partial Class FrmDistrict
         Dim Label1 As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDistrict))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.CountryBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -272,14 +272,14 @@ Partial Class FrmDistrict
         Me.DistrictDataGridView.AllowUserToAddRows = False
         Me.DistrictDataGridView.AutoGenerateColumns = False
         Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.25!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DistrictDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DistrictDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DistrictDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DistrictDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.District_rec_no, Me.DataGridViewTextBoxColumn2})
         Me.DistrictDataGridView.DataSource = Me.DistrictBindingSource
@@ -423,7 +423,7 @@ Partial Class FrmDistrict
         Me.DistrictBNavDeleteItem.Image = CType(resources.GetObject("DistrictBNavDeleteItem.Image"), System.Drawing.Image)
         Me.DistrictBNavDeleteItem.Name = "DistrictBNavDeleteItem"
         Me.DistrictBNavDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.DistrictBNavDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.DistrictBNavDeleteItem.Size = New System.Drawing.Size(23, 20)
         Me.DistrictBNavDeleteItem.Text = "Delete"
         '
         'ToolStripSeparator4
@@ -437,7 +437,7 @@ Partial Class FrmDistrict
         Me.DistrictBNavSaveItem.Enabled = False
         Me.DistrictBNavSaveItem.Image = CType(resources.GetObject("DistrictBNavSaveItem.Image"), System.Drawing.Image)
         Me.DistrictBNavSaveItem.Name = "DistrictBNavSaveItem"
-        Me.DistrictBNavSaveItem.Size = New System.Drawing.Size(23, 22)
+        Me.DistrictBNavSaveItem.Size = New System.Drawing.Size(23, 20)
         Me.DistrictBNavSaveItem.Text = "Save Data"
         '
         'DistrictBNavCancel
@@ -447,7 +447,7 @@ Partial Class FrmDistrict
         Me.DistrictBNavCancel.Image = CType(resources.GetObject("DistrictBNavCancel.Image"), System.Drawing.Image)
         Me.DistrictBNavCancel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.DistrictBNavCancel.Name = "DistrictBNavCancel"
-        Me.DistrictBNavCancel.Size = New System.Drawing.Size(23, 22)
+        Me.DistrictBNavCancel.Size = New System.Drawing.Size(23, 20)
         Me.DistrictBNavCancel.Text = "Cancel Operation"
         '
         'GroupControl1

@@ -1,5 +1,5 @@
 ﻿Public Class FrmCity
-    Private Sub CityBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles CityBindingNavigatorSaveItem.Click
+    Private Sub CityBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.CityBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.CityDS)
