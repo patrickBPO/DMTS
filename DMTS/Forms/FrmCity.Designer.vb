@@ -425,6 +425,7 @@ Partial Class FrmCity
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -520,7 +521,7 @@ Partial Class FrmCity
         Me.CityDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
         DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle16.BackColor = System.Drawing.Color.LightGreen
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Tahoma", 9.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Tahoma", 8.25!)
         DataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
         DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText

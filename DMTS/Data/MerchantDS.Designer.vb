@@ -289,11 +289,11 @@ Partial Public Class MerchantDS
         
         Private columnm_name As Global.System.Data.DataColumn
         
-        Private columncountry_id As Global.System.Data.DataColumn
+        Private columncountry_rec_no As Global.System.Data.DataColumn
         
-        Private columndistrict_id As Global.System.Data.DataColumn
+        Private columndistrict_rec_no As Global.System.Data.DataColumn
         
-        Private columncity_id As Global.System.Data.DataColumn
+        Private columncity_rec_no As Global.System.Data.DataColumn
         
         Private columnm_contact As Global.System.Data.DataColumn
         
@@ -366,25 +366,25 @@ Partial Public Class MerchantDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property country_idColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property country_rec_noColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columncountry_id
+                Return Me.columncountry_rec_no
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property district_idColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property district_rec_noColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columndistrict_id
+                Return Me.columndistrict_rec_no
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property city_idColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property city_rec_noColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columncity_id
+                Return Me.columncity_rec_no
             End Get
         End Property
         
@@ -465,9 +465,9 @@ Partial Public Class MerchantDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddmerchantRow(ByVal merchant_id As String, ByVal m_name As String, ByVal country_id As Long, ByVal district_id As Long, ByVal city_id As Long, ByVal m_contact As String, ByVal m_email As String, ByVal phone_1 As String, ByVal phone_2 As String, ByVal rate As Decimal) As merchantRow
+        Public Overloads Function AddmerchantRow(ByVal merchant_id As String, ByVal m_name As String, ByVal country_rec_no As Integer, ByVal district_rec_no As Integer, ByVal city_rec_no As Integer, ByVal m_contact As String, ByVal m_email As String, ByVal phone_1 As String, ByVal phone_2 As String, ByVal rate As Decimal) As merchantRow
             Dim rowmerchantRow As merchantRow = CType(Me.NewRow,merchantRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, merchant_id, m_name, country_id, district_id, city_id, m_contact, m_email, phone_1, phone_2, rate}
+            Dim columnValuesArray() As Object = New Object() {Nothing, merchant_id, m_name, country_rec_no, district_rec_no, city_rec_no, m_contact, m_email, phone_1, phone_2, rate}
             rowmerchantRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowmerchantRow)
             Return rowmerchantRow
@@ -493,9 +493,9 @@ Partial Public Class MerchantDS
             Me.columnmerchant_rec_no = MyBase.Columns("merchant_rec_no")
             Me.columnmerchant_id = MyBase.Columns("merchant_id")
             Me.columnm_name = MyBase.Columns("m_name")
-            Me.columncountry_id = MyBase.Columns("country_id")
-            Me.columndistrict_id = MyBase.Columns("district_id")
-            Me.columncity_id = MyBase.Columns("city_id")
+            Me.columncountry_rec_no = MyBase.Columns("country_rec_no")
+            Me.columndistrict_rec_no = MyBase.Columns("district_rec_no")
+            Me.columncity_rec_no = MyBase.Columns("city_rec_no")
             Me.columnm_contact = MyBase.Columns("m_contact")
             Me.columnm_email = MyBase.Columns("m_email")
             Me.columnphone_1 = MyBase.Columns("phone_1")
@@ -512,12 +512,12 @@ Partial Public Class MerchantDS
             MyBase.Columns.Add(Me.columnmerchant_id)
             Me.columnm_name = New Global.System.Data.DataColumn("m_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnm_name)
-            Me.columncountry_id = New Global.System.Data.DataColumn("country_id", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncountry_id)
-            Me.columndistrict_id = New Global.System.Data.DataColumn("district_id", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndistrict_id)
-            Me.columncity_id = New Global.System.Data.DataColumn("city_id", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncity_id)
+            Me.columncountry_rec_no = New Global.System.Data.DataColumn("country_rec_no", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncountry_rec_no)
+            Me.columndistrict_rec_no = New Global.System.Data.DataColumn("district_rec_no", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndistrict_rec_no)
+            Me.columncity_rec_no = New Global.System.Data.DataColumn("city_rec_no", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncity_rec_no)
             Me.columnm_contact = New Global.System.Data.DataColumn("m_contact", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnm_contact)
             Me.columnm_email = New Global.System.Data.DataColumn("m_email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -534,6 +534,7 @@ Partial Public Class MerchantDS
             Me.columnmerchant_rec_no.AutoIncrementStep = -1
             Me.columnmerchant_rec_no.Unique = true
             Me.columnmerchant_id.AllowDBNull = false
+            Me.columnmerchant_id.DefaultValue = CType("UNSPECIFIED",String)
             Me.columnmerchant_id.MaxLength = 44
             Me.columnm_name.MaxLength = 240
             Me.columnm_contact.MaxLength = 180
@@ -727,46 +728,46 @@ Partial Public Class MerchantDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property country_id() As Long
+        Public Property country_rec_no() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablemerchant.country_idColumn),Long)
+                    Return CType(Me(Me.tablemerchant.country_rec_noColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'country_id' in table 'merchant' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'country_rec_no' in table 'merchant' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemerchant.country_idColumn) = value
+                Me(Me.tablemerchant.country_rec_noColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property district_id() As Long
+        Public Property district_rec_no() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablemerchant.district_idColumn),Long)
+                    Return CType(Me(Me.tablemerchant.district_rec_noColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'district_id' in table 'merchant' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'district_rec_no' in table 'merchant' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemerchant.district_idColumn) = value
+                Me(Me.tablemerchant.district_rec_noColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property city_id() As Long
+        Public Property city_rec_no() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablemerchant.city_idColumn),Long)
+                    Return CType(Me(Me.tablemerchant.city_rec_noColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'city_id' in table 'merchant' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'city_rec_no' in table 'merchant' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablemerchant.city_idColumn) = value
+                Me(Me.tablemerchant.city_rec_noColumn) = value
             End Set
         End Property
         
@@ -871,38 +872,38 @@ Partial Public Class MerchantDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Iscountry_idNull() As Boolean
-            Return Me.IsNull(Me.tablemerchant.country_idColumn)
+        Public Function Iscountry_rec_noNull() As Boolean
+            Return Me.IsNull(Me.tablemerchant.country_rec_noColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Setcountry_idNull()
-            Me(Me.tablemerchant.country_idColumn) = Global.System.Convert.DBNull
+        Public Sub Setcountry_rec_noNull()
+            Me(Me.tablemerchant.country_rec_noColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Isdistrict_idNull() As Boolean
-            Return Me.IsNull(Me.tablemerchant.district_idColumn)
+        Public Function Isdistrict_rec_noNull() As Boolean
+            Return Me.IsNull(Me.tablemerchant.district_rec_noColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Setdistrict_idNull()
-            Me(Me.tablemerchant.district_idColumn) = Global.System.Convert.DBNull
+        Public Sub Setdistrict_rec_noNull()
+            Me(Me.tablemerchant.district_rec_noColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Iscity_idNull() As Boolean
-            Return Me.IsNull(Me.tablemerchant.city_idColumn)
+        Public Function Iscity_rec_noNull() As Boolean
+            Return Me.IsNull(Me.tablemerchant.city_rec_noColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Setcity_idNull()
-            Me(Me.tablemerchant.city_idColumn) = Global.System.Convert.DBNull
+        Public Sub Setcity_rec_noNull()
+            Me(Me.tablemerchant.city_rec_noColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1135,15 +1136,53 @@ Namespace MerchantDSTableAdapters
             tableMapping.ColumnMappings.Add("merchant_rec_no", "merchant_rec_no")
             tableMapping.ColumnMappings.Add("merchant_id", "merchant_id")
             tableMapping.ColumnMappings.Add("m_name", "m_name")
-            tableMapping.ColumnMappings.Add("country_id", "country_id")
-            tableMapping.ColumnMappings.Add("district_id", "district_id")
-            tableMapping.ColumnMappings.Add("city_id", "city_id")
+            tableMapping.ColumnMappings.Add("country_rec_no", "country_rec_no")
+            tableMapping.ColumnMappings.Add("district_rec_no", "district_rec_no")
+            tableMapping.ColumnMappings.Add("city_rec_no", "city_rec_no")
             tableMapping.ColumnMappings.Add("m_contact", "m_contact")
             tableMapping.ColumnMappings.Add("m_email", "m_email")
             tableMapping.ColumnMappings.Add("phone_1", "phone_1")
             tableMapping.ColumnMappings.Add("phone_2", "phone_2")
             tableMapping.ColumnMappings.Add("rate", "rate")
             Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.Odbc.OdbcCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM merchant"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (merchant_rec_no = ?)"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("merchant_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "merchant_rec_no", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.InsertCommand = New Global.System.Data.Odbc.OdbcCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO merchant"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (merchant_id, m_name, country_rec_"& _ 
+                "no, district_rec_no, city_rec_no, m_contact, m_email, phone_1, phone_2, rate)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"V"& _ 
+                "ALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("merchant_id", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "merchant_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("m_name", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "m_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("country_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "country_rec_no", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("district_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "district_rec_no", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("city_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "city_rec_no", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("m_contact", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "m_contact", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("m_email", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "m_email", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("phone_1", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone_1", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("phone_2", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone_2", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("rate", Global.System.Data.Odbc.OdbcType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, CType(5,Byte), CType(2,Byte), "rate", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand = New Global.System.Data.Odbc.OdbcCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE       merchant"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                merchant_id = ?, m_name = ?, country_re"& _ 
+                "c_no = ?, district_rec_no = ?, city_rec_no = ?, m_contact = ?, m_email = ?, phon"& _ 
+                "e_1 = ?, phone_2 = ?, rate = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (merchant_rec_no = ?)"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("merchant_id", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "merchant_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("m_name", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "m_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("country_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "country_rec_no", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("district_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "district_rec_no", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("city_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "city_rec_no", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("m_contact", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "m_contact", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("m_email", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "m_email", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("phone_1", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone_1", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("phone_2", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone_2", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("rate", Global.System.Data.Odbc.OdbcType.[Decimal], 0, Global.System.Data.ParameterDirection.Input, CType(5,Byte), CType(2,Byte), "rate", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_merchant_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "merchant_rec_no", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1159,7 +1198,9 @@ Namespace MerchantDSTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT * FROM `merchant`"
+            Me._commandCollection(0).CommandText = "SELECT        merchant_rec_no, merchant_id, m_name, country_rec_no, district_rec_"& _ 
+                "no, city_rec_no, m_contact, m_email, phone_1, phone_2, rate"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            mer"& _ 
+                "chant"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -1186,6 +1227,34 @@ Namespace MerchantDSTableAdapters
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As MerchantDS.merchantDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As MerchantDS) As Integer
+            Return Me.Adapter.Update(dataSet, "merchant")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
     End Class
     
     '''<summary>
@@ -1201,6 +1270,8 @@ Namespace MerchantDSTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
+        Private _merchantTableAdapter As merchantTableAdapter
+        
         Private _backupDataSetBeforeUpdate As Boolean
         
         Private _connection As Global.System.Data.IDbConnection
@@ -1213,6 +1284,20 @@ Namespace MerchantDSTableAdapters
             End Get
             Set
                 Me._updateOrder = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
+            "a", "System.Drawing.Design.UITypeEditor")>  _
+        Public Property merchantTableAdapter() As merchantTableAdapter
+            Get
+                Return Me._merchantTableAdapter
+            End Get
+            Set
+                Me._merchantTableAdapter = value
             End Set
         End Property
         
@@ -1235,6 +1320,10 @@ Namespace MerchantDSTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
+                If ((Not (Me._merchantTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._merchantTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._merchantTableAdapter.Connection
+                End If
                 Return Nothing
             End Get
             Set
@@ -1248,6 +1337,9 @@ Namespace MerchantDSTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
+                If (Not (Me._merchantTableAdapter) Is Nothing) Then
+                    count = (count + 1)
+                End If
                 Return count
             End Get
         End Property
@@ -1259,6 +1351,15 @@ Namespace MerchantDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Function UpdateUpdatedRows(ByVal dataSet As MerchantDS, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._merchantTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.merchant.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._merchantTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -1269,6 +1370,14 @@ Namespace MerchantDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Function UpdateInsertedRows(ByVal dataSet As MerchantDS, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._merchantTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.merchant.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._merchantTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -1279,6 +1388,14 @@ Namespace MerchantDSTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As MerchantDS, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
+            If (Not (Me._merchantTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.merchant.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._merchantTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
             Return result
         End Function
         
@@ -1320,6 +1437,11 @@ Namespace MerchantDSTableAdapters
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
+            If ((Not (Me._merchantTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._merchantTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
             Dim workConnection As Global.System.Data.IDbConnection = Me.Connection
             If (workConnection Is Nothing) Then
                 Throw New Global.System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana"& _ 
@@ -1352,6 +1474,15 @@ Namespace MerchantDSTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
+                If (Not (Me._merchantTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._merchantTableAdapter, Me._merchantTableAdapter.Connection)
+                    Me._merchantTableAdapter.Connection = CType(workConnection,Global.System.Data.Odbc.OdbcConnection)
+                    Me._merchantTableAdapter.Transaction = CType(workTransaction,Global.System.Data.Odbc.OdbcTransaction)
+                    If Me._merchantTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._merchantTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._merchantTableAdapter.Adapter)
+                    End If
+                End If
                 '
                 '---- Perform updates -----------
                 '
@@ -1411,6 +1542,10 @@ Namespace MerchantDSTableAdapters
             Finally
                 If workConnOpened Then
                     workConnection.Close
+                End If
+                If (Not (Me._merchantTableAdapter) Is Nothing) Then
+                    Me._merchantTableAdapter.Connection = CType(revertConnections(Me._merchantTableAdapter),Global.System.Data.Odbc.OdbcConnection)
+                    Me._merchantTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter
