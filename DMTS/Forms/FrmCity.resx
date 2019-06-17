@@ -135,12 +135,6 @@
   <metadata name="CountryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>743, 17</value>
   </metadata>
-  <metadata name="CountryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>743, 17</value>
-  </metadata>
-  <metadata name="CityDS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="CityDS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -209,17 +203,17 @@
   <data name="CityBNavEditItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPjZBdSNNRGIfP/svNcCk2lxsF8yIQ6iLoUiqY
-        7SJvFCNJ8iqiqIH0AelNsZLoC7JNHK050bLm14Y63doHaFo0ZiVbG0hfRsqo2SK2qWvm9uuY50am5gMH
-        Du95fu855yWboUoikbrl8o8GqfQKK22e1tbWMk9T01ezTIb2ggLcy89/Iickmx1vTHV1aaHf748GAgG4
-        dTo00yY3RSLcys19VZqTU8i09ZkdEDyadpTj5dgwRkefw9VpQmNx8fIroBOLp6jCWzHXwNcmrE0MEsTM
-        HGYd++B/M4xgMAifx4M2hQJ3JBItUzPpUmcfClnJYqyHQ8rFQ8pGELcWYXJiAD6fD6+93oUqpTKP6aup
-        q9m6K2nnvkd7ePjjpA3sBEt9dG/PQqRbhBGnNqnX608wfTVHdhNhwsZ5Y70ESTsfKcdymNCwAHEzQbiZ
-        Sxov7lQwPZOwRWCcsxAkBvlIO2m4n4aHBJinTbxqknZd23GaqZm8NQjPztPAXB8Nu2jYuryysGDl4Uc7
-        wcR9cSNTM6k9eWBPeKQmGTfTsJsgRae/1L8Fv4c4/OwgmHqQN0Q1bsVeg4a6C8ci472IOCrpjdvpv/n/
-        ZvDrKUGoJftdeYl4G1PXRnv18plvL2z4bO3ATOdRLNKJR7sIpluywucr8oqYtj6Ghvr6LzYTJrv0+NSr
-        wYz1BkKP9yZ05yQlTNkYk/auZrL7IZ7dVqffW7QfxtuvGzWXlIfZ8X/hVCqV+1RF2fHKg/tlrLZJCPkL
-        ywQk85F6kmsAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPjZBdSNNRGIfP/ra5cDlsLh0F8yIQ6iLoUiqY
+        eZE3ipEkeRVR1ED6gPSmsCyKgsyJozUnWtacuqH+3cY+QNOkMSvZcjD6MlJGzYzYpq6Z89cxz41MbQ8c
+        OLzn+b3nnJekQ6Vcnu9WKj/q8/OvsVL6tLW1lXqam7+aFQp05ObiQU7OMyUhYna8NVVVxXl+vz8yOTkJ
+        t1aLFtrkjkSCu9nZr4qzsvKYtjmzA6In044yjI0OYWTkBVxdRjQWFq6+AlqZbIoqgjVzA3ztmTXxQYKo
+        mcOs4wD8b4YQCATg83jQrlLhnlyuYWoqpnrxkRBPlqI9HJIuAZI2ghhfgODEAHw+H157vYuVJSVSpq+n
+        tnr7noSd+x7pEeCPkzawEyz30b1diLluCYadmoROpzvF9PUc20sy4zbOG+0lSNgzkHSshgkNixAzE4Rb
+        uITh8m4V01MJW0SGeQtBfDADK04a7qdhqwgLtMlYPVlx3dh1lqmpvNVnnl+ggfk+GnbRML+6hFjkBfjR
+        QTDxUNbI1FRqTh/aFx6uTsTMNOwmSNLpL/dvw28rh5+dBFOPpFaqcWv2BjTUXjoxN96LOUcFvXEn/XfG
+        vxn8ek4QahW/KyuS7WDqxmiuXz337aUNn/lOzHQdxxKdeMREMN0qDF8slxYwbXP0DXV1X2xGBE06fOpt
+        wgx/G6Gn++PaC/IipmyNUXO/Kdj9GPyt+pX3Fs2H8Y6bhqYrJUfZ8X/h1Gq1+0x56cmKwwcVrJYmhPwF
+        vRwk5Ele6SoAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="CityBNavDeleteItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

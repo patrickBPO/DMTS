@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="City" targetNamespace="http://tempuri.org/City.xsd" xmlns:mstns="http://tempuri.org/City.xsd" xmlns="http://tempuri.org/City.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" PropertyReference="ApplicationSettings.DMTS.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cityTableAdapter" GeneratorDataComponentClassName="cityTableAdapter" Name="city" UserDataComponentName="cityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `city`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="City_rec_no" DataSetColumn="City_rec_no" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="District_rec_no" DataSetColumn="District_rec_no" />
+              <Mapping SourceColumn="Country_rec_no" DataSetColumn="Country_rec_no" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="City" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="City" msprop:Generator_UserDSName="City">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="city" msprop:Generator_TableClassName="cityDataTable" msprop:Generator_TableVarName="tablecity" msprop:Generator_TablePropName="_city" msprop:Generator_RowDeletingName="cityRowDeleting" msprop:Generator_RowChangingName="cityRowChanging" msprop:Generator_RowEvHandlerName="cityRowChangeEventHandler" msprop:Generator_RowDeletedName="cityRowDeleted" msprop:Generator_UserTableName="city" msprop:Generator_RowChangedName="cityRowChanged" msprop:Generator_RowEvArgName="cityRowChangeEvent" msprop:Generator_RowClassName="cityRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="City_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCity_rec_no" msprop:Generator_ColumnPropNameInRow="City_rec_no" msprop:Generator_ColumnPropNameInTable="City_rec_noColumn" msprop:Generator_UserColumnName="City_rec_no" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1020" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="District_rec_no" msprop:Generator_ColumnVarNameInTable="columnDistrict_rec_no" msprop:Generator_ColumnPropNameInRow="District_rec_no" msprop:Generator_ColumnPropNameInTable="District_rec_noColumn" msprop:Generator_UserColumnName="District_rec_no" type="xs:int" />
+              <xs:element name="Country_rec_no" msprop:Generator_ColumnVarNameInTable="columnCountry_rec_no" msprop:Generator_ColumnPropNameInRow="Country_rec_no" msprop:Generator_ColumnPropNameInTable="Country_rec_noColumn" msprop:Generator_UserColumnName="Country_rec_no" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:city" />
+      <xs:field xpath="mstns:City_rec_no" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
