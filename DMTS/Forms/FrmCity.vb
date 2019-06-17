@@ -110,7 +110,7 @@ Public Class FrmCity
         Me.Validate()
         CityDataGridView.CancelEdit()
         CityDS.city.RejectChanges()
-        'Me.cityTableAdapter.Update(Me.cityDS.city)
+        Me.CityTableAdapter.Update(Me.CityDS.city)
         DoCancel(CityBNavEditItem,
               CityBNavAddNewItem,
               CityBNavSaveItem,
@@ -128,9 +128,14 @@ Public Class FrmCity
     Private Sub CityDataGridView_CellEndEdit(sender As Object, e As DataGridViewCellEventArgs) Handles CityDataGridView.CellEndEdit
         Dim NewValue As String
         If CityDataGridView.Columns(e.ColumnIndex).ValueType Is GetType(String) Then
-            NewValue = CityDataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
+            If IsDBNull(CityDataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value) Then
+                NewValue = 0
+            Else
+                NewValue = CityDataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value
+            End If
+
 
             CityDataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value = NewValue.ToUpper
-        End If
+            End If
     End Sub
 End Class
