@@ -43,6 +43,8 @@ Partial Class FrmLocTerminal
         Dim City_rec_noLabel1 As System.Windows.Forms.Label
         Dim Label5 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLocTerminal))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.Merch_locBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
@@ -112,6 +114,13 @@ Partial Class FrmLocTerminal
         Me.CityTableAdapter = New DMTS.CityTableAdapters.cityTableAdapter()
         Me.Loc_terminalTableAdapter = New DMTS.LocTerminalDSTableAdapters.loc_terminalTableAdapter()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
+        Me.GCMerchant = New DevExpress.XtraEditors.GroupControl()
+        Me.District_rec_noComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.DistrictBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Country_rec_noComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CountryBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.City_rec_noComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CityBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MerchantBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripButton5 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
@@ -126,12 +135,6 @@ Partial Class FrmLocTerminal
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton11 = New System.Windows.Forms.ToolStripButton()
         Me.TxtMSearch = New System.Windows.Forms.TextBox()
-        Me.City_rec_noComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.CityBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.District_rec_noComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DistrictBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Country_rec_noComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.CountryBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.M_nameTextBox = New System.Windows.Forms.TextBox()
         Me.Merchant_idTextBox = New System.Windows.Forms.TextBox()
         Me.MerchantTableAdapter = New DMTS.LocTerminalDSTableAdapters.merchantTableAdapter()
@@ -181,11 +184,13 @@ Partial Class FrmLocTerminal
         CType(Me.Loc_terminalDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl3.SuspendLayout()
-        CType(Me.MerchantBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MerchantBindingNavigator.SuspendLayout()
-        CType(Me.CityBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GCMerchant, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GCMerchant.SuspendLayout()
         CType(Me.DistrictBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CountryBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CityBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MerchantBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MerchantBindingNavigator.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label13
@@ -337,55 +342,55 @@ Partial Class FrmLocTerminal
         Merchant_idLabel.AutoSize = True
         Merchant_idLabel.BackColor = System.Drawing.Color.Transparent
         Merchant_idLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Merchant_idLabel.Location = New System.Drawing.Point(31, 73)
+        Merchant_idLabel.Location = New System.Drawing.Point(26, 87)
         Merchant_idLabel.Name = "Merchant_idLabel"
-        Merchant_idLabel.Size = New System.Drawing.Size(78, 13)
+        Merchant_idLabel.Size = New System.Drawing.Size(77, 13)
         Merchant_idLabel.TabIndex = 2
-        Merchant_idLabel.Text = "merchant id:"
+        Merchant_idLabel.Text = "Merchant ID"
         '
         'M_nameLabel
         '
         M_nameLabel.AutoSize = True
         M_nameLabel.BackColor = System.Drawing.Color.Transparent
         M_nameLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        M_nameLabel.Location = New System.Drawing.Point(166, 73)
+        M_nameLabel.Location = New System.Drawing.Point(158, 87)
         M_nameLabel.Name = "M_nameLabel"
-        M_nameLabel.Size = New System.Drawing.Size(56, 13)
+        M_nameLabel.Size = New System.Drawing.Size(96, 13)
         M_nameLabel.TabIndex = 4
-        M_nameLabel.Text = "m name:"
+        M_nameLabel.Text = "Merchant Name"
         '
         'Country_rec_noLabel1
         '
         Country_rec_noLabel1.AutoSize = True
         Country_rec_noLabel1.BackColor = System.Drawing.Color.Transparent
         Country_rec_noLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Country_rec_noLabel1.Location = New System.Drawing.Point(297, 73)
+        Country_rec_noLabel1.Location = New System.Drawing.Point(352, 83)
         Country_rec_noLabel1.Name = "Country_rec_noLabel1"
-        Country_rec_noLabel1.Size = New System.Drawing.Size(92, 13)
+        Country_rec_noLabel1.Size = New System.Drawing.Size(52, 13)
         Country_rec_noLabel1.TabIndex = 6
-        Country_rec_noLabel1.Text = "country rec no:"
+        Country_rec_noLabel1.Text = "Country"
         '
         'District_rec_noLabel1
         '
         District_rec_noLabel1.AutoSize = True
         District_rec_noLabel1.BackColor = System.Drawing.Color.Transparent
         District_rec_noLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        District_rec_noLabel1.Location = New System.Drawing.Point(482, 73)
+        District_rec_noLabel1.Location = New System.Drawing.Point(683, 83)
         District_rec_noLabel1.Name = "District_rec_noLabel1"
-        District_rec_noLabel1.Size = New System.Drawing.Size(88, 13)
+        District_rec_noLabel1.Size = New System.Drawing.Size(48, 13)
         District_rec_noLabel1.TabIndex = 8
-        District_rec_noLabel1.Text = "district rec no:"
+        District_rec_noLabel1.Text = "District"
         '
         'City_rec_noLabel1
         '
         City_rec_noLabel1.AutoSize = True
         City_rec_noLabel1.BackColor = System.Drawing.Color.Transparent
         City_rec_noLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel1.Location = New System.Drawing.Point(648, 73)
+        City_rec_noLabel1.Location = New System.Drawing.Point(525, 83)
         City_rec_noLabel1.Name = "City_rec_noLabel1"
-        City_rec_noLabel1.Size = New System.Drawing.Size(69, 13)
+        City_rec_noLabel1.Size = New System.Drawing.Size(29, 13)
         City_rec_noLabel1.TabIndex = 10
-        City_rec_noLabel1.Text = "city rec no:"
+        City_rec_noLabel1.Text = "City"
         '
         'Label5
         '
@@ -402,7 +407,9 @@ Partial Class FrmLocTerminal
         'GroupControl1
         '
         Me.GroupControl1.Appearance.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupControl1.Appearance.BorderColor = System.Drawing.Color.Lime
         Me.GroupControl1.Appearance.Options.UseBackColor = True
+        Me.GroupControl1.Appearance.Options.UseBorderColor = True
         Me.GroupControl1.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GroupControl1.AppearanceCaption.Options.UseFont = True
         Me.GroupControl1.Controls.Add(Me.Merch_locBindingNavigator)
@@ -414,7 +421,7 @@ Partial Class FrmLocTerminal
         Me.GroupControl1.Controls.Add(Me.GCMLocation)
         Me.GroupControl1.Controls.Add(Me.GCMDetails)
         Me.GroupControl1.Controls.Add(Me.GroupControl2)
-        Me.GroupControl1.Location = New System.Drawing.Point(14, 124)
+        Me.GroupControl1.Location = New System.Drawing.Point(14, 146)
         Me.GroupControl1.LookAndFeel.SkinName = "Office 2010 Blue"
         Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl1.Name = "GroupControl1"
@@ -940,14 +947,26 @@ Partial Class FrmLocTerminal
         Me.Loc_terminalDataGridView.AllowUserToAddRows = False
         Me.Loc_terminalDataGridView.AutoGenerateColumns = False
         Me.Loc_terminalDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 9.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Loc_terminalDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Loc_terminalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Loc_terminalDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.Loc_terminalDataGridView.DataSource = Me.Loc_terminalBindingSource
-        Me.Loc_terminalDataGridView.Location = New System.Drawing.Point(14, 73)
+        Me.Loc_terminalDataGridView.Location = New System.Drawing.Point(12, 73)
         Me.Loc_terminalDataGridView.Name = "Loc_terminalDataGridView"
         Me.Loc_terminalDataGridView.ReadOnly = True
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Loc_terminalDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.Loc_terminalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Loc_terminalDataGridView.Size = New System.Drawing.Size(428, 220)
+        Me.Loc_terminalDataGridView.Size = New System.Drawing.Size(453, 220)
         Me.Loc_terminalDataGridView.TabIndex = 32
         '
         'DataGridViewTextBoxColumn1
@@ -972,7 +991,7 @@ Partial Class FrmLocTerminal
         Me.DataGridViewTextBoxColumn3.HeaderText = "Terminal ID"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Width = 95
+        Me.DataGridViewTextBoxColumn3.Width = 110
         '
         'DataGridViewTextBoxColumn4
         '
@@ -1023,15 +1042,13 @@ Partial Class FrmLocTerminal
         '
         Me.GroupControl3.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GroupControl3.AppearanceCaption.Options.UseFont = True
+        Me.GroupControl3.Controls.Add(Me.GCMerchant)
         Me.GroupControl3.Controls.Add(Me.MerchantBindingNavigator)
         Me.GroupControl3.Controls.Add(Label5)
         Me.GroupControl3.Controls.Add(Me.TxtMSearch)
         Me.GroupControl3.Controls.Add(City_rec_noLabel1)
-        Me.GroupControl3.Controls.Add(Me.City_rec_noComboBox1)
         Me.GroupControl3.Controls.Add(District_rec_noLabel1)
-        Me.GroupControl3.Controls.Add(Me.District_rec_noComboBox1)
         Me.GroupControl3.Controls.Add(Country_rec_noLabel1)
-        Me.GroupControl3.Controls.Add(Me.Country_rec_noComboBox1)
         Me.GroupControl3.Controls.Add(M_nameLabel)
         Me.GroupControl3.Controls.Add(Me.M_nameTextBox)
         Me.GroupControl3.Controls.Add(Merchant_idLabel)
@@ -1040,9 +1057,83 @@ Partial Class FrmLocTerminal
         Me.GroupControl3.LookAndFeel.SkinName = "Office 2010 Blue"
         Me.GroupControl3.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl3.Name = "GroupControl3"
-        Me.GroupControl3.Size = New System.Drawing.Size(801, 115)
+        Me.GroupControl3.Size = New System.Drawing.Size(801, 139)
         Me.GroupControl3.TabIndex = 2
         Me.GroupControl3.Text = "MERCHANT"
+        '
+        'GCMerchant
+        '
+        Me.GCMerchant.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GCMerchant.AppearanceCaption.Options.UseFont = True
+        Me.GCMerchant.Controls.Add(Me.District_rec_noComboBox1)
+        Me.GCMerchant.Controls.Add(Me.Country_rec_noComboBox1)
+        Me.GCMerchant.Controls.Add(Me.City_rec_noComboBox1)
+        Me.GCMerchant.Enabled = False
+        Me.GCMerchant.Location = New System.Drawing.Point(292, 101)
+        Me.GCMerchant.LookAndFeel.SkinName = "Office 2010 Blue"
+        Me.GCMerchant.LookAndFeel.UseDefaultLookAndFeel = False
+        Me.GCMerchant.Name = "GCMerchant"
+        Me.GCMerchant.ShowCaption = False
+        Me.GCMerchant.Size = New System.Drawing.Size(498, 31)
+        Me.GCMerchant.TabIndex = 37
+        Me.GCMerchant.Text = "Location"
+        '
+        'District_rec_noComboBox1
+        '
+        Me.District_rec_noComboBox1.BackColor = System.Drawing.Color.LightBlue
+        Me.District_rec_noComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "district_rec_no", True))
+        Me.District_rec_noComboBox1.DataSource = Me.DistrictBindingSource1
+        Me.District_rec_noComboBox1.DisplayMember = "description"
+        Me.District_rec_noComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.District_rec_noComboBox1.FormattingEnabled = True
+        Me.District_rec_noComboBox1.Location = New System.Drawing.Point(170, 5)
+        Me.District_rec_noComboBox1.Name = "District_rec_noComboBox1"
+        Me.District_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
+        Me.District_rec_noComboBox1.TabIndex = 9
+        Me.District_rec_noComboBox1.ValueMember = "District_rec_no"
+        '
+        'DistrictBindingSource1
+        '
+        Me.DistrictBindingSource1.DataMember = "District"
+        Me.DistrictBindingSource1.DataSource = Me.District
+        '
+        'Country_rec_noComboBox1
+        '
+        Me.Country_rec_noComboBox1.BackColor = System.Drawing.Color.LightBlue
+        Me.Country_rec_noComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "country_rec_no", True))
+        Me.Country_rec_noComboBox1.DataSource = Me.CountryBindingSource1
+        Me.Country_rec_noComboBox1.DisplayMember = "description"
+        Me.Country_rec_noComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.Country_rec_noComboBox1.FormattingEnabled = True
+        Me.Country_rec_noComboBox1.Location = New System.Drawing.Point(5, 5)
+        Me.Country_rec_noComboBox1.Name = "Country_rec_noComboBox1"
+        Me.Country_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
+        Me.Country_rec_noComboBox1.TabIndex = 7
+        Me.Country_rec_noComboBox1.ValueMember = "country_rec_no"
+        '
+        'CountryBindingSource1
+        '
+        Me.CountryBindingSource1.DataMember = "Country"
+        Me.CountryBindingSource1.DataSource = Me.Country
+        '
+        'City_rec_noComboBox1
+        '
+        Me.City_rec_noComboBox1.BackColor = System.Drawing.Color.LightBlue
+        Me.City_rec_noComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "city_rec_no", True))
+        Me.City_rec_noComboBox1.DataSource = Me.CityBindingSource1
+        Me.City_rec_noComboBox1.DisplayMember = "Description"
+        Me.City_rec_noComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.City_rec_noComboBox1.FormattingEnabled = True
+        Me.City_rec_noComboBox1.Location = New System.Drawing.Point(335, 5)
+        Me.City_rec_noComboBox1.Name = "City_rec_noComboBox1"
+        Me.City_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
+        Me.City_rec_noComboBox1.TabIndex = 11
+        Me.City_rec_noComboBox1.ValueMember = "City_rec_no"
+        '
+        'CityBindingSource1
+        '
+        Me.CityBindingSource1.DataMember = "city"
+        Me.CityBindingSource1.DataSource = Me.City
         '
         'MerchantBindingNavigator
         '
@@ -1170,64 +1261,11 @@ Partial Class FrmLocTerminal
         Me.TxtMSearch.Size = New System.Drawing.Size(237, 21)
         Me.TxtMSearch.TabIndex = 33
         '
-        'City_rec_noComboBox1
-        '
-        Me.City_rec_noComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "city_rec_no", True))
-        Me.City_rec_noComboBox1.DataSource = Me.CityBindingSource1
-        Me.City_rec_noComboBox1.DisplayMember = "Description"
-        Me.City_rec_noComboBox1.Enabled = False
-        Me.City_rec_noComboBox1.FormattingEnabled = True
-        Me.City_rec_noComboBox1.Location = New System.Drawing.Point(600, 89)
-        Me.City_rec_noComboBox1.Name = "City_rec_noComboBox1"
-        Me.City_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
-        Me.City_rec_noComboBox1.TabIndex = 11
-        Me.City_rec_noComboBox1.ValueMember = "City_rec_no"
-        '
-        'CityBindingSource1
-        '
-        Me.CityBindingSource1.DataMember = "city"
-        Me.CityBindingSource1.DataSource = Me.City
-        '
-        'District_rec_noComboBox1
-        '
-        Me.District_rec_noComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "district_rec_no", True))
-        Me.District_rec_noComboBox1.DataSource = Me.DistrictBindingSource1
-        Me.District_rec_noComboBox1.DisplayMember = "description"
-        Me.District_rec_noComboBox1.Enabled = False
-        Me.District_rec_noComboBox1.FormattingEnabled = True
-        Me.District_rec_noComboBox1.Location = New System.Drawing.Point(435, 89)
-        Me.District_rec_noComboBox1.Name = "District_rec_noComboBox1"
-        Me.District_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
-        Me.District_rec_noComboBox1.TabIndex = 9
-        Me.District_rec_noComboBox1.ValueMember = "District_rec_no"
-        '
-        'DistrictBindingSource1
-        '
-        Me.DistrictBindingSource1.DataMember = "District"
-        Me.DistrictBindingSource1.DataSource = Me.District
-        '
-        'Country_rec_noComboBox1
-        '
-        Me.Country_rec_noComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "country_rec_no", True))
-        Me.Country_rec_noComboBox1.DataSource = Me.CountryBindingSource1
-        Me.Country_rec_noComboBox1.DisplayMember = "description"
-        Me.Country_rec_noComboBox1.Enabled = False
-        Me.Country_rec_noComboBox1.FormattingEnabled = True
-        Me.Country_rec_noComboBox1.Location = New System.Drawing.Point(270, 89)
-        Me.Country_rec_noComboBox1.Name = "Country_rec_noComboBox1"
-        Me.Country_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
-        Me.Country_rec_noComboBox1.TabIndex = 7
-        Me.Country_rec_noComboBox1.ValueMember = "country_rec_no"
-        '
-        'CountryBindingSource1
-        '
-        Me.CountryBindingSource1.DataMember = "Country"
-        Me.CountryBindingSource1.DataSource = Me.Country
-        '
         'M_nameTextBox
         '
+        Me.M_nameTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.M_nameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "m_name", True))
-        Me.M_nameTextBox.Location = New System.Drawing.Point(119, 89)
+        Me.M_nameTextBox.Location = New System.Drawing.Point(133, 105)
         Me.M_nameTextBox.Name = "M_nameTextBox"
         Me.M_nameTextBox.ReadOnly = True
         Me.M_nameTextBox.Size = New System.Drawing.Size(145, 21)
@@ -1235,8 +1273,9 @@ Partial Class FrmLocTerminal
         '
         'Merchant_idTextBox
         '
+        Me.Merchant_idTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.Merchant_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "merchant_id", True))
-        Me.Merchant_idTextBox.Location = New System.Drawing.Point(13, 89)
+        Me.Merchant_idTextBox.Location = New System.Drawing.Point(14, 105)
         Me.Merchant_idTextBox.Name = "Merchant_idTextBox"
         Me.Merchant_idTextBox.ReadOnly = True
         Me.Merchant_idTextBox.Size = New System.Drawing.Size(100, 21)
@@ -1250,7 +1289,7 @@ Partial Class FrmLocTerminal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(829, 680)
+        Me.ClientSize = New System.Drawing.Size(829, 698)
         Me.Controls.Add(Me.GroupControl3)
         Me.Controls.Add(Me.GroupControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1290,12 +1329,14 @@ Partial Class FrmLocTerminal
         CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl3.ResumeLayout(False)
         Me.GroupControl3.PerformLayout()
+        CType(Me.GCMerchant, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GCMerchant.ResumeLayout(False)
+        CType(Me.DistrictBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CountryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CityBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MerchantBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MerchantBindingNavigator.ResumeLayout(False)
         Me.MerchantBindingNavigator.PerformLayout()
-        CType(Me.CityBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DistrictBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CountryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1362,10 +1403,6 @@ Partial Class FrmLocTerminal
     Friend WithEvents loc_terminalBNavEditItem As ToolStripButton
     Friend WithEvents loc_terminalBNavSaveItem As ToolStripButton
     Friend WithEvents loc_terminalBNavCancel As ToolStripButton
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents GroupControl3 As DevExpress.XtraEditors.GroupControl
     Friend WithEvents MerchantBindingSource As BindingSource
     Friend WithEvents MerchantTableAdapter As LocTerminalDSTableAdapters.merchantTableAdapter
@@ -1392,4 +1429,9 @@ Partial Class FrmLocTerminal
     Friend WithEvents CountryBindingSource1 As BindingSource
     Friend WithEvents CityBindingSource1 As BindingSource
     Friend WithEvents MerchantmerchlocBindingSource As BindingSource
+    Friend WithEvents GCMerchant As DevExpress.XtraEditors.GroupControl
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class
