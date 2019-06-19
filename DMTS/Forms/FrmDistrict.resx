@@ -207,9 +207,6 @@
         dtINAGGiDUDGyGpoawAxeNSAQWkAORiqnRLAwAAA9EMMU8Daa3MAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="DistrictDS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="DistrictBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
@@ -274,17 +271,17 @@
   <data name="DistrictBNavEditItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPjZBdSNNRGIfP/mtz4XLYXG4U6EUg1EXQpVQw
-        20XeKEaS5FVEUYL0AelNYUkUFdkmjtbc0LJ0uok6tzE30LRozEy2FEZfRsqo2SI2P9bM7dcxz41s2h44
-        cHjP83vPOS/JhEqZTO4uKPiol8uvsVLmGI3GUk9z81eLQoH2vDw8yM19VkCIiB1vTVVVSb7f749MTU3B
-        rdWihTa5LRbjTk7O65Ls7Hymbc78gPDJrLMMr8aGMTr6Aq6uTjQVFa29AlqpdIYqvHUzDb62rNrYIEHU
-        wmHeeQD+iWFMT0/D5/GgTanEXZlMw9RUTA2iI0ErWYn2cEi4eEjYCRashQhMDsDn8+GN17tcqVJJmL6R
-        uurte+IO7nukh4c/Q7SBg2C1j+4dAoS7xRgZ0sR1Ot0ppm/k2F6SFbNz3qiZIO7gI+FcCxMaFmLBQhBq
-        4eKGy7uVTE8l1Cs0LPYSxAb5SA7RcD8N24RYok0mGkjSdWPXWaam8lafdX6JBhb7aNhFw9a1JcCylYcf
-        7QSTD6VNTE2l9vShfaGR6viChYbdBAk6/dX+bfht4/Czg2DmkcRGNW7dTkNj3aUT4XEzws4KeuNO+m/+
-        vxn8ek4QbBW9KyuW7mBqejTXr5779tKOz9YOzHUdxwqdeMREMNsqCF0slxQybXP0jfX1X+ydCJh0+GRW
-        Y856C8Gn+2PaC7JipmxNp+aeOtD9GK77Dcn3vZoP4+03DeorqqPs+L9wNTU17jPlpScrDh9UsFqGEPIX
-        01wk/CQ1Fa4AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI9SURBVDhPjZBdSNNRGIfP/mvTcDlsLjcK9CIQ6iLoUiqY
+        eZE3ipEkeRVRlCB9QHpTrCSSgmwTR2tuuLLm10Sd29gHaGa0ZiVbE0ZfRsqo2SK2qWvm/HWW50am5gMH
+        Du95fu855yVboVoqlbkLCz/qZLJrrLR1DAZDuae19atZLocxPx/38vKeFBKSzY43p6amtMDv90cDgQDc
+        Gg3aaJPbIhGac3NflubkFDBtY+aGhI9mHBV48XwEY2PP4OoyoaW4OP0KaCSSaarwVs118HVk1SeGCWJm
+        DnOOA/C/GcHU1BR8Hg86FArckUrVTM2kW5l9JGQhS7FeDikXDykbQdxShODkEHw+H157vYvVZWVipq+l
+        oXb7nqSd+x7t5eGPkzawEywP0L1dgEiPCKNOdVKr1Z5i+lqO7SVZCRvnjfURJO18pBzpMKFhIeJmgnAb
+        l9Rf3q1geibhfqF+vp8gMczHipOGB2nYKsQCbfJKSVZcN3adZWomb3VZ5xdoYH6Ahl00bEkvARYtPPww
+        Ekzel7QwNZP604f2hUdrk3EzDbsJUnT6y4Pb8NvK4WcnwfQDsZVq3Kq9Dk0Nl05EJvoQcVTRG3fSf/P/
+        zeDXU4JQe/a7ihLJDqauj/r61XPfxm34bOnEbNdxLNGJR7sJZtoF4YuV4iKmbYyuqbHxi82EYLcWn/pU
+        mLXcQujx/oTmgrSEKZtjUt9VBXsewt6sXHnfr/4wYbypV10pO8qO/wtXV1fnPlNZfrLq8EE5q20RQv4C
+        yDwk8DNTGJQAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="DistrictBNavDeleteItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -332,9 +329,6 @@
   </metadata>
   <metadata name="DistrictTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>186, 56</value>
-  </metadata>
-  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>534, 56</value>
   </metadata>
   <metadata name="ToolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>633, 56</value>

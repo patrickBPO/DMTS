@@ -38,6 +38,7 @@ Partial Class FrmCity
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.TxtCountry = New System.Windows.Forms.TextBox()
@@ -212,12 +213,12 @@ Partial Class FrmCity
         Me.DistrictDataGridView.AllowUserToAddRows = False
         Me.DistrictDataGridView.AllowUserToDeleteRows = False
         Me.DistrictDataGridView.AutoGenerateColumns = False
-        Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGreen
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(78, Byte), Integer))
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DistrictDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
@@ -231,12 +232,13 @@ Partial Class FrmCity
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DistrictDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.DistrictDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DistrictDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DistrictDataGridView.Size = New System.Drawing.Size(244, 254)
@@ -277,12 +279,12 @@ Partial Class FrmCity
         Me.CountryDataGridView.AllowUserToDeleteRows = False
         Me.CountryDataGridView.AllowUserToOrderColumns = True
         Me.CountryDataGridView.AutoGenerateColumns = False
-        Me.CountryDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        Me.CountryDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGreen
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(78, Byte), Integer))
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.CountryDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
@@ -296,12 +298,13 @@ Partial Class FrmCity
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.CountryDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.CountryDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.CountryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.CountryDataGridView.Size = New System.Drawing.Size(244, 191)
@@ -336,7 +339,7 @@ Partial Class FrmCity
         '
         'TxtCSearch
         '
-        Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtCSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtCSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCSearch.Location = New System.Drawing.Point(74, 15)
         Me.TxtCSearch.Name = "TxtCSearch"
@@ -345,7 +348,7 @@ Partial Class FrmCity
         '
         'TxtDSearch
         '
-        Me.TxtDSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtDSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtDSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtDSearch.Location = New System.Drawing.Point(71, 263)
         Me.TxtDSearch.Name = "TxtDSearch"
@@ -361,6 +364,8 @@ Partial Class FrmCity
         Me.GroupControl1.Controls.Add(Label4)
         Me.GroupControl1.Controls.Add(Me.TxtSearch)
         Me.GroupControl1.Location = New System.Drawing.Point(311, 19)
+        Me.GroupControl1.LookAndFeel.SkinName = "Office 2010 Blue"
+        Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(326, 567)
         Me.GroupControl1.TabIndex = 11
@@ -369,11 +374,12 @@ Partial Class FrmCity
         'CityBindingNavigator
         '
         Me.CityBindingNavigator.AddNewItem = Nothing
+        Me.CityBindingNavigator.BackColor = System.Drawing.Color.LightSteelBlue
         Me.CityBindingNavigator.BindingSource = Me.CityBindingSource
         Me.CityBindingNavigator.CountItem = Me.ToolStripLabel1
         Me.CityBindingNavigator.DeleteItem = Nothing
         Me.CityBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripLabel1, Me.ToolStripSeparator2, Me.ToolStripButton5, Me.ToolStripButton6, Me.ToolStripSeparator3, Me.CityBNavAddNewItem, Me.CityBNavEditItem, Me.CityBNavDeleteItem, Me.ToolStripSeparator4, Me.CityBNavSaveItem, Me.CityBNavCancel})
-        Me.CityBindingNavigator.Location = New System.Drawing.Point(2, 20)
+        Me.CityBindingNavigator.Location = New System.Drawing.Point(2, 21)
         Me.CityBindingNavigator.MoveFirstItem = Me.ToolStripButton3
         Me.CityBindingNavigator.MoveLastItem = Me.ToolStripButton6
         Me.CityBindingNavigator.MoveNextItem = Me.ToolStripButton5
@@ -518,32 +524,41 @@ Partial Class FrmCity
         '
         Me.CityDataGridView.AllowUserToAddRows = False
         Me.CityDataGridView.AutoGenerateColumns = False
-        Me.CityDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        Me.CityDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGreen
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(78, Byte), Integer))
         DataGridViewCellStyle7.Font = New System.Drawing.Font("Tahoma", 8.25!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.CityDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.CityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CityDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.CityDataGridView.DataSource = Me.CityBindingSource
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.CityDataGridView.DefaultCellStyle = DataGridViewCellStyle8
         Me.CityDataGridView.Location = New System.Drawing.Point(21, 86)
         Me.CityDataGridView.Name = "CityDataGridView"
         Me.CityDataGridView.ReadOnly = True
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Tahoma", 8.25!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CityDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.MediumSeaGreen
-        Me.CityDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CityDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.CityDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.CityDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.CityDataGridView.Size = New System.Drawing.Size(294, 473)
         Me.CityDataGridView.TabIndex = 9
@@ -582,7 +597,7 @@ Partial Class FrmCity
         '
         'TxtSearch
         '
-        Me.TxtSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtSearch.Location = New System.Drawing.Point(78, 59)
         Me.TxtSearch.Name = "TxtSearch"

@@ -25,6 +25,8 @@ Partial Class FrmCountry
         Me.components = New System.ComponentModel.Container()
         Dim Label2 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCountry))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
         Me.CountryBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.CountryBNavAddNewItem = New System.Windows.Forms.ToolStripButton()
@@ -79,6 +81,8 @@ Partial Class FrmCountry
         Me.GroupControl2.Controls.Add(Label2)
         Me.GroupControl2.Controls.Add(Me.TxtCSearch)
         Me.GroupControl2.Location = New System.Drawing.Point(12, 12)
+        Me.GroupControl2.LookAndFeel.SkinName = "Office 2010 Blue"
+        Me.GroupControl2.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl2.Name = "GroupControl2"
         Me.GroupControl2.Size = New System.Drawing.Size(278, 321)
         Me.GroupControl2.TabIndex = 9
@@ -87,11 +91,12 @@ Partial Class FrmCountry
         'CountryBindingNavigator
         '
         Me.CountryBindingNavigator.AddNewItem = Me.CountryBNavAddNewItem
+        Me.CountryBindingNavigator.BackColor = System.Drawing.Color.LightSteelBlue
         Me.CountryBindingNavigator.BindingSource = Me.CountryBindingSource
         Me.CountryBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.CountryBindingNavigator.DeleteItem = Me.CountryBNavDeleteItem
         Me.CountryBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.CountryBNavAddNewItem, Me.CountryBNavEditItem, Me.CountryBNavDeleteItem, Me.CountryBNavSaveItem, Me.CountryBNavCancel})
-        Me.CountryBindingNavigator.Location = New System.Drawing.Point(2, 20)
+        Me.CountryBindingNavigator.Location = New System.Drawing.Point(2, 21)
         Me.CountryBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.CountryBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.CountryBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -235,13 +240,26 @@ Partial Class FrmCountry
         '
         Me.CountryDataGridView.AllowUserToAddRows = False
         Me.CountryDataGridView.AutoGenerateColumns = False
-        Me.CountryDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        Me.CountryDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.CountryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CountryDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.CountryDataGridView.DataSource = Me.CountryBindingSource
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(53, Byte), Integer))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.CountryDataGridView.DefaultCellStyle = DataGridViewCellStyle1
         Me.CountryDataGridView.Location = New System.Drawing.Point(16, 86)
         Me.CountryDataGridView.Name = "CountryDataGridView"
         Me.CountryDataGridView.ReadOnly = True
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.CountryDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.CountryDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.CountryDataGridView.Size = New System.Drawing.Size(244, 220)
         Me.CountryDataGridView.TabIndex = 12
@@ -264,7 +282,7 @@ Partial Class FrmCountry
         '
         'TxtCSearch
         '
-        Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtCSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtCSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCSearch.Location = New System.Drawing.Point(74, 59)
         Me.TxtCSearch.Name = "TxtCSearch"

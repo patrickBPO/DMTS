@@ -27,7 +27,9 @@ Partial Class FrmDistrict
         Dim Label1 As System.Windows.Forms.Label
         Dim Label2 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDistrict))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.CountryBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -124,6 +126,7 @@ Partial Class FrmDistrict
         'CountryBindingNavigator
         '
         Me.CountryBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.CountryBindingNavigator.BackColor = System.Drawing.Color.LightSteelBlue
         Me.CountryBindingNavigator.BindingSource = Me.CountryBindingSource
         Me.CountryBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.CountryBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
@@ -270,22 +273,35 @@ Partial Class FrmDistrict
         '
         Me.DistrictDataGridView.AllowUserToAddRows = False
         Me.DistrictDataGridView.AutoGenerateColumns = False
-        Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.25!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DistrictDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.DistrictDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DistrictDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 9.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DistrictDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DistrictDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DistrictDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.District_rec_no, Me.DataGridViewTextBoxColumn2})
         Me.DistrictDataGridView.DataSource = Me.DistrictBindingSource
         Me.DistrictDataGridView.Location = New System.Drawing.Point(24, 75)
         Me.DistrictDataGridView.MultiSelect = False
         Me.DistrictDataGridView.Name = "DistrictDataGridView"
         Me.DistrictDataGridView.ReadOnly = True
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 8.25!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DistrictDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.DistrictDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DistrictDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DistrictDataGridView.Size = New System.Drawing.Size(243, 220)
         Me.DistrictDataGridView.TabIndex = 5
@@ -457,6 +473,7 @@ Partial Class FrmDistrict
         Me.GroupControl1.Controls.Add(Me.DistrictDataGridView)
         Me.GroupControl1.Controls.Add(Me.DistrictBindingNavigator)
         Me.GroupControl1.Location = New System.Drawing.Point(15, 101)
+        Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(292, 300)
         Me.GroupControl1.TabIndex = 7
@@ -464,7 +481,7 @@ Partial Class FrmDistrict
         '
         'TxtSearch
         '
-        Me.TxtSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtSearch.Location = New System.Drawing.Point(80, 49)
         Me.TxtSearch.Name = "TxtSearch"
@@ -501,7 +518,7 @@ Partial Class FrmDistrict
         '
         'TxtCSearch
         '
-        Me.TxtCSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtCSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtCSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCSearch.Location = New System.Drawing.Point(76, 11)
         Me.TxtCSearch.Name = "TxtCSearch"

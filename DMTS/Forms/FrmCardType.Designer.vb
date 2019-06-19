@@ -25,6 +25,8 @@ Partial Class FrmCardType
         Me.components = New System.ComponentModel.Container()
         Dim Label2 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCardType))
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.CardTypeDS = New DMTS.CardTypeDS()
         Me.Card_typeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Card_typeTableAdapter = New DMTS.CardTypeDSTableAdapters.card_typeTableAdapter()
@@ -94,6 +96,7 @@ Partial Class FrmCardType
         'Card_typeBindingNavigator
         '
         Me.Card_typeBindingNavigator.AddNewItem = Me.CardTypeBNavAddNewItem
+        Me.Card_typeBindingNavigator.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Card_typeBindingNavigator.BindingSource = Me.Card_typeBindingSource
         Me.Card_typeBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.Card_typeBindingNavigator.DeleteItem = Me.CardTypeBNavDeleteItem
@@ -231,12 +234,25 @@ Partial Class FrmCardType
         '
         Me.Card_typeDataGridView.AllowUserToAddRows = False
         Me.Card_typeDataGridView.AutoGenerateColumns = False
-        Me.Card_typeDataGridView.BackgroundColor = System.Drawing.Color.SeaGreen
+        Me.Card_typeDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.Card_typeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Card_typeDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn2})
         Me.Card_typeDataGridView.DataSource = Me.Card_typeBindingSource
         Me.Card_typeDataGridView.Location = New System.Drawing.Point(19, 79)
         Me.Card_typeDataGridView.Name = "Card_typeDataGridView"
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Card_typeDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Card_typeDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.Card_typeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Card_typeDataGridView.Size = New System.Drawing.Size(293, 220)
         Me.Card_typeDataGridView.TabIndex = 1
@@ -283,7 +299,7 @@ Partial Class FrmCardType
         '
         'TxtCTSearch
         '
-        Me.TxtCTSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtCTSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtCTSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtCTSearch.Location = New System.Drawing.Point(80, 53)
         Me.TxtCTSearch.Name = "TxtCTSearch"

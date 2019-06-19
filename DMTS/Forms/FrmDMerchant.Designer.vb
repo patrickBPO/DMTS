@@ -122,6 +122,7 @@ Partial Class FrmDMerchant
         'Merchant_idLabel
         '
         Merchant_idLabel.AutoSize = True
+        Merchant_idLabel.BackColor = System.Drawing.Color.Transparent
         Merchant_idLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Merchant_idLabel.Location = New System.Drawing.Point(13, 27)
         Merchant_idLabel.Name = "Merchant_idLabel"
@@ -132,6 +133,7 @@ Partial Class FrmDMerchant
         'M_nameLabel
         '
         M_nameLabel.AutoSize = True
+        M_nameLabel.BackColor = System.Drawing.Color.Transparent
         M_nameLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         M_nameLabel.Location = New System.Drawing.Point(142, 28)
         M_nameLabel.Name = "M_nameLabel"
@@ -142,6 +144,7 @@ Partial Class FrmDMerchant
         'M_contactLabel
         '
         M_contactLabel.AutoSize = True
+        M_contactLabel.BackColor = System.Drawing.Color.Transparent
         M_contactLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         M_contactLabel.Location = New System.Drawing.Point(331, 28)
         M_contactLabel.Name = "M_contactLabel"
@@ -152,6 +155,7 @@ Partial Class FrmDMerchant
         'M_emailLabel
         '
         M_emailLabel.AutoSize = True
+        M_emailLabel.BackColor = System.Drawing.Color.Transparent
         M_emailLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         M_emailLabel.Location = New System.Drawing.Point(49, 75)
         M_emailLabel.Name = "M_emailLabel"
@@ -162,6 +166,7 @@ Partial Class FrmDMerchant
         'RateLabel
         '
         RateLabel.AutoSize = True
+        RateLabel.BackColor = System.Drawing.Color.Transparent
         RateLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         RateLabel.Location = New System.Drawing.Point(389, 74)
         RateLabel.Name = "RateLabel"
@@ -172,6 +177,7 @@ Partial Class FrmDMerchant
         'Country_rec_noLabel
         '
         Country_rec_noLabel.AutoSize = True
+        Country_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         Country_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Country_rec_noLabel.Location = New System.Drawing.Point(4, 36)
         Country_rec_noLabel.Name = "Country_rec_noLabel"
@@ -182,6 +188,7 @@ Partial Class FrmDMerchant
         'District_rec_noLabel
         '
         District_rec_noLabel.AutoSize = True
+        District_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         District_rec_noLabel.Location = New System.Drawing.Point(8, 63)
         District_rec_noLabel.Name = "District_rec_noLabel"
@@ -192,6 +199,7 @@ Partial Class FrmDMerchant
         'City_rec_noLabel
         '
         City_rec_noLabel.AutoSize = True
+        City_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         City_rec_noLabel.Location = New System.Drawing.Point(28, 90)
         City_rec_noLabel.Name = "City_rec_noLabel"
@@ -202,6 +210,7 @@ Partial Class FrmDMerchant
         'Phone_1Label1
         '
         Phone_1Label1.AutoSize = True
+        Phone_1Label1.BackColor = System.Drawing.Color.Transparent
         Phone_1Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Phone_1Label1.Location = New System.Drawing.Point(200, 74)
         Phone_1Label1.Name = "Phone_1Label1"
@@ -212,6 +221,7 @@ Partial Class FrmDMerchant
         'Phone_2Label1
         '
         Phone_2Label1.AutoSize = True
+        Phone_2Label1.BackColor = System.Drawing.Color.Transparent
         Phone_2Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Phone_2Label1.Location = New System.Drawing.Point(303, 74)
         Phone_2Label1.Name = "Phone_2Label1"
@@ -236,7 +246,9 @@ Partial Class FrmDMerchant
         Me.GroupControl1.Appearance.Options.UseBackColor = True
         Me.GroupControl1.AppearanceCaption.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.GroupControl1.AppearanceCaption.BackColor2 = System.Drawing.Color.MediumSpringGreen
+        Me.GroupControl1.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GroupControl1.AppearanceCaption.Options.UseBackColor = True
+        Me.GroupControl1.AppearanceCaption.Options.UseFont = True
         Me.GroupControl1.Controls.Add(Label4)
         Me.GroupControl1.Controls.Add(Me.TxtSearch)
         Me.GroupControl1.Controls.Add(Me.GCMDetails)
@@ -245,6 +257,8 @@ Partial Class FrmDMerchant
         Me.GroupControl1.Controls.Add(Merchant_rec_noLabel)
         Me.GroupControl1.Controls.Add(Me.Merchant_rec_noTextBox)
         Me.GroupControl1.Location = New System.Drawing.Point(13, 13)
+        Me.GroupControl1.LookAndFeel.SkinName = "Office 2010 Blue"
+        Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(769, 221)
         Me.GroupControl1.TabIndex = 0
@@ -252,7 +266,7 @@ Partial Class FrmDMerchant
         '
         'TxtSearch
         '
-        Me.TxtSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtSearch.Location = New System.Drawing.Point(71, 55)
         Me.TxtSearch.Name = "TxtSearch"
@@ -261,6 +275,8 @@ Partial Class FrmDMerchant
         '
         'GCMDetails
         '
+        Me.GCMDetails.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GCMDetails.AppearanceCaption.Options.UseFont = True
         Me.GCMDetails.Controls.Add(M_nameLabel)
         Me.GCMDetails.Controls.Add(Phone_2Label1)
         Me.GCMDetails.Controls.Add(Me.Merchant_idTextBox)
@@ -356,6 +372,8 @@ Partial Class FrmDMerchant
         '
         'GCMLocation
         '
+        Me.GCMLocation.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GCMLocation.AppearanceCaption.Options.UseFont = True
         Me.GCMLocation.Controls.Add(Me.Country_rec_noComboBox)
         Me.GCMLocation.Controls.Add(Country_rec_noLabel)
         Me.GCMLocation.Controls.Add(Me.District_rec_noComboBox)
@@ -438,11 +456,12 @@ Partial Class FrmDMerchant
         'MerchantBindingNavigator
         '
         Me.MerchantBindingNavigator.AddNewItem = Me.merchantBNavAddNewItem
+        Me.MerchantBindingNavigator.BackColor = System.Drawing.Color.LightSteelBlue
         Me.MerchantBindingNavigator.BindingSource = Me.MerchantBindingSource
         Me.MerchantBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.MerchantBindingNavigator.DeleteItem = Me.merchantBNavDeleteItem
         Me.MerchantBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.merchantBNavAddNewItem, Me.merchantBNavEditItem, Me.merchantBNavDeleteItem, Me.merchantBNavSaveItem, Me.merchantBNavCancel})
-        Me.MerchantBindingNavigator.Location = New System.Drawing.Point(2, 20)
+        Me.MerchantBindingNavigator.Location = New System.Drawing.Point(2, 21)
         Me.MerchantBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.MerchantBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.MerchantBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -569,12 +588,13 @@ Partial Class FrmDMerchant
         '
         'Merchant_rec_noTextBox
         '
+        Me.Merchant_rec_noTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.Merchant_rec_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "merchant_rec_no", True))
         Me.Merchant_rec_noTextBox.Location = New System.Drawing.Point(671, 48)
         Me.Merchant_rec_noTextBox.Name = "Merchant_rec_noTextBox"
         Me.Merchant_rec_noTextBox.ReadOnly = True
         Me.Merchant_rec_noTextBox.Size = New System.Drawing.Size(80, 21)
-        Me.Merchant_rec_noTextBox.TabIndex = 1
+        Me.Merchant_rec_noTextBox.TabIndex = 56
         '
         'MerchantTableAdapter
         '
@@ -602,7 +622,7 @@ Partial Class FrmDMerchant
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(797, 246)
         Me.Controls.Add(Me.GroupControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

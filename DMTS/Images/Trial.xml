@@ -1,0 +1,14 @@
+﻿<XtraSerializer version="1.0" application="Appearances">
+  <property name="Appearance" iskey="true" value="Appearance">
+    <property name="Options" isnull="true" iskey="true">
+      <property name="UseForeColor">true</property>
+      <property name="UseBorderColor">true</property>
+      <property name="UseBackColor">true</property>
+    </property>
+    <property name="ForeColor">0, 0, 64</property>
+    <property name="BorderColor">0, 0, 64</property>
+    <property name="BackColor">7, 71, 150</property>
+    <property name="BackColor2">192, 255, 255</property>
+    <property name="GradientMode">Vertical</property>
+  </property>
+</XtraSerializer>

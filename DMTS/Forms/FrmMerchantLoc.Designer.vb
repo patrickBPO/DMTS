@@ -298,6 +298,7 @@ Partial Class FrmMerchantLoc
         'Label1
         '
         Label1.AutoSize = True
+        Label1.BackColor = System.Drawing.Color.Transparent
         Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Label1.Location = New System.Drawing.Point(647, 26)
         Label1.Name = "Label1"
@@ -419,6 +420,7 @@ Partial Class FrmMerchantLoc
         'Label13
         '
         Label13.AutoSize = True
+        Label13.BackColor = System.Drawing.Color.Transparent
         Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Label13.ForeColor = System.Drawing.Color.Maroon
         Label13.Location = New System.Drawing.Point(18, 25)
@@ -439,6 +441,10 @@ Partial Class FrmMerchantLoc
         '
         'GroupControl1
         '
+        Me.GroupControl1.Appearance.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupControl1.Appearance.Options.UseBackColor = True
+        Me.GroupControl1.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GroupControl1.AppearanceCaption.Options.UseFont = True
         Me.GroupControl1.Controls.Add(Label13)
         Me.GroupControl1.Controls.Add(Me.TxtSearch)
         Me.GroupControl1.Controls.Add(Label1)
@@ -448,6 +454,8 @@ Partial Class FrmMerchantLoc
         Me.GroupControl1.Controls.Add(Merchant_rec_noLabel)
         Me.GroupControl1.Controls.Add(Me.GroupControl2)
         Me.GroupControl1.Location = New System.Drawing.Point(12, 34)
+        Me.GroupControl1.LookAndFeel.SkinName = "Office 2010 Blue"
+        Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(812, 430)
         Me.GroupControl1.TabIndex = 0
@@ -455,8 +463,9 @@ Partial Class FrmMerchantLoc
         '
         'TxtSearch
         '
-        Me.TxtSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.TxtSearch.Location = New System.Drawing.Point(78, 23)
         Me.TxtSearch.Name = "TxtSearch"
         Me.TxtSearch.Size = New System.Drawing.Size(237, 21)
@@ -468,6 +477,7 @@ Partial Class FrmMerchantLoc
         '
         'Merchant_rec_noTextBox
         '
+        Me.Merchant_rec_noTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.Merchant_rec_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "merchant_rec_no", True))
         Me.Merchant_rec_noTextBox.Location = New System.Drawing.Point(710, 23)
         Me.Merchant_rec_noTextBox.Name = "Merchant_rec_noTextBox"
@@ -487,6 +497,8 @@ Partial Class FrmMerchantLoc
         '
         'GCMLocation
         '
+        Me.GCMLocation.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GCMLocation.AppearanceCaption.Options.UseFont = True
         Me.GCMLocation.Controls.Add(Me.Country_rec_noComboBox)
         Me.GCMLocation.Controls.Add(Country_rec_noLabel)
         Me.GCMLocation.Controls.Add(Me.District_rec_noComboBox)
@@ -502,9 +514,12 @@ Partial Class FrmMerchantLoc
         '
         'Country_rec_noComboBox
         '
+        Me.Country_rec_noComboBox.BackColor = System.Drawing.Color.LightBlue
         Me.Country_rec_noComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "country_rec_no", True))
         Me.Country_rec_noComboBox.DataSource = Me.CountryBindingSource
         Me.Country_rec_noComboBox.DisplayMember = "description"
+        Me.Country_rec_noComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.Country_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Country_rec_noComboBox.FormattingEnabled = True
         Me.Country_rec_noComboBox.Location = New System.Drawing.Point(100, 31)
         Me.Country_rec_noComboBox.Name = "Country_rec_noComboBox"
@@ -524,9 +539,12 @@ Partial Class FrmMerchantLoc
         '
         'District_rec_noComboBox
         '
+        Me.District_rec_noComboBox.BackColor = System.Drawing.Color.LightBlue
         Me.District_rec_noComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "district_rec_no", True))
         Me.District_rec_noComboBox.DataSource = Me.DistrictBindingSource
         Me.District_rec_noComboBox.DisplayMember = "description"
+        Me.District_rec_noComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.District_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.District_rec_noComboBox.FormattingEnabled = True
         Me.District_rec_noComboBox.Location = New System.Drawing.Point(100, 58)
         Me.District_rec_noComboBox.Name = "District_rec_noComboBox"
@@ -546,9 +564,12 @@ Partial Class FrmMerchantLoc
         '
         'City_rec_noComboBox
         '
+        Me.City_rec_noComboBox.BackColor = System.Drawing.Color.LightBlue
         Me.City_rec_noComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "city_rec_no", True))
         Me.City_rec_noComboBox.DataSource = Me.CityBindingSource
         Me.City_rec_noComboBox.DisplayMember = "Description"
+        Me.City_rec_noComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.City_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.City_rec_noComboBox.FormattingEnabled = True
         Me.City_rec_noComboBox.Location = New System.Drawing.Point(100, 85)
         Me.City_rec_noComboBox.Name = "City_rec_noComboBox"
@@ -568,6 +589,8 @@ Partial Class FrmMerchantLoc
         '
         'GCMDetails
         '
+        Me.GCMDetails.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GCMDetails.AppearanceCaption.Options.UseFont = True
         Me.GCMDetails.Controls.Add(M_nameLabel)
         Me.GCMDetails.Controls.Add(Phone_2Label1)
         Me.GCMDetails.Controls.Add(Me.Merchant_idTextBox)
@@ -590,6 +613,7 @@ Partial Class FrmMerchantLoc
         '
         'Merchant_idTextBox
         '
+        Me.Merchant_idTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.Merchant_idTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Merchant_idTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "merchant_id", True))
         Me.Merchant_idTextBox.Location = New System.Drawing.Point(10, 44)
@@ -600,6 +624,7 @@ Partial Class FrmMerchantLoc
         '
         'Phone_2MaskedTextBox
         '
+        Me.Phone_2MaskedTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.Phone_2MaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "phone_2", True))
         Me.Phone_2MaskedTextBox.Location = New System.Drawing.Point(276, 91)
         Me.Phone_2MaskedTextBox.Mask = "(5\01) 000-0000"
@@ -610,6 +635,7 @@ Partial Class FrmMerchantLoc
         '
         'M_nameTextBox
         '
+        Me.M_nameTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.M_nameTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.M_nameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "m_name", True))
         Me.M_nameTextBox.Location = New System.Drawing.Point(117, 45)
@@ -620,6 +646,7 @@ Partial Class FrmMerchantLoc
         '
         'Phone_1MaskedTextBox
         '
+        Me.Phone_1MaskedTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.Phone_1MaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "phone_1", True))
         Me.Phone_1MaskedTextBox.Location = New System.Drawing.Point(170, 91)
         Me.Phone_1MaskedTextBox.Mask = "(5\01) 000-0000"
@@ -630,6 +657,7 @@ Partial Class FrmMerchantLoc
         '
         'M_contactTextBox
         '
+        Me.M_contactTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.M_contactTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.M_contactTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "m_contact", True))
         Me.M_contactTextBox.Location = New System.Drawing.Point(285, 45)
@@ -640,6 +668,7 @@ Partial Class FrmMerchantLoc
         '
         'RateTextBox
         '
+        Me.RateTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.RateTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.RateTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "rate", True))
         Me.RateTextBox.Location = New System.Drawing.Point(382, 91)
@@ -650,6 +679,7 @@ Partial Class FrmMerchantLoc
         '
         'M_emailTextBox
         '
+        Me.M_emailTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.M_emailTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.M_emailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "m_email", True))
         Me.M_emailTextBox.Location = New System.Drawing.Point(9, 92)
@@ -660,6 +690,8 @@ Partial Class FrmMerchantLoc
         '
         'GroupControl2
         '
+        Me.GroupControl2.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GroupControl2.AppearanceCaption.Options.UseFont = True
         Me.GroupControl2.Controls.Add(Label14)
         Me.GroupControl2.Controls.Add(Me.Ml_rec_noTextBox)
         Me.GroupControl2.Controls.Add(Label12)
@@ -675,6 +707,7 @@ Partial Class FrmMerchantLoc
         '
         'Ml_rec_noTextBox
         '
+        Me.Ml_rec_noTextBox.BackColor = System.Drawing.Color.LightBlue
         Me.Ml_rec_noTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource1, "ml_rec_no", True))
         Me.Ml_rec_noTextBox.Location = New System.Drawing.Point(678, 59)
         Me.Ml_rec_noTextBox.Name = "Ml_rec_noTextBox"
@@ -689,8 +722,9 @@ Partial Class FrmMerchantLoc
         '
         'TxtMLSearch
         '
-        Me.TxtMLSearch.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.TxtMLSearch.BackColor = System.Drawing.Color.SteelBlue
         Me.TxtMLSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TxtMLSearch.ForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.TxtMLSearch.Location = New System.Drawing.Point(74, 61)
         Me.TxtMLSearch.Name = "TxtMLSearch"
         Me.TxtMLSearch.Size = New System.Drawing.Size(237, 21)
@@ -698,6 +732,8 @@ Partial Class FrmMerchantLoc
         '
         'GCMLLocation
         '
+        Me.GCMLLocation.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GCMLLocation.AppearanceCaption.Options.UseFont = True
         Me.GCMLLocation.Controls.Add(Me.CboMLCountry)
         Me.GCMLLocation.Controls.Add(Label2)
         Me.GCMLLocation.Controls.Add(Me.CboMLDistrict)
@@ -713,6 +749,7 @@ Partial Class FrmMerchantLoc
         '
         'CboMLCountry
         '
+        Me.CboMLCountry.BackColor = System.Drawing.Color.White
         Me.CboMLCountry.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Merch_locBindingSource, "country_rec_no", True))
         Me.CboMLCountry.DataSource = Me.CountryBindingSource1
         Me.CboMLCountry.DisplayMember = "description"
@@ -739,6 +776,7 @@ Partial Class FrmMerchantLoc
         '
         'CboMLDistrict
         '
+        Me.CboMLDistrict.BackColor = System.Drawing.Color.White
         Me.CboMLDistrict.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Merch_locBindingSource, "district_rec_no", True))
         Me.CboMLDistrict.DataSource = Me.DistrictBindingSource1
         Me.CboMLDistrict.DisplayMember = "description"
@@ -756,6 +794,7 @@ Partial Class FrmMerchantLoc
         '
         'CboMLCity
         '
+        Me.CboMLCity.BackColor = System.Drawing.Color.White
         Me.CboMLCity.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.Merch_locBindingSource, "city_rec_no", True))
         Me.CboMLCity.DataSource = Me.CityBindingSource1
         Me.CboMLCity.DisplayMember = "Description"
@@ -773,6 +812,8 @@ Partial Class FrmMerchantLoc
         '
         'GCMLDetails
         '
+        Me.GCMLDetails.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GCMLDetails.AppearanceCaption.Options.UseFont = True
         Me.GCMLDetails.Controls.Add(Label5)
         Me.GCMLDetails.Controls.Add(Label6)
         Me.GCMLDetails.Controls.Add(Me.TxtLocID)
@@ -796,6 +837,7 @@ Partial Class FrmMerchantLoc
         '
         'TxtLocID
         '
+        Me.TxtLocID.BackColor = System.Drawing.Color.White
         Me.TxtLocID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TxtLocID.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "ml_id", True))
         Me.TxtLocID.Location = New System.Drawing.Point(10, 44)
@@ -805,6 +847,7 @@ Partial Class FrmMerchantLoc
         '
         'MaskedTextBox1
         '
+        Me.MaskedTextBox1.BackColor = System.Drawing.Color.White
         Me.MaskedTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "phone_2", True))
         Me.MaskedTextBox1.Location = New System.Drawing.Point(276, 91)
         Me.MaskedTextBox1.Mask = "(5\01) 000-0000"
@@ -814,6 +857,7 @@ Partial Class FrmMerchantLoc
         '
         'TextBox3
         '
+        Me.TextBox3.BackColor = System.Drawing.Color.White
         Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "ml_name", True))
         Me.TextBox3.Location = New System.Drawing.Point(134, 45)
@@ -823,6 +867,7 @@ Partial Class FrmMerchantLoc
         '
         'MaskedTextBox2
         '
+        Me.MaskedTextBox2.BackColor = System.Drawing.Color.White
         Me.MaskedTextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "phone_1", True))
         Me.MaskedTextBox2.Location = New System.Drawing.Point(170, 91)
         Me.MaskedTextBox2.Mask = "(5\01) 000-0000"
@@ -832,6 +877,7 @@ Partial Class FrmMerchantLoc
         '
         'TextBox4
         '
+        Me.TextBox4.BackColor = System.Drawing.Color.White
         Me.TextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "m_contact", True))
         Me.TextBox4.Location = New System.Drawing.Point(320, 45)
@@ -841,6 +887,7 @@ Partial Class FrmMerchantLoc
         '
         'TextBox5
         '
+        Me.TextBox5.BackColor = System.Drawing.Color.White
         Me.TextBox5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "shadow_acc", True))
         Me.TextBox5.Location = New System.Drawing.Point(382, 91)
@@ -850,6 +897,7 @@ Partial Class FrmMerchantLoc
         '
         'TextBox6
         '
+        Me.TextBox6.BackColor = System.Drawing.Color.White
         Me.TextBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TextBox6.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "m_email", True))
         Me.TextBox6.Location = New System.Drawing.Point(9, 92)
@@ -860,11 +908,12 @@ Partial Class FrmMerchantLoc
         'Merch_locBindingNavigator
         '
         Me.Merch_locBindingNavigator.AddNewItem = Me.merch_locBNavAddNewItem
+        Me.Merch_locBindingNavigator.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Merch_locBindingNavigator.BindingSource = Me.Merch_locBindingSource
         Me.Merch_locBindingNavigator.CountItem = Me.BindingNavigatorCountItem
         Me.Merch_locBindingNavigator.DeleteItem = Me.merch_locBNavDeleteItem
         Me.Merch_locBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.merch_locBNavAddNewItem, Me.merch_locBNavEditItem, Me.merch_locBNavDeleteItem, Me.merch_locBNavSaveItem, Me.merch_locBNavCancel})
-        Me.Merch_locBindingNavigator.Location = New System.Drawing.Point(2, 20)
+        Me.Merch_locBindingNavigator.Location = New System.Drawing.Point(2, 21)
         Me.Merch_locBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.Merch_locBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.Merch_locBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -1006,6 +1055,7 @@ Partial Class FrmMerchantLoc
         'MerchantBindingNavigator
         '
         Me.MerchantBindingNavigator.AddNewItem = Me.ToolStripButton1
+        Me.MerchantBindingNavigator.BackColor = System.Drawing.Color.LightSteelBlue
         Me.MerchantBindingNavigator.BindingSource = Me.MerchantBindingSource
         Me.MerchantBindingNavigator.CountItem = Me.ToolStripLabel1
         Me.MerchantBindingNavigator.DeleteItem = Me.ToolStripButton2
@@ -1133,6 +1183,7 @@ Partial Class FrmMerchantLoc
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(836, 470)
         Me.Controls.Add(Me.MerchantBindingNavigator)
         Me.Controls.Add(Me.GroupControl1)
