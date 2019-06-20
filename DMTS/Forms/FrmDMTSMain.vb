@@ -118,4 +118,8 @@ Public Class FrmDMTSMain
     Private Sub MerchantLocationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MerchantLocationToolStripMenuItem.Click
         FrmMerchantLoc.Show()
     End Sub
+
+    Private Sub ViewTransactionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewTransactionsToolStripMenuItem.Click
+
+    End Sub
 End Class
