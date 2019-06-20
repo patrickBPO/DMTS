@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TransactionsDS" targetNamespace="http://tempuri.org/TransactionsDS.xsd" xmlns:mstns="http://tempuri.org/TransactionsDS.xsd" xmlns="http://tempuri.org/TransactionsDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" PropertyReference="ApplicationSettings.DMTS.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="transactionsTableAdapter" GeneratorDataComponentClassName="transactionsTableAdapter" Name="transactions" UserDataComponentName="transactionsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        transactions.trans_rec_no, transactions.fh, transactions.trans_date, transactions.div_nbr, transactions.currency_code, transactions.amount, card_type.ct_desc, loc_terminal.lt_desc
+FROM            transactions, card_type, loc_terminal
+WHERE        transactions.ct_rec_no = card_type.ct_rec_no AND transactions.lt_rec_no = loc_terminal.lt_rec_no
+ORDER BY transactions.trans_date</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="trans_rec_no" DataSetColumn="trans_rec_no" />
+              <Mapping SourceColumn="fh" DataSetColumn="fh" />
+              <Mapping SourceColumn="trans_date" DataSetColumn="trans_date" />
+              <Mapping SourceColumn="div_nbr" DataSetColumn="div_nbr" />
+              <Mapping SourceColumn="currency_code" DataSetColumn="currency_code" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+              <Mapping SourceColumn="ct_desc" DataSetColumn="ct_desc" />
+              <Mapping SourceColumn="lt_desc" DataSetColumn="lt_desc" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TransactionsDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TransactionsDS" msprop:Generator_UserDSName="TransactionsDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="transactions" msprop:Generator_TableClassName="transactionsDataTable" msprop:Generator_TableVarName="tabletransactions" msprop:Generator_TablePropName="transactions" msprop:Generator_RowDeletingName="transactionsRowDeleting" msprop:Generator_RowChangingName="transactionsRowChanging" msprop:Generator_RowEvHandlerName="transactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="transactionsRowDeleted" msprop:Generator_UserTableName="transactions" msprop:Generator_RowChangedName="transactionsRowChanged" msprop:Generator_RowEvArgName="transactionsRowChangeEvent" msprop:Generator_RowClassName="transactionsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trans_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntrans_rec_no" msprop:Generator_ColumnPropNameInRow="trans_rec_no" msprop:Generator_ColumnPropNameInTable="trans_rec_noColumn" msprop:Generator_UserColumnName="trans_rec_no" type="xs:int" minOccurs="0" />
+              <xs:element name="fh" msprop:Generator_ColumnVarNameInTable="columnfh" msprop:Generator_ColumnPropNameInRow="fh" msprop:Generator_ColumnPropNameInTable="fhColumn" msprop:Generator_UserColumnName="fh" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="trans_date" msprop:Generator_ColumnVarNameInTable="columntrans_date" msprop:Generator_ColumnPropNameInRow="trans_date" msprop:Generator_ColumnPropNameInTable="trans_dateColumn" msprop:Generator_UserColumnName="trans_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="div_nbr" msprop:Generator_ColumnVarNameInTable="columndiv_nbr" msprop:Generator_ColumnPropNameInRow="div_nbr" msprop:Generator_ColumnPropNameInTable="div_nbrColumn" msprop:Generator_UserColumnName="div_nbr" type="xs:int" minOccurs="0" />
+              <xs:element name="currency_code" msprop:Generator_ColumnVarNameInTable="columncurrency_code" msprop:Generator_ColumnPropNameInRow="currency_code" msprop:Generator_ColumnPropNameInTable="currency_codeColumn" msprop:Generator_UserColumnName="currency_code" type="xs:int" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:double" minOccurs="0" />
+              <xs:element name="ct_desc" msprop:Generator_ColumnVarNameInTable="columnct_desc" msprop:Generator_ColumnPropNameInRow="ct_desc" msprop:Generator_ColumnPropNameInTable="ct_descColumn" msprop:Generator_UserColumnName="ct_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="240" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lt_desc" msprop:Generator_ColumnVarNameInTable="columnlt_desc" msprop:Generator_ColumnPropNameInRow="lt_desc" msprop:Generator_ColumnPropNameInTable="lt_descColumn" msprop:Generator_UserColumnName="lt_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="240" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:transactions" />
+      <xs:field xpath="mstns:trans_rec_no" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

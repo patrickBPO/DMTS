@@ -186,6 +186,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MLocDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\TransactionsDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionsDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCardType.Designer.vb">
       <DependentUpon>FrmCardType.vb</DependentUpon>
     </Compile>
@@ -329,7 +334,7 @@
     <EmbeddedResource Include="Forms\FrmViewTrans.resx">
       <DependentUpon>FrmViewTrans.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\licenses1.licx" />
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -459,6 +464,17 @@
     <None Include="Data\MLocDS.xss">
       <DependentUpon>MLocDS.xsd</DependentUpon>
     </None>
+    <None Include="Data\TransactionsDS.xsc">
+      <DependentUpon>TransactionsDS.xsd</DependentUpon>
+    </None>
+    <None Include="Data\TransactionsDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionsDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\TransactionsDS.xss">
+      <DependentUpon>TransactionsDS.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -479,6 +495,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DollarSign.ico" />
+    <None Include="Images\DollarSign.ico" />
     <None Include="Images\Undo.ico" />
     <None Include="Images\Edit.ico" />
     <None Include="Images\Previous.png" />
