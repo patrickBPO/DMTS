@@ -140,7 +140,7 @@ Partial Class FrmDMTSMain
         'ViewEditTransactionsToolStripMenuItem
         '
         Me.ViewEditTransactionsToolStripMenuItem.Name = "ViewEditTransactionsToolStripMenuItem"
-        Me.ViewEditTransactionsToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.ViewEditTransactionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ViewEditTransactionsToolStripMenuItem.Text = "View Transactions"
         '
         'ImportToolStripMenuItem
@@ -172,8 +172,8 @@ Partial Class FrmDMTSMain
         'ViewTransactionsToolStripMenuItem
         '
         Me.ViewTransactionsToolStripMenuItem.Name = "ViewTransactionsToolStripMenuItem"
-        Me.ViewTransactionsToolStripMenuItem.Size = New System.Drawing.Size(248, 22)
-        Me.ViewTransactionsToolStripMenuItem.Text = "Transactions Report (Date Range)"
+        Me.ViewTransactionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ViewTransactionsToolStripMenuItem.Text = "Transactions Report"
         '
         'HelpToolStripMenuItem
         '

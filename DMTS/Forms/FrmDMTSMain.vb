@@ -120,6 +120,6 @@ Public Class FrmDMTSMain
     End Sub
 
     Private Sub ViewTransactionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewTransactionsToolStripMenuItem.Click
-
+        FrmTransReport.Show()
     End Sub
 End Class

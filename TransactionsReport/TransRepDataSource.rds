@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="TransRepDataSource">
+  <ConnectionProperties>
+    <Extension>ODBC</Extension>
+    <ConnectString>Dsn=DMTSConn</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>9f1d2e31-d4da-492d-a24d-6a3528144fdb</DataSourceID>
+</RptDataSource>
