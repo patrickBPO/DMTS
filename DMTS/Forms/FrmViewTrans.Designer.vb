@@ -91,6 +91,7 @@ Partial Class FrmViewTrans
         Me.lt_desc.Caption = "Terminal"
         Me.lt_desc.FieldName = "lt_desc"
         Me.lt_desc.Name = "lt_desc"
+        Me.lt_desc.OptionsColumn.AllowEdit = False
         Me.lt_desc.Visible = True
         Me.lt_desc.VisibleIndex = 6
         Me.lt_desc.Width = 396
@@ -100,6 +101,7 @@ Partial Class FrmViewTrans
         Me.colfh.Caption = "FH"
         Me.colfh.FieldName = "fh"
         Me.colfh.Name = "colfh"
+        Me.colfh.OptionsColumn.AllowEdit = False
         Me.colfh.Visible = True
         Me.colfh.VisibleIndex = 0
         Me.colfh.Width = 36
@@ -109,6 +111,7 @@ Partial Class FrmViewTrans
         Me.coltrans_date.Caption = "Date"
         Me.coltrans_date.FieldName = "trans_date"
         Me.coltrans_date.Name = "coltrans_date"
+        Me.coltrans_date.OptionsColumn.AllowEdit = False
         Me.coltrans_date.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "trans_date", "# Trans={0:###,###}")})
         Me.coltrans_date.Visible = True
         Me.coltrans_date.VisibleIndex = 1
@@ -119,6 +122,7 @@ Partial Class FrmViewTrans
         Me.coldiv_nbr.Caption = "Div Nbr"
         Me.coldiv_nbr.FieldName = "div_nbr"
         Me.coldiv_nbr.Name = "coldiv_nbr"
+        Me.coldiv_nbr.OptionsColumn.AllowEdit = False
         Me.coldiv_nbr.Visible = True
         Me.coldiv_nbr.VisibleIndex = 2
         Me.coldiv_nbr.Width = 50
@@ -128,6 +132,7 @@ Partial Class FrmViewTrans
         Me.colcurrency_code.Caption = "Code"
         Me.colcurrency_code.FieldName = "currency_code"
         Me.colcurrency_code.Name = "colcurrency_code"
+        Me.colcurrency_code.OptionsColumn.AllowEdit = False
         Me.colcurrency_code.Visible = True
         Me.colcurrency_code.VisibleIndex = 3
         Me.colcurrency_code.Width = 43
@@ -139,6 +144,7 @@ Partial Class FrmViewTrans
         Me.colamount.Caption = "Amount"
         Me.colamount.FieldName = "amount"
         Me.colamount.Name = "colamount"
+        Me.colamount.OptionsColumn.AllowEdit = False
         Me.colamount.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", "Grand Tot={0:$#,###,##0.00}")})
         Me.colamount.Visible = True
         Me.colamount.VisibleIndex = 4
@@ -149,6 +155,7 @@ Partial Class FrmViewTrans
         Me.ct_desc.Caption = "Card Type"
         Me.ct_desc.FieldName = "ct_desc"
         Me.ct_desc.Name = "ct_desc"
+        Me.ct_desc.OptionsColumn.AllowEdit = False
         Me.ct_desc.Visible = True
         Me.ct_desc.VisibleIndex = 5
         Me.ct_desc.Width = 67
