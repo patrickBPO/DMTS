@@ -71,7 +71,7 @@ Partial Class FrmTransReport
         Me.SimpleButton1.Name = "SimpleButton1"
         Me.SimpleButton1.Size = New System.Drawing.Size(75, 23)
         Me.SimpleButton1.TabIndex = 3
-        Me.SimpleButton1.Text = "&Print Preview"
+        Me.SimpleButton1.Text = "&Printing"
         '
         'GridControl1
         '

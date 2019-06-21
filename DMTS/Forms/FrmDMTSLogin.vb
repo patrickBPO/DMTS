@@ -1,4 +1,5 @@
-﻿Imports System.Data.Odbc
+﻿Imports System.Data
+Imports System.Data.Odbc
 Imports System.Data.Sql
 Imports System.Data.SqlClient
 Imports MySql.Data.MySqlClient
@@ -9,9 +10,12 @@ Public Class FrmDMTSLogin
     'Dim MyConnection As New OdbcConnection(MyConString)
     'Dim MyCommand As New OdbcCommand()
     'Dim MyDataReader As OdbcDataReader
-    Dim MyConString As String = "server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
-            persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
+    'Dim OpenDatabase As Boolean
+
+    Dim MyConString As String = "server=localhost;user id=DMTS;password=dmts@xs4db;
+            persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3306;
             database=dmts;defaultcommandtimeout=180"
+
     Dim MyConnection As New MySqlConnection(MyConString)
     Dim MyCommand As New MySqlCommand()
     Dim MyDataReader As MySqlDataReader
@@ -40,6 +44,7 @@ Public Class FrmDMTSLogin
 
         Try
             If MyConnection.State = ConnectionState.Closed Then
+                'MyConnection.ConnectionString = MyConString
                 MyConnection.Open()
             End If
 

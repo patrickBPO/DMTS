@@ -122,4 +122,8 @@ Public Class FrmDMTSMain
     Private Sub ViewTransactionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewTransactionsToolStripMenuItem.Click
         FrmTransReport.Show()
     End Sub
+
+    Private Sub LocationTerminalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocationTerminalToolStripMenuItem.Click
+        FrmLocTerminal.Show()
+    End Sub
 End Class
