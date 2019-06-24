@@ -73,12 +73,20 @@ Partial Class FrmViewTrans
         '
         'GridView1
         '
+        Me.GridView1.Appearance.FooterPanel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Blue
+        Me.GridView1.Appearance.FooterPanel.Options.UseFont = True
+        Me.GridView1.Appearance.FooterPanel.Options.UseForeColor = True
+        Me.GridView1.Appearance.GroupFooter.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GridView1.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Blue
+        Me.GridView1.Appearance.GroupFooter.Options.UseFont = True
+        Me.GridView1.Appearance.GroupFooter.Options.UseForeColor = True
         Me.GridView1.Appearance.OddRow.BackColor = System.Drawing.Color.SlateGray
         Me.GridView1.Appearance.OddRow.Options.UseBackColor = True
         Me.GridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.coltrans_rec_no, Me.lt_desc, Me.colfh, Me.coltrans_date, Me.coldiv_nbr, Me.colcurrency_code, Me.colamount, Me.ct_desc})
         Me.GridView1.GridControl = Me.GridControl1
-        Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", Nothing, "(Total={0:$###,##0.00})"), New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "trans_date", Nothing, "(Count ={0:###,###})")})
+        Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", Nothing, "(Total={0:$###,##0.00})"), New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "currency_code", Nothing, "(Count ={0:###,###})")})
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.PaintStyleName = "Skin"
@@ -116,7 +124,6 @@ Partial Class FrmViewTrans
         Me.coltrans_date.FieldName = "trans_date"
         Me.coltrans_date.Name = "coltrans_date"
         Me.coltrans_date.OptionsColumn.AllowEdit = False
-        Me.coltrans_date.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "trans_date", "Count ={0:###,###}")})
         Me.coltrans_date.Visible = True
         Me.coltrans_date.VisibleIndex = 0
         Me.coltrans_date.Width = 124
@@ -137,6 +144,7 @@ Partial Class FrmViewTrans
         Me.colcurrency_code.FieldName = "currency_code"
         Me.colcurrency_code.Name = "colcurrency_code"
         Me.colcurrency_code.OptionsColumn.AllowEdit = False
+        Me.colcurrency_code.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "currency_code", "Count ={0:###,###}")})
         Me.colcurrency_code.Visible = True
         Me.colcurrency_code.VisibleIndex = 5
         Me.colcurrency_code.Width = 130

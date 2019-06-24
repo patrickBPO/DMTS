@@ -98,14 +98,26 @@ Partial Class FrmTransReport
         '
         'GridView1
         '
+        Me.GridView1.Appearance.FooterPanel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GridView1.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Blue
+        Me.GridView1.Appearance.FooterPanel.Options.UseFont = True
+        Me.GridView1.Appearance.FooterPanel.Options.UseForeColor = True
+        Me.GridView1.Appearance.GroupFooter.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GridView1.Appearance.GroupFooter.ForeColor = System.Drawing.Color.Blue
+        Me.GridView1.Appearance.GroupFooter.Options.UseFont = True
+        Me.GridView1.Appearance.GroupFooter.Options.UseForeColor = True
         Me.GridView1.Appearance.OddRow.BackColor = System.Drawing.Color.SlateGray
         Me.GridView1.Appearance.OddRow.Options.UseBackColor = True
+        Me.GridView1.AppearancePrint.EvenRow.Options.UseTextOptions = True
         Me.GridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.coltrans_rec_no, Me.lt_desc, Me.colfh, Me.coltrans_date, Me.coldiv_nbr, Me.colcurrency_code, Me.colamount, Me.ct_desc})
         Me.GridView1.GridControl = Me.GridControl1
-        Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", Nothing, "(Total={0:$###,##0.00})"), New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "trans_date", Nothing, "(Count ={0:###,###})")})
+        Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", Nothing, "(Total={0:$###,##0.00})"), New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "currency_code", Nothing, "(Count ={0:###,###})")})
         Me.GridView1.Name = "GridView1"
-        Me.GridView1.OptionsPrint.RtfPageHeader = resources.GetString("GridView1.OptionsPrint.RtfPageHeader")
+        Me.GridView1.OptionsPrint.EnableAppearanceEvenRow = True
+        Me.GridView1.OptionsPrint.RtfPageFooter = resources.GetString("GridView1.OptionsPrint.RtfPageFooter")
+        Me.GridView1.OptionsPrint.RtfReportHeader = resources.GetString("GridView1.OptionsPrint.RtfReportHeader")
+        Me.GridView1.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Fast
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.PaintStyleName = "Skin"
         Me.GridView1.SortInfo.AddRange(New DevExpress.XtraGrid.Columns.GridColumnSortInfo() {New DevExpress.XtraGrid.Columns.GridColumnSortInfo(Me.colamount, DevExpress.Data.ColumnSortOrder.Ascending)})
@@ -142,7 +154,6 @@ Partial Class FrmTransReport
         Me.coltrans_date.FieldName = "trans_date"
         Me.coltrans_date.Name = "coltrans_date"
         Me.coltrans_date.OptionsColumn.AllowEdit = False
-        Me.coltrans_date.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "trans_date", "Tot Count ={0:###,###}")})
         Me.coltrans_date.Visible = True
         Me.coltrans_date.VisibleIndex = 0
         Me.coltrans_date.Width = 124
@@ -155,7 +166,7 @@ Partial Class FrmTransReport
         Me.coldiv_nbr.OptionsColumn.AllowEdit = False
         Me.coldiv_nbr.Visible = True
         Me.coldiv_nbr.VisibleIndex = 4
-        Me.coldiv_nbr.Width = 88
+        Me.coldiv_nbr.Width = 85
         '
         'colcurrency_code
         '
@@ -163,9 +174,10 @@ Partial Class FrmTransReport
         Me.colcurrency_code.FieldName = "currency_code"
         Me.colcurrency_code.Name = "colcurrency_code"
         Me.colcurrency_code.OptionsColumn.AllowEdit = False
+        Me.colcurrency_code.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "currency_code", "Tot Count ={0:###,###}")})
         Me.colcurrency_code.Visible = True
         Me.colcurrency_code.VisibleIndex = 5
-        Me.colcurrency_code.Width = 130
+        Me.colcurrency_code.Width = 140
         '
         'colamount
         '
@@ -176,7 +188,7 @@ Partial Class FrmTransReport
         Me.colamount.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", "Grand Tot={0:$#,###,##0.00}")})
         Me.colamount.Visible = True
         Me.colamount.VisibleIndex = 6
-        Me.colamount.Width = 216
+        Me.colamount.Width = 198
         '
         'ct_desc
         '
@@ -186,7 +198,7 @@ Partial Class FrmTransReport
         Me.ct_desc.OptionsColumn.AllowEdit = False
         Me.ct_desc.Visible = True
         Me.ct_desc.VisibleIndex = 3
-        Me.ct_desc.Width = 56
+        Me.ct_desc.Width = 67
         '
         'RICboCardType
         '
