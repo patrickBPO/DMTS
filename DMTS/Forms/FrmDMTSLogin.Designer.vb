@@ -22,6 +22,7 @@ Partial Class FrmDMTSLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDMTSLogin))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -30,7 +31,14 @@ Partial Class FrmDMTSLogin
         Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.CmdLogin = New System.Windows.Forms.Button()
         Me.CmdCancel = New System.Windows.Forms.Button()
+        Me.TxtSname = New System.Windows.Forms.TextBox()
+        Me.LblSname = New System.Windows.Forms.Label()
+        Me.SnameBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SNameDS = New DMTS.SNameDS()
+        Me.S_nameTableAdapter = New DMTS.SNameDSTableAdapters.s_nameTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SnameBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SNameDS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -103,6 +111,46 @@ Partial Class FrmDMTSLogin
         Me.CmdCancel.Text = "Cancel"
         Me.CmdCancel.UseVisualStyleBackColor = False
         '
+        'TxtSname
+        '
+        Me.TxtSname.BackColor = System.Drawing.Color.White
+        Me.TxtSname.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SnameBindingSource, "description", True))
+        Me.TxtSname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtSname.ForeColor = System.Drawing.Color.Blue
+        Me.TxtSname.Location = New System.Drawing.Point(270, 117)
+        Me.TxtSname.Name = "TxtSname"
+        Me.TxtSname.Size = New System.Drawing.Size(100, 20)
+        Me.TxtSname.TabIndex = 8
+        Me.TxtSname.Visible = False
+        '
+        'LblSname
+        '
+        Me.LblSname.AutoSize = True
+        Me.LblSname.BackColor = System.Drawing.Color.Transparent
+        Me.LblSname.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LblSname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblSname.ForeColor = System.Drawing.Color.Red
+        Me.LblSname.Location = New System.Drawing.Point(40, 120)
+        Me.LblSname.Name = "LblSname"
+        Me.LblSname.Size = New System.Drawing.Size(225, 13)
+        Me.LblSname.TabIndex = 9
+        Me.LblSname.Text = "Correct Server Name or IP required -->"
+        Me.LblSname.Visible = False
+        '
+        'SnameBindingSource
+        '
+        Me.SnameBindingSource.DataMember = "s_name"
+        Me.SnameBindingSource.DataSource = Me.SNameDS
+        '
+        'SNameDS
+        '
+        Me.SNameDS.DataSetName = "SNameDS"
+        Me.SNameDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'S_nameTableAdapter
+        '
+        Me.S_nameTableAdapter.ClearBeforeFill = True
+        '
         'FrmDMTSLogin
         '
         Me.AcceptButton = Me.CmdLogin
@@ -110,6 +158,8 @@ Partial Class FrmDMTSLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(401, 199)
+        Me.Controls.Add(Me.LblSname)
+        Me.Controls.Add(Me.TxtSname)
         Me.Controls.Add(Me.CmdCancel)
         Me.Controls.Add(Me.CmdLogin)
         Me.Controls.Add(Me.TxtPassword)
@@ -121,6 +171,8 @@ Partial Class FrmDMTSLogin
         Me.Name = "FrmDMTSLogin"
         Me.Text = "User Login"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SnameBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SNameDS, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -133,4 +185,9 @@ Partial Class FrmDMTSLogin
     Friend WithEvents TxtPassword As TextBox
     Friend WithEvents CmdLogin As Button
     Friend WithEvents CmdCancel As Button
+    Friend WithEvents TxtSname As TextBox
+    Friend WithEvents LblSname As Label
+    Friend WithEvents SNameDS As SNameDS
+    Friend WithEvents SnameBindingSource As BindingSource
+    Friend WithEvents S_nameTableAdapter As SNameDSTableAdapters.s_nameTableAdapter
 End Class

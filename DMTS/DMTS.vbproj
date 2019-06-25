@@ -249,6 +249,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TransactionsDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DiaAddServer.Designer.vb">
+      <DependentUpon>DiaAddServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DiaAddServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmCardType.Designer.vb">
       <DependentUpon>FrmCardType.vb</DependentUpon>
     </Compile>
@@ -354,8 +360,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SNameDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SNameDS.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\DiaAddServer.resx">
+      <DependentUpon>DiaAddServer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCardType.resx">
       <DependentUpon>FrmCardType.vb</DependentUpon>
     </EmbeddedResource>
@@ -554,6 +568,17 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="SNameDS.xsc">
+      <DependentUpon>SNameDS.xsd</DependentUpon>
+    </None>
+    <None Include="SNameDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SNameDS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SNameDS.xss">
+      <DependentUpon>SNameDS.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Excel-icon.ico" />
