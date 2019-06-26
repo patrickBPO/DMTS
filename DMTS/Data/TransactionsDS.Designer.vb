@@ -299,6 +299,8 @@ Partial Public Class TransactionsDS
         
         Private columnlt_desc As Global.System.Data.DataColumn
         
+        Private columnm_name As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -399,6 +401,14 @@ Partial Public Class TransactionsDS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property m_nameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnm_name
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -435,9 +445,9 @@ Partial Public Class TransactionsDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddtransactionsRow(ByVal fh As String, ByVal trans_date As Date, ByVal div_nbr As Integer, ByVal currency_code As Integer, ByVal amount As Double, ByVal ct_desc As String, ByVal lt_desc As String) As transactionsRow
+        Public Overloads Function AddtransactionsRow(ByVal fh As String, ByVal trans_date As Date, ByVal div_nbr As Integer, ByVal currency_code As Integer, ByVal amount As Double, ByVal ct_desc As String, ByVal lt_desc As String, ByVal m_name As String) As transactionsRow
             Dim rowtransactionsRow As transactionsRow = CType(Me.NewRow,transactionsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, fh, trans_date, div_nbr, currency_code, amount, ct_desc, lt_desc}
+            Dim columnValuesArray() As Object = New Object() {Nothing, fh, trans_date, div_nbr, currency_code, amount, ct_desc, lt_desc, m_name}
             rowtransactionsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtransactionsRow)
             Return rowtransactionsRow
@@ -468,6 +478,7 @@ Partial Public Class TransactionsDS
             Me.columnamount = MyBase.Columns("amount")
             Me.columnct_desc = MyBase.Columns("ct_desc")
             Me.columnlt_desc = MyBase.Columns("lt_desc")
+            Me.columnm_name = MyBase.Columns("m_name")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -489,14 +500,18 @@ Partial Public Class TransactionsDS
             MyBase.Columns.Add(Me.columnct_desc)
             Me.columnlt_desc = New Global.System.Data.DataColumn("lt_desc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnlt_desc)
+            Me.columnm_name = New Global.System.Data.DataColumn("m_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnm_name)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columntrans_rec_no}, false))
             Me.columntrans_rec_no.AutoIncrement = true
             Me.columntrans_rec_no.AutoIncrementSeed = -1
             Me.columntrans_rec_no.AutoIncrementStep = -1
+            Me.columntrans_rec_no.AllowDBNull = false
             Me.columntrans_rec_no.Unique = true
             Me.columnfh.MaxLength = 20
             Me.columnct_desc.MaxLength = 240
             Me.columnlt_desc.MaxLength = 240
+            Me.columnm_name.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -645,11 +660,7 @@ Partial Public Class TransactionsDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property trans_rec_no() As Integer
             Get
-                Try 
-                    Return CType(Me(Me.tabletransactions.trans_rec_noColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'trans_rec_no' in table 'transactions' is DBNull.", e)
-                End Try
+                Return CType(Me(Me.tabletransactions.trans_rec_noColumn),Integer)
             End Get
             Set
                 Me(Me.tabletransactions.trans_rec_noColumn) = value
@@ -763,15 +774,18 @@ Partial Public Class TransactionsDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Istrans_rec_noNull() As Boolean
-            Return Me.IsNull(Me.tabletransactions.trans_rec_noColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Settrans_rec_noNull()
-            Me(Me.tabletransactions.trans_rec_noColumn) = Global.System.Convert.DBNull
-        End Sub
+        Public Property m_name() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tabletransactions.m_nameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'm_name' in table 'transactions' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabletransactions.m_nameColumn) = value
+            End Set
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -855,6 +869,18 @@ Partial Public Class TransactionsDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub Setlt_descNull()
             Me(Me.tabletransactions.lt_descColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function Ism_nameNull() As Boolean
+            Return Me.IsNull(Me.tabletransactions.m_nameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub Setm_nameNull()
+            Me(Me.tabletransactions.m_nameColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1032,6 +1058,7 @@ Namespace TransactionsDSTableAdapters
             tableMapping.ColumnMappings.Add("amount", "amount")
             tableMapping.ColumnMappings.Add("ct_desc", "ct_desc")
             tableMapping.ColumnMappings.Add("lt_desc", "lt_desc")
+            tableMapping.ColumnMappings.Add("m_name", "m_name")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -1050,9 +1077,11 @@ Namespace TransactionsDSTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        transactions.trans_rec_no, transactions.fh, transactions.trans_date"& _ 
                 ", transactions.div_nbr, transactions.currency_code, transactions.amount, card_ty"& _ 
-                "pe.ct_desc, loc_terminal.lt_desc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            transactions, card_type, loc_t"& _ 
-                "erminal"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        transactions.ct_rec_no = card_type.ct_rec_no AND transacti"& _ 
-                "ons.lt_rec_no = loc_terminal.lt_rec_no"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY transactions.trans_date"
+                "pe.ct_desc, loc_terminal.lt_desc, merchant.m_name"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            transactions,"& _ 
+                " card_type, loc_terminal, merch_loc, merchant"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        transactions.ct_rec_"& _ 
+                "no = card_type.ct_rec_no AND transactions.lt_rec_no = loc_terminal.lt_rec_no AND"& _ 
+                " loc_terminal.ml_rec_no = merch_loc.ml_rec_no AND merch_loc.merchant_rec_no = me"& _ 
+                "rchant.merchant_rec_no"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY transactions.trans_date"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

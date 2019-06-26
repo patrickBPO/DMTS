@@ -12,9 +12,9 @@
               <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT        transactions.trans_rec_no, transactions.fh, transactions.trans_date, transactions.div_nbr, transactions.currency_code, transactions.amount, card_type.ct_desc, loc_terminal.lt_desc
-FROM            transactions, card_type, loc_terminal
-WHERE        transactions.ct_rec_no = card_type.ct_rec_no AND transactions.lt_rec_no = loc_terminal.lt_rec_no
+                    <CommandText>SELECT        transactions.trans_rec_no, transactions.fh, transactions.trans_date, transactions.div_nbr, transactions.currency_code, transactions.amount, card_type.ct_desc, loc_terminal.lt_desc, merchant.m_name
+FROM            transactions, card_type, loc_terminal, merch_loc, merchant
+WHERE        transactions.ct_rec_no = card_type.ct_rec_no AND transactions.lt_rec_no = loc_terminal.lt_rec_no AND loc_terminal.ml_rec_no = merch_loc.ml_rec_no AND merch_loc.merchant_rec_no = merchant.merchant_rec_no
 ORDER BY transactions.trans_date</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -30,6 +30,7 @@ ORDER BY transactions.trans_date</CommandText>
               <Mapping SourceColumn="amount" DataSetColumn="amount" />
               <Mapping SourceColumn="ct_desc" DataSetColumn="ct_desc" />
               <Mapping SourceColumn="lt_desc" DataSetColumn="lt_desc" />
+              <Mapping SourceColumn="m_name" DataSetColumn="m_name" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -41,10 +42,10 @@ ORDER BY transactions.trans_date</CommandText>
   <xs:element name="TransactionsDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TransactionsDS" msprop:Generator_UserDSName="TransactionsDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="transactions" msprop:Generator_TableClassName="transactionsDataTable" msprop:Generator_TableVarName="tabletransactions" msprop:Generator_TablePropName="transactions" msprop:Generator_RowDeletingName="transactionsRowDeleting" msprop:Generator_RowChangingName="transactionsRowChanging" msprop:Generator_RowEvHandlerName="transactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="transactionsRowDeleted" msprop:Generator_UserTableName="transactions" msprop:Generator_RowChangedName="transactionsRowChanged" msprop:Generator_RowEvArgName="transactionsRowChangeEvent" msprop:Generator_RowClassName="transactionsRow">
+        <xs:element name="transactions" msprop:Generator_TableClassName="transactionsDataTable" msprop:Generator_TableVarName="tabletransactions" msprop:Generator_RowChangedName="transactionsRowChanged" msprop:Generator_TablePropName="transactions" msprop:Generator_RowDeletingName="transactionsRowDeleting" msprop:Generator_RowChangingName="transactionsRowChanging" msprop:Generator_RowEvHandlerName="transactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="transactionsRowDeleted" msprop:Generator_RowClassName="transactionsRow" msprop:Generator_UserTableName="transactions" msprop:Generator_RowEvArgName="transactionsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="trans_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntrans_rec_no" msprop:Generator_ColumnPropNameInRow="trans_rec_no" msprop:Generator_ColumnPropNameInTable="trans_rec_noColumn" msprop:Generator_UserColumnName="trans_rec_no" type="xs:int" minOccurs="0" />
+              <xs:element name="trans_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columntrans_rec_no" msprop:Generator_ColumnPropNameInRow="trans_rec_no" msprop:Generator_ColumnPropNameInTable="trans_rec_noColumn" msprop:Generator_UserColumnName="trans_rec_no" type="xs:int" />
               <xs:element name="fh" msprop:Generator_ColumnVarNameInTable="columnfh" msprop:Generator_ColumnPropNameInRow="fh" msprop:Generator_ColumnPropNameInTable="fhColumn" msprop:Generator_UserColumnName="fh" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -67,6 +68,13 @@ ORDER BY transactions.trans_date</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="240" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="m_name" msprop:Generator_ColumnVarNameInTable="columnm_name" msprop:Generator_ColumnPropNameInRow="m_name" msprop:Generator_ColumnPropNameInTable="m_nameColumn" msprop:Generator_UserColumnName="m_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
