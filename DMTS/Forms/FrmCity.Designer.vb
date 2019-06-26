@@ -45,9 +45,6 @@ Partial Class FrmCity
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CityDS = New DMTS.CityDS()
         Me.DistrictDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DistrictBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CountryDataGridView = New System.Windows.Forms.DataGridView()
         Me.CountryrecnoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -85,6 +82,9 @@ Partial Class FrmCity
         Me.TableAdapterManager = New DMTS.CityDSTableAdapters.TableAdapterManager()
         Me.CountryTableAdapter = New DMTS.CityDSTableAdapters.countryTableAdapter()
         Me.DistrictTableAdapter = New DMTS.CityDSTableAdapters.districtTableAdapter()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Label2 = New System.Windows.Forms.Label()
         DescriptionLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
@@ -145,7 +145,7 @@ Partial Class FrmCity
         Label3.Name = "Label3"
         Label3.Size = New System.Drawing.Size(59, 17)
         Label3.TabIndex = 3
-        Label3.Text = "District"
+        Label3.Text = "Branch"
         '
         'Label4
         '
@@ -243,30 +243,6 @@ Partial Class FrmCity
         Me.DistrictDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DistrictDataGridView.Size = New System.Drawing.Size(244, 254)
         Me.DistrictDataGridView.TabIndex = 9
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "District_rec_no"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "District_rec_no"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Visible = False
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "description"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "District"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Width = 200
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Country_rec_no"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "Country_rec_no"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
         '
         'DistrictBindingSource
         '
@@ -431,7 +407,6 @@ Partial Class FrmCity
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -634,6 +609,30 @@ Partial Class FrmCity
         '
         Me.DistrictTableAdapter.ClearBeforeFill = True
         '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "District_rec_no"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "District_rec_no"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Visible = False
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "description"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Branch"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 200
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Country_rec_no"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Country_rec_no"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        Me.DataGridViewTextBoxColumn9.ReadOnly = True
+        Me.DataGridViewTextBoxColumn9.Visible = False
+        '
         'FrmCity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -705,8 +704,8 @@ Partial Class FrmCity
     Friend WithEvents TxtCountry As TextBox
     Friend WithEvents CountryrecnoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescriptionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TxtDistrict As TextBox
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-    Friend WithEvents TxtDistrict As TextBox
 End Class

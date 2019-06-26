@@ -39,6 +39,7 @@ Partial Class FrmViewTrans
         Me.RICboCardType = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.TransactionsTableAdapter = New DMTS.TransactionsDSTableAdapters.transactionsTableAdapter()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.m_name = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransactionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransactionsDS, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,7 +85,7 @@ Partial Class FrmViewTrans
         Me.GridView1.Appearance.OddRow.BackColor = System.Drawing.Color.SlateGray
         Me.GridView1.Appearance.OddRow.Options.UseBackColor = True
         Me.GridView1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.coltrans_rec_no, Me.lt_desc, Me.colfh, Me.coltrans_date, Me.coldiv_nbr, Me.colcurrency_code, Me.colamount, Me.ct_desc})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.coltrans_rec_no, Me.lt_desc, Me.colfh, Me.coltrans_date, Me.coldiv_nbr, Me.colcurrency_code, Me.colamount, Me.ct_desc, Me.m_name})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", Nothing, "(Total={0:$###,##0.00})"), New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "currency_code", Nothing, "(Count ={0:###,###})")})
         Me.GridView1.Name = "GridView1"
@@ -105,8 +106,8 @@ Partial Class FrmViewTrans
         Me.lt_desc.Name = "lt_desc"
         Me.lt_desc.OptionsColumn.AllowEdit = False
         Me.lt_desc.Visible = True
-        Me.lt_desc.VisibleIndex = 2
-        Me.lt_desc.Width = 192
+        Me.lt_desc.VisibleIndex = 3
+        Me.lt_desc.Width = 157
         '
         'colfh
         '
@@ -116,7 +117,7 @@ Partial Class FrmViewTrans
         Me.colfh.OptionsColumn.AllowEdit = False
         Me.colfh.Visible = True
         Me.colfh.VisibleIndex = 1
-        Me.colfh.Width = 29
+        Me.colfh.Width = 27
         '
         'coltrans_date
         '
@@ -126,7 +127,7 @@ Partial Class FrmViewTrans
         Me.coltrans_date.OptionsColumn.AllowEdit = False
         Me.coltrans_date.Visible = True
         Me.coltrans_date.VisibleIndex = 0
-        Me.coltrans_date.Width = 124
+        Me.coltrans_date.Width = 73
         '
         'coldiv_nbr
         '
@@ -135,8 +136,8 @@ Partial Class FrmViewTrans
         Me.coldiv_nbr.Name = "coldiv_nbr"
         Me.coldiv_nbr.OptionsColumn.AllowEdit = False
         Me.coldiv_nbr.Visible = True
-        Me.coldiv_nbr.VisibleIndex = 4
-        Me.coldiv_nbr.Width = 88
+        Me.coldiv_nbr.VisibleIndex = 5
+        Me.coldiv_nbr.Width = 52
         '
         'colcurrency_code
         '
@@ -146,8 +147,8 @@ Partial Class FrmViewTrans
         Me.colcurrency_code.OptionsColumn.AllowEdit = False
         Me.colcurrency_code.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "currency_code", "Count ={0:###,###}")})
         Me.colcurrency_code.Visible = True
-        Me.colcurrency_code.VisibleIndex = 5
-        Me.colcurrency_code.Width = 130
+        Me.colcurrency_code.VisibleIndex = 6
+        Me.colcurrency_code.Width = 124
         '
         'colamount
         '
@@ -157,8 +158,8 @@ Partial Class FrmViewTrans
         Me.colamount.OptionsColumn.AllowEdit = False
         Me.colamount.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", "Grand Tot={0:$#,###,##0.00}")})
         Me.colamount.Visible = True
-        Me.colamount.VisibleIndex = 6
-        Me.colamount.Width = 216
+        Me.colamount.VisibleIndex = 7
+        Me.colamount.Width = 172
         '
         'ct_desc
         '
@@ -167,8 +168,8 @@ Partial Class FrmViewTrans
         Me.ct_desc.Name = "ct_desc"
         Me.ct_desc.OptionsColumn.AllowEdit = False
         Me.ct_desc.Visible = True
-        Me.ct_desc.VisibleIndex = 3
-        Me.ct_desc.Width = 56
+        Me.ct_desc.VisibleIndex = 4
+        Me.ct_desc.Width = 63
         '
         'RICboCardType
         '
@@ -194,6 +195,15 @@ Partial Class FrmViewTrans
         Me.GroupControl1.Size = New System.Drawing.Size(894, 425)
         Me.GroupControl1.TabIndex = 1
         Me.GroupControl1.Text = "Terminal Transaction History"
+        '
+        'm_name
+        '
+        Me.m_name.Caption = "Merchant"
+        Me.m_name.FieldName = "m_name"
+        Me.m_name.Name = "m_name"
+        Me.m_name.Visible = True
+        Me.m_name.VisibleIndex = 2
+        Me.m_name.Width = 167
         '
         'FrmViewTrans
         '
@@ -230,4 +240,5 @@ Partial Class FrmViewTrans
     Friend WithEvents lt_desc As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents ct_desc As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
+    Friend WithEvents m_name As DevExpress.XtraGrid.Columns.GridColumn
 End Class

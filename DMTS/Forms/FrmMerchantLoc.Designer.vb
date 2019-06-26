@@ -281,9 +281,9 @@ Partial Class FrmMerchantLoc
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         District_rec_noLabel.Location = New System.Drawing.Point(8, 63)
         District_rec_noLabel.Name = "District_rec_noLabel"
-        District_rec_noLabel.Size = New System.Drawing.Size(48, 13)
+        District_rec_noLabel.Size = New System.Drawing.Size(46, 13)
         District_rec_noLabel.TabIndex = 19
-        District_rec_noLabel.Text = "District"
+        District_rec_noLabel.Text = "Branch"
         '
         'City_rec_noLabel
         '
@@ -322,9 +322,9 @@ Partial Class FrmMerchantLoc
         Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Label3.Location = New System.Drawing.Point(12, 63)
         Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(48, 13)
+        Label3.Size = New System.Drawing.Size(46, 13)
         Label3.TabIndex = 19
-        Label3.Text = "District"
+        Label3.Text = "Branch"
         '
         'Label4
         '

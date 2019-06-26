@@ -44,7 +44,6 @@ Partial Class FrmLocTerminal
         Dim Label5 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLocTerminal))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.Merch_locBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
@@ -223,9 +222,9 @@ Partial Class FrmLocTerminal
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         District_rec_noLabel.Location = New System.Drawing.Point(8, 63)
         District_rec_noLabel.Name = "District_rec_noLabel"
-        District_rec_noLabel.Size = New System.Drawing.Size(48, 13)
+        District_rec_noLabel.Size = New System.Drawing.Size(46, 13)
         District_rec_noLabel.TabIndex = 19
-        District_rec_noLabel.Text = "District"
+        District_rec_noLabel.Text = "Branch"
         '
         'City_rec_noLabel
         '
@@ -377,9 +376,9 @@ Partial Class FrmLocTerminal
         District_rec_noLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         District_rec_noLabel1.Location = New System.Drawing.Point(683, 83)
         District_rec_noLabel1.Name = "District_rec_noLabel1"
-        District_rec_noLabel1.Size = New System.Drawing.Size(48, 13)
+        District_rec_noLabel1.Size = New System.Drawing.Size(46, 13)
         District_rec_noLabel1.TabIndex = 8
-        District_rec_noLabel1.Text = "District"
+        District_rec_noLabel1.Text = "Branch"
         '
         'City_rec_noLabel1
         '
@@ -947,24 +946,16 @@ Partial Class FrmLocTerminal
         Me.Loc_terminalDataGridView.AllowUserToAddRows = False
         Me.Loc_terminalDataGridView.AutoGenerateColumns = False
         Me.Loc_terminalDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Tahoma", 9.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Loc_terminalDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Loc_terminalDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Loc_terminalDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.Loc_terminalDataGridView.DataSource = Me.Loc_terminalBindingSource
         Me.Loc_terminalDataGridView.Location = New System.Drawing.Point(12, 73)
         Me.Loc_terminalDataGridView.Name = "Loc_terminalDataGridView"
         Me.Loc_terminalDataGridView.ReadOnly = True
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Loc_terminalDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Loc_terminalDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.Loc_terminalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Loc_terminalDataGridView.Size = New System.Drawing.Size(453, 220)
         Me.Loc_terminalDataGridView.TabIndex = 32

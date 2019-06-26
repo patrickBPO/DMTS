@@ -192,9 +192,9 @@ Partial Class FrmDMerchant
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         District_rec_noLabel.Location = New System.Drawing.Point(8, 63)
         District_rec_noLabel.Name = "District_rec_noLabel"
-        District_rec_noLabel.Size = New System.Drawing.Size(48, 13)
+        District_rec_noLabel.Size = New System.Drawing.Size(46, 13)
         District_rec_noLabel.TabIndex = 19
-        District_rec_noLabel.Text = "District"
+        District_rec_noLabel.Text = "Branch"
         '
         'City_rec_noLabel
         '
