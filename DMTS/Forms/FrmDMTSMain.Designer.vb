@@ -27,13 +27,13 @@ Partial Class FrmDMTSMain
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CardTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CountryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DistrictToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LocationTerminalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MerchantToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MerchantLocationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LocationTerminalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CardTypeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.POSTransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewEditTransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -82,18 +82,6 @@ Partial Class FrmDMTSMain
         Me.ReferencesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ReferencesToolStripMenuItem.Text = "References"
         '
-        'CardTypeToolStripMenuItem
-        '
-        Me.CardTypeToolStripMenuItem.Name = "CardTypeToolStripMenuItem"
-        Me.CardTypeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CardTypeToolStripMenuItem.Text = "Card Type"
-        '
-        'CityToolStripMenuItem
-        '
-        Me.CityToolStripMenuItem.Name = "CityToolStripMenuItem"
-        Me.CityToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CityToolStripMenuItem.Text = "City"
-        '
         'CountryToolStripMenuItem
         '
         Me.CountryToolStripMenuItem.Name = "CountryToolStripMenuItem"
@@ -104,13 +92,13 @@ Partial Class FrmDMTSMain
         '
         Me.DistrictToolStripMenuItem.Name = "DistrictToolStripMenuItem"
         Me.DistrictToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DistrictToolStripMenuItem.Text = "District"
+        Me.DistrictToolStripMenuItem.Text = "Branch"
         '
-        'LocationTerminalToolStripMenuItem
+        'CityToolStripMenuItem
         '
-        Me.LocationTerminalToolStripMenuItem.Name = "LocationTerminalToolStripMenuItem"
-        Me.LocationTerminalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LocationTerminalToolStripMenuItem.Text = "Location Terminal"
+        Me.CityToolStripMenuItem.Name = "CityToolStripMenuItem"
+        Me.CityToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CityToolStripMenuItem.Text = "City"
         '
         'MerchantToolStripMenuItem
         '
@@ -123,6 +111,18 @@ Partial Class FrmDMTSMain
         Me.MerchantLocationToolStripMenuItem.Name = "MerchantLocationToolStripMenuItem"
         Me.MerchantLocationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MerchantLocationToolStripMenuItem.Text = "Merchant Location"
+        '
+        'LocationTerminalToolStripMenuItem
+        '
+        Me.LocationTerminalToolStripMenuItem.Name = "LocationTerminalToolStripMenuItem"
+        Me.LocationTerminalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LocationTerminalToolStripMenuItem.Text = "Location Terminal"
+        '
+        'CardTypeToolStripMenuItem
+        '
+        Me.CardTypeToolStripMenuItem.Name = "CardTypeToolStripMenuItem"
+        Me.CardTypeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CardTypeToolStripMenuItem.Text = "Card Type"
         '
         'ExitToolStripMenuItem
         '
