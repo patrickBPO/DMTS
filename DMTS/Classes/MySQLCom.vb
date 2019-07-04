@@ -5,6 +5,10 @@ Public Class MySQLCom
     Public Shared ConnStr As String = "server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
             persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
             database=dmts;defaultcommandtimeout=180"
+    Public Shared MyConn As New MySqlConnection("server=" & GlbSName & ";user id=DMTS;password=dmts@xs4db;
+            persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3306;
+            database=dmts;defaultcommandtimeout=180")
+    Public Shared GlbSName As String
     Public Structure InsStruct
         Dim FH As String
         Dim CPD As String
@@ -13,16 +17,18 @@ Public Class MySQLCom
         Dim CURRENCY_CODE As String
         Dim AMOUNT As String
         Dim CARD_TYPE As String
+        Dim MERCHANT_NAME As String
+        Dim DBA_NBR As String
     End Structure
     Public Shared Function GetCardType(ByVal CTypeStr As String) As String
         Dim OpInt As String = "0"
+        'Dim MyConn As New MySqlConnection("server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
+        '    persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
+        '    database=dmts;defaultcommandtimeout=180")
 
-        Dim MyConn As New MySqlConnection("server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
-            persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
-            database=dmts;defaultcommandtimeout=180")
         Dim MyComm As New MySqlCommand("SELECT ct_rec_no AS c_type_int FROM card_type 
             WHERE ct_code = '" & CTypeStr & "'", MyConn)
-        MyConn.Open()
+        'MyConn.Open()
         Try
             Dim Urdr As MySqlDataReader = MyComm.ExecuteReader
             While Urdr.Read
@@ -30,11 +36,11 @@ Public Class MySQLCom
 
             End While
             Urdr.Close()
-            MyConn.Close()
+            'MyConn.Close()
 
         Catch ex As Exception
             Return False
-            MyConn.Close()
+            'MyConn.Close()
         End Try
 
         If OpInt <> "0" Then
@@ -72,13 +78,118 @@ Public Class MySQLCom
     Public Shared Function InsertTransPrep(ByRef MyComm As MySqlCommand) As Boolean
 
         Try
+            'MyComm.Connection.Open()
             MyComm.ExecuteNonQuery()
+            'MyComm.Connection.Close()
             Return True
 
+        Catch ex As Exception
+            'MyComm.Connection.Close()
+            Return False
+        End Try
+
+    End Function
+    Public Shared Function ConnToServer(ByRef MyConnection As MySqlConnection) As Boolean
+
+        'Dim MyConn As New MySqlConnection("server=" & GlbSName & ";user id=DMTS;password=dmts@xs4db;
+        '    persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3306;
+        '    database=dmts;defaultcommandtimeout=180")
+        Try
+            MyConn.Open()
+            MyConnection = MyConn
+            Return True
         Catch ex As Exception
             Return False
         End Try
 
+    End Function
+    Public Shared Function GetMerchRec(ByVal MerchID As String) As Int16
+        Dim OpInt As Int16 = 0
+        'Dim MyConn As New MySqlConnection("server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
+        '    persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
+        '    database=dmts;defaultcommandtimeout=180")
+
+        Dim MyComm As New MySqlCommand("SELECT merchant_rec_no AS m_rec_no FROM merchant 
+            WHERE merchant_id = " & MerchID, MyConn)
+        'MyConn.Open()
+        Try
+            Dim Urdr As MySqlDataReader = MyComm.ExecuteReader
+            While Urdr.Read
+                OpInt = Urdr("m_rec_no").ToString
+
+            End While
+            Urdr.Close()
+            'MyConn.Close()
+
+        Catch ex As Exception
+            Return False
+            'MyConn.Close()
+        End Try
+
+        If OpInt <> 0 Then
+            Return OpInt
+        Else
+            Return 0
+        End If
+    End Function
+    Public Shared Function GetMerchLocRec(ByVal MerchLocID As String, ByVal MerchLocRec As Int16) As Int16
+        Dim OpInt As Int16 = 0
+        'Dim MyConn As New MySqlConnection("server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
+        '    persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
+        '    database=dmts;defaultcommandtimeout=180")
+
+        Dim MyComm As New MySqlCommand("SELECT ml_rec_no AS ml_rec_no FROM merch_loc
+            WHERE ml_id = " & MerchLocID & " AND merchant_rec_no = " & MerchLocRec, MyConn)
+        'MyConn.Open()
+        Try
+            Dim Urdr As MySqlDataReader = MyComm.ExecuteReader
+            While Urdr.Read
+                OpInt = Urdr("ml_rec_no").ToString
+
+            End While
+            Urdr.Close()
+            'MyConn.Close()
+
+        Catch ex As Exception
+            Return False
+            'MyConn.Close()
+        End Try
+
+        If OpInt <> 0 Then
+            Return OpInt
+        Else
+            '- Propose to have a auto insert of non-existent Merchants
+            Return 0
+        End If
+    End Function
+    Public Shared Function GetLocTermRec(ByVal LocTermID As String, ByVal MerchantLocRec As Int16) As Int16
+        Dim OpInt As Int16 = 0
+        'Dim MyConn As New MySqlConnection("server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
+        '    persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
+        '    database=dmts;defaultcommandtimeout=180")
+
+        Dim MyComm As New MySqlCommand("SELECT lt_rec_no AS lt_rec_no FROM loc_terminal
+            WHERE lt_id = " & LocTermID & " AND ml_rec_no = " & MerchantLocRec, MyConn)
+        'MyConn.Open()
+        Try
+            Dim Urdr As MySqlDataReader = MyComm.ExecuteReader
+            While Urdr.Read
+                OpInt = Urdr("lt_rec_no").ToString
+
+            End While
+            Urdr.Close()
+            'MyConn.Close()
+
+        Catch ex As Exception
+            Return False
+            'MyConn.Close()
+        End Try
+
+        If OpInt <> 0 Then
+            Return OpInt
+        Else
+            Return 0
+        End If
     End Function
     'Public Shared Sub refreshDatagrid(ByRef DGV As DataGridView, ByVal TabName As String, ByVal ConnectString As String,
     '                                  ByRef DS As DataSet, ByRef TableAdapter As Object, ByRef DatTable As DataTable)

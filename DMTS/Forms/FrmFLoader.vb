@@ -240,6 +240,9 @@ Public Class FrmFLoader
         Dim CURRENCY_CODE As String = Nothing '-- 8
         Dim AMOUNT As String = Nothing '-- 9
         Dim CARD_TYPE As String = Nothing '-- 10(Convert to Number)
+        Dim MERCHANT_NAME As String = Nothing
+        Dim DBA_NBR As String = Nothing
+        Dim merchant_id As string
         Dim TargetPath As String
         'Dim TargetFile As String
         'Dim TargetLine As String
@@ -249,9 +252,9 @@ Public Class FrmFLoader
         Dim Conn As New MySqlConnection
         Dim Comm As New MySqlCommand
 
-        Conn.ConnectionString = "server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
-            persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
-            database=dmts;defaultcommandtimeout=180"
+        'Conn.ConnectionString = "server=localhost;user id=dmtsuser;password=Dmtsuser@xs4db;
+        '    persistsecurityinfo=True;allowzerodatetime=True;convertzerodatetime=True;port=3308;
+        '    database=dmts;defaultcommandtimeout=180"
 
         MainPath = Strings.Left(open.FileName.ToString, Len(open.FileName) - Len(open.SafeFileName))
 
@@ -285,10 +288,13 @@ Public Class FrmFLoader
             '    Exit Sub
 
             'End If
-            Conn.Open()
-            Comm.Connection = Conn
-            Comm.CommandText = "INSERT INTO transactions (lt_rec_no,fh,trans_date,div_nbr,currency_code,amount,ct_rec_no) 
-            VALUES (@lt_rec_no,@fh,@trans_date,@div_nbr,@currency_code,@amount,@ct_rec_no)"
+            'Conn.Open()
+            If ConnToServer(Conn) Then
+                Comm.Connection = Conn
+
+            End If
+            Comm.CommandText = "INSERT INTO transactions (lt_rec_no,fh,trans_date,div_nbr,currency_code,amount,ct_rec_no,ml_id) 
+            VALUES (@lt_rec_no,@fh,@trans_date,@div_nbr,@currency_code,@amount,@ct_rec_no,@ml_id)"
             Comm.Prepare()
             Comm.Parameters.AddWithValue("@lt_rec_no", TERMINAL_NBR)
             Comm.Parameters.AddWithValue("@fh", FH)
@@ -297,6 +303,7 @@ Public Class FrmFLoader
             Comm.Parameters.AddWithValue("@currency_code", CURRENCY_CODE)
             Comm.Parameters.AddWithValue("@amount", AMOUNT)
             Comm.Parameters.AddWithValue("@ct_rec_no", CARD_TYPE)
+            Comm.Parameters.AddWithValue("@ml_id", DBA_NBR)
 
             For Each line As String In File.ReadLines(MyFname) ' Loop over lines in file.
                 cnt = 1
@@ -312,8 +319,13 @@ Public Class FrmFLoader
                                 CPD = Format(DateTime.Parse(col.TrimEnd), "yyyy-MM-dd")
                             Case 3 '-- 5
                                 DIV_NBR = col.TrimEnd
+                            Case 4 '-- 5
+                                DBA_NBR = col.TrimEnd
                             Case 5 '-- 2
                                 TERMINAL_NBR = col.TrimEnd
+                            '-- Identify appropriate Terminal (Get merchant and location record number for the terminal
+                            Case 7 '-- Identify appropriate Terminal (Get merchant and location record number for the terminal
+                                MERCHANT_NAME = col.TrimEnd
                             Case 8 '-- 6
                                 CURRENCY_CODE = col.TrimEnd
                             Case 9 '-- 7
@@ -333,15 +345,24 @@ Public Class FrmFLoader
                     UseInsStruct.CURRENCY_CODE = CURRENCY_CODE
                     UseInsStruct.AMOUNT = AMOUNT
                     UseInsStruct.CARD_TYPE = CARD_TYPE
-                    Try
+                    UseInsStruct.MERCHANT_NAME = MERCHANT_NAME
+                    UseInsStruct.DBA_NBR = DBA_NBR
 
-                        Comm.Parameters("@lt_rec_no").Value = TERMINAL_NBR
+                    Try
+                        '-- Extract merchant id
+                        Dim MerchantId As String = Regex.Match(MERCHANT_NAME, "([0-9][0-9][0-9]+)").Groups(0).ToString()
+                        Dim MerchantRec As Int16 = GetMerchRec(MerchantId)
+                        Dim MerchantLocRec As Int16 = GetMerchLocRec(DBA_NBR, MerchantRec)
+                        Dim LocationTermRec As Int16 = GetLocTermRec(TERMINAL_NBR, MerchantLocRec)
+
+                        Comm.Parameters("@lt_rec_no").Value = LocationTermRec
                         Comm.Parameters("@fh").Value = FH
                         Comm.Parameters("@trans_date").Value = CPD
                         Comm.Parameters("@div_nbr").Value = DIV_NBR
                         Comm.Parameters("@currency_code").Value = CURRENCY_CODE
                         Comm.Parameters("@amount").Value = AMOUNT
                         Comm.Parameters("@ct_rec_no").Value = CARD_TYPE
+                        Comm.Parameters("@ml_id").Value = DBA_NBR
 
                         If Not InsertTransPrep(Comm) Then
                             MsgBox("Record (" & lcnt & ") failed to load...", vbExclamation, "Insert Failed")

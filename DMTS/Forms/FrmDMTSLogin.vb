@@ -3,6 +3,7 @@ Imports System.Data.Odbc
 Imports System.Data.Sql
 Imports System.Data.SqlClient
 Imports MySql.Data.MySqlClient
+Imports DMTS.MySQLCom
 
 Public Class FrmDMTSLogin
     Public LoginSucceeded As Boolean
@@ -34,6 +35,7 @@ Public Class FrmDMTSLogin
         OpenDatabase = False
         TxtSname.Visible = True
         txtName = TxtSname.Text
+        GlbSName = txtName
         TxtSname.Visible = False
         If Trim(txtName) = "" Then
             CheckServerText(True)
