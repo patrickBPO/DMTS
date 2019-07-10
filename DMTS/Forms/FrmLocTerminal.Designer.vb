@@ -43,7 +43,7 @@ Partial Class FrmLocTerminal
         Dim City_rec_noLabel1 As System.Windows.Forms.Label
         Dim Label5 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLocTerminal))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.Merch_locBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
@@ -220,22 +220,22 @@ Partial Class FrmLocTerminal
         District_rec_noLabel.AutoSize = True
         District_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        District_rec_noLabel.Location = New System.Drawing.Point(8, 63)
+        District_rec_noLabel.Location = New System.Drawing.Point(28, 61)
         District_rec_noLabel.Name = "District_rec_noLabel"
-        District_rec_noLabel.Size = New System.Drawing.Size(46, 13)
+        District_rec_noLabel.Size = New System.Drawing.Size(29, 13)
         District_rec_noLabel.TabIndex = 19
-        District_rec_noLabel.Text = "Branch"
+        District_rec_noLabel.Text = "City"
         '
         'City_rec_noLabel
         '
         City_rec_noLabel.AutoSize = True
         City_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel.Location = New System.Drawing.Point(28, 90)
+        City_rec_noLabel.Location = New System.Drawing.Point(11, 88)
         City_rec_noLabel.Name = "City_rec_noLabel"
-        City_rec_noLabel.Size = New System.Drawing.Size(29, 13)
+        City_rec_noLabel.Size = New System.Drawing.Size(46, 13)
         City_rec_noLabel.TabIndex = 21
-        City_rec_noLabel.Text = "City"
+        City_rec_noLabel.Text = "Branch"
         '
         'Label12
         '
@@ -952,10 +952,10 @@ Partial Class FrmLocTerminal
         Me.Loc_terminalDataGridView.Location = New System.Drawing.Point(12, 73)
         Me.Loc_terminalDataGridView.Name = "Loc_terminalDataGridView"
         Me.Loc_terminalDataGridView.ReadOnly = True
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Loc_terminalDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Loc_terminalDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.Loc_terminalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Loc_terminalDataGridView.Size = New System.Drawing.Size(453, 220)
         Me.Loc_terminalDataGridView.TabIndex = 32

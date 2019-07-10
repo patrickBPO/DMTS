@@ -190,22 +190,22 @@ Partial Class FrmDMerchant
         District_rec_noLabel.AutoSize = True
         District_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        District_rec_noLabel.Location = New System.Drawing.Point(8, 63)
+        District_rec_noLabel.Location = New System.Drawing.Point(27, 61)
         District_rec_noLabel.Name = "District_rec_noLabel"
-        District_rec_noLabel.Size = New System.Drawing.Size(46, 13)
+        District_rec_noLabel.Size = New System.Drawing.Size(29, 13)
         District_rec_noLabel.TabIndex = 19
-        District_rec_noLabel.Text = "Branch"
+        District_rec_noLabel.Text = "City"
         '
         'City_rec_noLabel
         '
         City_rec_noLabel.AutoSize = True
         City_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel.Location = New System.Drawing.Point(28, 90)
+        City_rec_noLabel.Location = New System.Drawing.Point(10, 88)
         City_rec_noLabel.Name = "City_rec_noLabel"
-        City_rec_noLabel.Size = New System.Drawing.Size(29, 13)
+        City_rec_noLabel.Size = New System.Drawing.Size(46, 13)
         City_rec_noLabel.TabIndex = 21
-        City_rec_noLabel.Text = "City"
+        City_rec_noLabel.Text = "Branch"
         '
         'Phone_1Label1
         '

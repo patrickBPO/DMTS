@@ -92,13 +92,13 @@ Partial Class FrmDMTSMain
         '
         Me.DistrictToolStripMenuItem.Name = "DistrictToolStripMenuItem"
         Me.DistrictToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.DistrictToolStripMenuItem.Text = "Branch"
+        Me.DistrictToolStripMenuItem.Text = "City"
         '
         'CityToolStripMenuItem
         '
         Me.CityToolStripMenuItem.Name = "CityToolStripMenuItem"
         Me.CityToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.CityToolStripMenuItem.Text = "City"
+        Me.CityToolStripMenuItem.Text = "Branch"
         '
         'MerchantToolStripMenuItem
         '

@@ -379,6 +379,7 @@ Public Class FrmFLoader
                         End If
                     Catch ex As Exception
                         MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Exit Sub
                     End Try
 
                 End If

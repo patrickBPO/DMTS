@@ -279,21 +279,21 @@ Partial Class FrmMerchantLoc
         '
         District_rec_noLabel.AutoSize = True
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        District_rec_noLabel.Location = New System.Drawing.Point(8, 63)
+        District_rec_noLabel.Location = New System.Drawing.Point(27, 61)
         District_rec_noLabel.Name = "District_rec_noLabel"
-        District_rec_noLabel.Size = New System.Drawing.Size(46, 13)
+        District_rec_noLabel.Size = New System.Drawing.Size(29, 13)
         District_rec_noLabel.TabIndex = 19
-        District_rec_noLabel.Text = "Branch"
+        District_rec_noLabel.Text = "City"
         '
         'City_rec_noLabel
         '
         City_rec_noLabel.AutoSize = True
         City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel.Location = New System.Drawing.Point(28, 90)
+        City_rec_noLabel.Location = New System.Drawing.Point(10, 88)
         City_rec_noLabel.Name = "City_rec_noLabel"
-        City_rec_noLabel.Size = New System.Drawing.Size(29, 13)
+        City_rec_noLabel.Size = New System.Drawing.Size(46, 13)
         City_rec_noLabel.TabIndex = 21
-        City_rec_noLabel.Text = "City"
+        City_rec_noLabel.Text = "Branch"
         '
         'Label1
         '
@@ -320,21 +320,21 @@ Partial Class FrmMerchantLoc
         '
         Label3.AutoSize = True
         Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Label3.Location = New System.Drawing.Point(12, 63)
+        Label3.Location = New System.Drawing.Point(31, 61)
         Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(46, 13)
+        Label3.Size = New System.Drawing.Size(29, 13)
         Label3.TabIndex = 19
-        Label3.Text = "Branch"
+        Label3.Text = "City"
         '
         'Label4
         '
         Label4.AutoSize = True
         Label4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Label4.Location = New System.Drawing.Point(32, 90)
+        Label4.Location = New System.Drawing.Point(14, 88)
         Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(29, 13)
+        Label4.Size = New System.Drawing.Size(46, 13)
         Label4.TabIndex = 21
-        Label4.Text = "City"
+        Label4.Text = "Branch"
         '
         'Label5
         '
