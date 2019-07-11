@@ -529,7 +529,7 @@ Partial Class FrmDistrict
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "description"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "City"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "City/Town/Village"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
         Me.DataGridViewTextBoxColumn2.Width = 200

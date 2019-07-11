@@ -269,7 +269,7 @@ Partial Class FrmMerchantLoc
         '
         Country_rec_noLabel.AutoSize = True
         Country_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Country_rec_noLabel.Location = New System.Drawing.Point(4, 36)
+        Country_rec_noLabel.Location = New System.Drawing.Point(60, 34)
         Country_rec_noLabel.Name = "Country_rec_noLabel"
         Country_rec_noLabel.Size = New System.Drawing.Size(52, 13)
         Country_rec_noLabel.TabIndex = 17
@@ -279,17 +279,17 @@ Partial Class FrmMerchantLoc
         '
         District_rec_noLabel.AutoSize = True
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        District_rec_noLabel.Location = New System.Drawing.Point(27, 61)
+        District_rec_noLabel.Location = New System.Drawing.Point(4, 61)
         District_rec_noLabel.Name = "District_rec_noLabel"
-        District_rec_noLabel.Size = New System.Drawing.Size(29, 13)
+        District_rec_noLabel.Size = New System.Drawing.Size(108, 13)
         District_rec_noLabel.TabIndex = 19
-        District_rec_noLabel.Text = "City"
+        District_rec_noLabel.Text = "City/Town/Village"
         '
         'City_rec_noLabel
         '
         City_rec_noLabel.AutoSize = True
         City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel.Location = New System.Drawing.Point(10, 88)
+        City_rec_noLabel.Location = New System.Drawing.Point(66, 88)
         City_rec_noLabel.Name = "City_rec_noLabel"
         City_rec_noLabel.Size = New System.Drawing.Size(46, 13)
         City_rec_noLabel.TabIndex = 21
@@ -310,7 +310,7 @@ Partial Class FrmMerchantLoc
         '
         Label2.AutoSize = True
         Label2.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Label2.Location = New System.Drawing.Point(8, 36)
+        Label2.Location = New System.Drawing.Point(64, 34)
         Label2.Name = "Label2"
         Label2.Size = New System.Drawing.Size(52, 13)
         Label2.TabIndex = 17
@@ -320,17 +320,17 @@ Partial Class FrmMerchantLoc
         '
         Label3.AutoSize = True
         Label3.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Label3.Location = New System.Drawing.Point(31, 61)
+        Label3.Location = New System.Drawing.Point(8, 61)
         Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(29, 13)
+        Label3.Size = New System.Drawing.Size(108, 13)
         Label3.TabIndex = 19
-        Label3.Text = "City"
+        Label3.Text = "City/Town/Village"
         '
         'Label4
         '
         Label4.AutoSize = True
         Label4.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Label4.Location = New System.Drawing.Point(14, 88)
+        Label4.Location = New System.Drawing.Point(70, 88)
         Label4.Name = "Label4"
         Label4.Size = New System.Drawing.Size(46, 13)
         Label4.TabIndex = 21
@@ -521,9 +521,9 @@ Partial Class FrmMerchantLoc
         Me.Country_rec_noComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.Country_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.Country_rec_noComboBox.FormattingEnabled = True
-        Me.Country_rec_noComboBox.Location = New System.Drawing.Point(100, 31)
+        Me.Country_rec_noComboBox.Location = New System.Drawing.Point(115, 31)
         Me.Country_rec_noComboBox.Name = "Country_rec_noComboBox"
-        Me.Country_rec_noComboBox.Size = New System.Drawing.Size(182, 21)
+        Me.Country_rec_noComboBox.Size = New System.Drawing.Size(169, 21)
         Me.Country_rec_noComboBox.TabIndex = 9
         Me.Country_rec_noComboBox.ValueMember = "country_rec_no"
         '
@@ -546,9 +546,9 @@ Partial Class FrmMerchantLoc
         Me.District_rec_noComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.District_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.District_rec_noComboBox.FormattingEnabled = True
-        Me.District_rec_noComboBox.Location = New System.Drawing.Point(100, 58)
+        Me.District_rec_noComboBox.Location = New System.Drawing.Point(115, 58)
         Me.District_rec_noComboBox.Name = "District_rec_noComboBox"
-        Me.District_rec_noComboBox.Size = New System.Drawing.Size(182, 21)
+        Me.District_rec_noComboBox.Size = New System.Drawing.Size(169, 21)
         Me.District_rec_noComboBox.TabIndex = 10
         Me.District_rec_noComboBox.ValueMember = "District_rec_no"
         '
@@ -571,9 +571,9 @@ Partial Class FrmMerchantLoc
         Me.City_rec_noComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.City_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.City_rec_noComboBox.FormattingEnabled = True
-        Me.City_rec_noComboBox.Location = New System.Drawing.Point(100, 85)
+        Me.City_rec_noComboBox.Location = New System.Drawing.Point(115, 85)
         Me.City_rec_noComboBox.Name = "City_rec_noComboBox"
-        Me.City_rec_noComboBox.Size = New System.Drawing.Size(182, 21)
+        Me.City_rec_noComboBox.Size = New System.Drawing.Size(169, 21)
         Me.City_rec_noComboBox.TabIndex = 11
         Me.City_rec_noComboBox.ValueMember = "City_rec_no"
         '
@@ -754,9 +754,9 @@ Partial Class FrmMerchantLoc
         Me.CboMLCountry.DataSource = Me.CountryBindingSource1
         Me.CboMLCountry.DisplayMember = "description"
         Me.CboMLCountry.FormattingEnabled = True
-        Me.CboMLCountry.Location = New System.Drawing.Point(79, 31)
+        Me.CboMLCountry.Location = New System.Drawing.Point(120, 31)
         Me.CboMLCountry.Name = "CboMLCountry"
-        Me.CboMLCountry.Size = New System.Drawing.Size(182, 21)
+        Me.CboMLCountry.Size = New System.Drawing.Size(141, 21)
         Me.CboMLCountry.TabIndex = 21
         Me.CboMLCountry.ValueMember = "country_rec_no"
         '
@@ -781,9 +781,9 @@ Partial Class FrmMerchantLoc
         Me.CboMLDistrict.DataSource = Me.DistrictBindingSource1
         Me.CboMLDistrict.DisplayMember = "description"
         Me.CboMLDistrict.FormattingEnabled = True
-        Me.CboMLDistrict.Location = New System.Drawing.Point(79, 58)
+        Me.CboMLDistrict.Location = New System.Drawing.Point(120, 58)
         Me.CboMLDistrict.Name = "CboMLDistrict"
-        Me.CboMLDistrict.Size = New System.Drawing.Size(182, 21)
+        Me.CboMLDistrict.Size = New System.Drawing.Size(141, 21)
         Me.CboMLDistrict.TabIndex = 22
         Me.CboMLDistrict.ValueMember = "District_rec_no"
         '
@@ -799,9 +799,9 @@ Partial Class FrmMerchantLoc
         Me.CboMLCity.DataSource = Me.CityBindingSource1
         Me.CboMLCity.DisplayMember = "Description"
         Me.CboMLCity.FormattingEnabled = True
-        Me.CboMLCity.Location = New System.Drawing.Point(79, 85)
+        Me.CboMLCity.Location = New System.Drawing.Point(120, 85)
         Me.CboMLCity.Name = "CboMLCity"
-        Me.CboMLCity.Size = New System.Drawing.Size(182, 21)
+        Me.CboMLCity.Size = New System.Drawing.Size(141, 21)
         Me.CboMLCity.TabIndex = 23
         Me.CboMLCity.ValueMember = "City_rec_no"
         '

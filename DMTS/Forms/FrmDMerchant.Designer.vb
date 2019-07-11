@@ -179,7 +179,7 @@ Partial Class FrmDMerchant
         Country_rec_noLabel.AutoSize = True
         Country_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         Country_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Country_rec_noLabel.Location = New System.Drawing.Point(4, 36)
+        Country_rec_noLabel.Location = New System.Drawing.Point(60, 34)
         Country_rec_noLabel.Name = "Country_rec_noLabel"
         Country_rec_noLabel.Size = New System.Drawing.Size(52, 13)
         Country_rec_noLabel.TabIndex = 17
@@ -190,18 +190,18 @@ Partial Class FrmDMerchant
         District_rec_noLabel.AutoSize = True
         District_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         District_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        District_rec_noLabel.Location = New System.Drawing.Point(27, 61)
+        District_rec_noLabel.Location = New System.Drawing.Point(4, 61)
         District_rec_noLabel.Name = "District_rec_noLabel"
-        District_rec_noLabel.Size = New System.Drawing.Size(29, 13)
+        District_rec_noLabel.Size = New System.Drawing.Size(108, 13)
         District_rec_noLabel.TabIndex = 19
-        District_rec_noLabel.Text = "City"
+        District_rec_noLabel.Text = "City/Town/Village"
         '
         'City_rec_noLabel
         '
         City_rec_noLabel.AutoSize = True
         City_rec_noLabel.BackColor = System.Drawing.Color.Transparent
         City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel.Location = New System.Drawing.Point(10, 88)
+        City_rec_noLabel.Location = New System.Drawing.Point(66, 88)
         City_rec_noLabel.Name = "City_rec_noLabel"
         City_rec_noLabel.Size = New System.Drawing.Size(46, 13)
         City_rec_noLabel.TabIndex = 21
@@ -393,9 +393,9 @@ Partial Class FrmDMerchant
         Me.Country_rec_noComboBox.DataSource = Me.CountryBindingSource
         Me.Country_rec_noComboBox.DisplayMember = "description"
         Me.Country_rec_noComboBox.FormattingEnabled = True
-        Me.Country_rec_noComboBox.Location = New System.Drawing.Point(100, 31)
+        Me.Country_rec_noComboBox.Location = New System.Drawing.Point(116, 31)
         Me.Country_rec_noComboBox.Name = "Country_rec_noComboBox"
-        Me.Country_rec_noComboBox.Size = New System.Drawing.Size(182, 21)
+        Me.Country_rec_noComboBox.Size = New System.Drawing.Size(166, 21)
         Me.Country_rec_noComboBox.TabIndex = 9
         Me.Country_rec_noComboBox.ValueMember = "country_rec_no"
         '
@@ -415,9 +415,9 @@ Partial Class FrmDMerchant
         Me.District_rec_noComboBox.DataSource = Me.DistrictBindingSource
         Me.District_rec_noComboBox.DisplayMember = "description"
         Me.District_rec_noComboBox.FormattingEnabled = True
-        Me.District_rec_noComboBox.Location = New System.Drawing.Point(100, 58)
+        Me.District_rec_noComboBox.Location = New System.Drawing.Point(116, 58)
         Me.District_rec_noComboBox.Name = "District_rec_noComboBox"
-        Me.District_rec_noComboBox.Size = New System.Drawing.Size(182, 21)
+        Me.District_rec_noComboBox.Size = New System.Drawing.Size(166, 21)
         Me.District_rec_noComboBox.TabIndex = 10
         Me.District_rec_noComboBox.ValueMember = "District_rec_no"
         '
@@ -437,9 +437,9 @@ Partial Class FrmDMerchant
         Me.City_rec_noComboBox.DataSource = Me.CityBindingSource
         Me.City_rec_noComboBox.DisplayMember = "Description"
         Me.City_rec_noComboBox.FormattingEnabled = True
-        Me.City_rec_noComboBox.Location = New System.Drawing.Point(100, 85)
+        Me.City_rec_noComboBox.Location = New System.Drawing.Point(116, 85)
         Me.City_rec_noComboBox.Name = "City_rec_noComboBox"
-        Me.City_rec_noComboBox.Size = New System.Drawing.Size(182, 21)
+        Me.City_rec_noComboBox.Size = New System.Drawing.Size(166, 21)
         Me.City_rec_noComboBox.TabIndex = 11
         Me.City_rec_noComboBox.ValueMember = "City_rec_no"
         '
