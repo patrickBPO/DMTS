@@ -44,6 +44,7 @@ Partial Class FrmDMTSMain
         Me.ViewTransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoadDebitsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -79,55 +80,55 @@ Partial Class FrmDMTSMain
         '
         Me.ReferencesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CountryToolStripMenuItem, Me.DistrictToolStripMenuItem, Me.CityToolStripMenuItem, Me.MerchantToolStripMenuItem, Me.MerchantLocationToolStripMenuItem, Me.LocationTerminalToolStripMenuItem, Me.CardTypeToolStripMenuItem})
         Me.ReferencesToolStripMenuItem.Name = "ReferencesToolStripMenuItem"
-        Me.ReferencesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReferencesToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.ReferencesToolStripMenuItem.Text = "References"
         '
         'CountryToolStripMenuItem
         '
         Me.CountryToolStripMenuItem.Name = "CountryToolStripMenuItem"
-        Me.CountryToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CountryToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.CountryToolStripMenuItem.Text = "Country"
         '
         'DistrictToolStripMenuItem
         '
         Me.DistrictToolStripMenuItem.Name = "DistrictToolStripMenuItem"
-        Me.DistrictToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DistrictToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.DistrictToolStripMenuItem.Text = "City"
         '
         'CityToolStripMenuItem
         '
         Me.CityToolStripMenuItem.Name = "CityToolStripMenuItem"
-        Me.CityToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CityToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.CityToolStripMenuItem.Text = "Branch"
         '
         'MerchantToolStripMenuItem
         '
         Me.MerchantToolStripMenuItem.Name = "MerchantToolStripMenuItem"
-        Me.MerchantToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MerchantToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.MerchantToolStripMenuItem.Text = "Merchant"
         '
         'MerchantLocationToolStripMenuItem
         '
         Me.MerchantLocationToolStripMenuItem.Name = "MerchantLocationToolStripMenuItem"
-        Me.MerchantLocationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MerchantLocationToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.MerchantLocationToolStripMenuItem.Text = "Merchant Location"
         '
         'LocationTerminalToolStripMenuItem
         '
         Me.LocationTerminalToolStripMenuItem.Name = "LocationTerminalToolStripMenuItem"
-        Me.LocationTerminalToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LocationTerminalToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.LocationTerminalToolStripMenuItem.Text = "Location Terminal"
         '
         'CardTypeToolStripMenuItem
         '
         Me.CardTypeToolStripMenuItem.Name = "CardTypeToolStripMenuItem"
-        Me.CardTypeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CardTypeToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.CardTypeToolStripMenuItem.Text = "Card Type"
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'POSTransactionsToolStripMenuItem
@@ -145,7 +146,7 @@ Partial Class FrmDMTSMain
         '
         'ImportToolStripMenuItem
         '
-        Me.ImportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileLoaderToolStripMenuItem, Me.FileConverterToolStripMenuItem})
+        Me.ImportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileLoaderToolStripMenuItem, Me.LoadDebitsToolStripMenuItem, Me.FileConverterToolStripMenuItem})
         Me.ImportToolStripMenuItem.Name = "ImportToolStripMenuItem"
         Me.ImportToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.ImportToolStripMenuItem.Text = "Import"
@@ -153,13 +154,13 @@ Partial Class FrmDMTSMain
         'FileLoaderToolStripMenuItem
         '
         Me.FileLoaderToolStripMenuItem.Name = "FileLoaderToolStripMenuItem"
-        Me.FileLoaderToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
-        Me.FileLoaderToolStripMenuItem.Text = "File Loader"
+        Me.FileLoaderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileLoaderToolStripMenuItem.Text = "Load Credits"
         '
         'FileConverterToolStripMenuItem
         '
         Me.FileConverterToolStripMenuItem.Name = "FileConverterToolStripMenuItem"
-        Me.FileConverterToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.FileConverterToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FileConverterToolStripMenuItem.Text = "File Converter"
         '
         'ReportsToolStripMenuItem
@@ -186,6 +187,13 @@ Partial Class FrmDMTSMain
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
         Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(38, 20)
         Me.ExitToolStripMenuItem1.Text = "Exit"
+        '
+        'LoadDebitsToolStripMenuItem
+        '
+        Me.LoadDebitsToolStripMenuItem.Enabled = False
+        Me.LoadDebitsToolStripMenuItem.Name = "LoadDebitsToolStripMenuItem"
+        Me.LoadDebitsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LoadDebitsToolStripMenuItem.Text = "Load Debits"
         '
         'FrmDMTSMain
         '
@@ -230,4 +238,5 @@ Partial Class FrmDMTSMain
     Friend WithEvents DistrictToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewEditTransactionsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FileConverterToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LoadDebitsToolStripMenuItem As ToolStripMenuItem
 End Class
