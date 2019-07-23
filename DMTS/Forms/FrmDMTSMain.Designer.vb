@@ -39,12 +39,13 @@ Partial Class FrmDMTSMain
         Me.ViewEditTransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileLoaderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoadDebitsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FileConverterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewTransactionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TerminalCountsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LoadDebitsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -154,18 +155,25 @@ Partial Class FrmDMTSMain
         'FileLoaderToolStripMenuItem
         '
         Me.FileLoaderToolStripMenuItem.Name = "FileLoaderToolStripMenuItem"
-        Me.FileLoaderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileLoaderToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.FileLoaderToolStripMenuItem.Text = "Load Credits"
+        '
+        'LoadDebitsToolStripMenuItem
+        '
+        Me.LoadDebitsToolStripMenuItem.Enabled = False
+        Me.LoadDebitsToolStripMenuItem.Name = "LoadDebitsToolStripMenuItem"
+        Me.LoadDebitsToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.LoadDebitsToolStripMenuItem.Text = "Load Debits"
         '
         'FileConverterToolStripMenuItem
         '
         Me.FileConverterToolStripMenuItem.Name = "FileConverterToolStripMenuItem"
-        Me.FileConverterToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FileConverterToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
         Me.FileConverterToolStripMenuItem.Text = "File Converter"
         '
         'ReportsToolStripMenuItem
         '
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewTransactionsToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewTransactionsToolStripMenuItem, Me.TerminalCountsToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
         Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.ReportsToolStripMenuItem.Text = "Reports"
@@ -173,8 +181,14 @@ Partial Class FrmDMTSMain
         'ViewTransactionsToolStripMenuItem
         '
         Me.ViewTransactionsToolStripMenuItem.Name = "ViewTransactionsToolStripMenuItem"
-        Me.ViewTransactionsToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.ViewTransactionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ViewTransactionsToolStripMenuItem.Text = "Transactions Report"
+        '
+        'TerminalCountsToolStripMenuItem
+        '
+        Me.TerminalCountsToolStripMenuItem.Name = "TerminalCountsToolStripMenuItem"
+        Me.TerminalCountsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TerminalCountsToolStripMenuItem.Text = "Terminal Counts"
         '
         'HelpToolStripMenuItem
         '
@@ -187,13 +201,6 @@ Partial Class FrmDMTSMain
         Me.ExitToolStripMenuItem1.Name = "ExitToolStripMenuItem1"
         Me.ExitToolStripMenuItem1.Size = New System.Drawing.Size(38, 20)
         Me.ExitToolStripMenuItem1.Text = "Exit"
-        '
-        'LoadDebitsToolStripMenuItem
-        '
-        Me.LoadDebitsToolStripMenuItem.Enabled = False
-        Me.LoadDebitsToolStripMenuItem.Name = "LoadDebitsToolStripMenuItem"
-        Me.LoadDebitsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LoadDebitsToolStripMenuItem.Text = "Load Debits"
         '
         'FrmDMTSMain
         '
@@ -239,4 +246,5 @@ Partial Class FrmDMTSMain
     Friend WithEvents ViewEditTransactionsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents FileConverterToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LoadDebitsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TerminalCountsToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSMLocTermCnt" targetNamespace="http://tempuri.org/DSMLocTermCnt.xsd" xmlns:mstns="http://tempuri.org/DSMLocTermCnt.xsd" xmlns="http://tempuri.org/DSMLocTermCnt.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="DMTSConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DMTSConn (MySettings)" PropertyReference="ApplicationSettings.DMTS.My.MySettings.GlobalReference.Default.DMTSConn" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MLocTermCntTableAdapter" GeneratorDataComponentClassName="MLocTermCntTableAdapter" Name="MLocTermCnt" UserDataComponentName="MLocTermCntTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DMTSConn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        merchant.merchant_id, merchant.m_name, merch_loc.ml_id, merch_loc.ml_name, loc_terminal.lt_id, loc_terminal.lt_desc, city.Description AS Branch
+FROM            merchant, loc_terminal, { oj merch_loc LEFT OUTER JOIN
+                         city ON merch_loc.city_rec_no = city.City_rec_no }
+WHERE        merch_loc.merchant_rec_no = merchant.merchant_rec_no AND merch_loc.ml_rec_no = loc_terminal.ml_rec_no
+ORDER BY merchant.merchant_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="merchant_id" DataSetColumn="merchant_id" />
+              <Mapping SourceColumn="m_name" DataSetColumn="m_name" />
+              <Mapping SourceColumn="ml_id" DataSetColumn="ml_id" />
+              <Mapping SourceColumn="ml_name" DataSetColumn="ml_name" />
+              <Mapping SourceColumn="lt_id" DataSetColumn="lt_id" />
+              <Mapping SourceColumn="lt_desc" DataSetColumn="lt_desc" />
+              <Mapping SourceColumn="Branch" DataSetColumn="Branch" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSMLocTermCnt" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSMLocTermCnt" msprop:Generator_UserDSName="DSMLocTermCnt">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MLocTermCnt" msprop:Generator_TableClassName="MLocTermCntDataTable" msprop:Generator_TableVarName="tableMLocTermCnt" msprop:Generator_TablePropName="MLocTermCnt" msprop:Generator_RowDeletingName="MLocTermCntRowDeleting" msprop:Generator_RowChangingName="MLocTermCntRowChanging" msprop:Generator_RowEvHandlerName="MLocTermCntRowChangeEventHandler" msprop:Generator_RowDeletedName="MLocTermCntRowDeleted" msprop:Generator_UserTableName="MLocTermCnt" msprop:Generator_RowChangedName="MLocTermCntRowChanged" msprop:Generator_RowEvArgName="MLocTermCntRowChangeEvent" msprop:Generator_RowClassName="MLocTermCntRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="merchant_id" msprop:Generator_ColumnVarNameInTable="columnmerchant_id" msprop:Generator_ColumnPropNameInRow="merchant_id" msprop:Generator_ColumnPropNameInTable="merchant_idColumn" msprop:Generator_UserColumnName="merchant_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="m_name" msprop:Generator_ColumnVarNameInTable="columnm_name" msprop:Generator_ColumnPropNameInRow="m_name" msprop:Generator_ColumnPropNameInTable="m_nameColumn" msprop:Generator_UserColumnName="m_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ml_id" msprop:Generator_ColumnVarNameInTable="columnml_id" msprop:Generator_ColumnPropNameInRow="ml_id" msprop:Generator_ColumnPropNameInTable="ml_idColumn" msprop:Generator_UserColumnName="ml_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ml_name" msprop:Generator_ColumnVarNameInTable="columnml_name" msprop:Generator_ColumnPropNameInRow="ml_name" msprop:Generator_ColumnPropNameInTable="ml_nameColumn" msprop:Generator_UserColumnName="ml_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lt_id" msprop:Generator_ColumnVarNameInTable="columnlt_id" msprop:Generator_ColumnPropNameInRow="lt_id" msprop:Generator_ColumnPropNameInTable="lt_idColumn" msprop:Generator_UserColumnName="lt_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lt_desc" msprop:Generator_ColumnVarNameInTable="columnlt_desc" msprop:Generator_ColumnPropNameInRow="lt_desc" msprop:Generator_ColumnPropNameInTable="lt_descColumn" msprop:Generator_UserColumnName="lt_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Branch" msprop:Generator_ColumnVarNameInTable="columnBranch" msprop:Generator_ColumnPropNameInRow="Branch" msprop:Generator_ColumnPropNameInTable="BranchColumn" msprop:Generator_UserColumnName="Branch" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

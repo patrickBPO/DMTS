@@ -31,6 +31,7 @@ Partial Class FrmTransReport
         Me.TransactionsDS = New DMTS.TransactionsDS()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.coltrans_rec_no = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.m_name = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.lt_desc = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colfh = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.coltrans_date = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -40,7 +41,6 @@ Partial Class FrmTransReport
         Me.ct_desc = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RICboCardType = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.TransactionsTableAdapter = New DMTS.TransactionsDSTableAdapters.transactionsTableAdapter()
-        Me.m_name = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,6 +129,15 @@ Partial Class FrmTransReport
         Me.coltrans_rec_no.Name = "coltrans_rec_no"
         Me.coltrans_rec_no.Width = 99
         '
+        'm_name
+        '
+        Me.m_name.Caption = "Merchant"
+        Me.m_name.FieldName = "m_name"
+        Me.m_name.Name = "m_name"
+        Me.m_name.Visible = True
+        Me.m_name.VisibleIndex = 2
+        Me.m_name.Width = 149
+        '
         'lt_desc
         '
         Me.lt_desc.Caption = "Terminal"
@@ -210,15 +219,6 @@ Partial Class FrmTransReport
         'TransactionsTableAdapter
         '
         Me.TransactionsTableAdapter.ClearBeforeFill = True
-        '
-        'm_name
-        '
-        Me.m_name.Caption = "Merchant"
-        Me.m_name.FieldName = "m_name"
-        Me.m_name.Name = "m_name"
-        Me.m_name.Visible = True
-        Me.m_name.VisibleIndex = 2
-        Me.m_name.Width = 149
         '
         'FrmTransReport
         '

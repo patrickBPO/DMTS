@@ -126,4 +126,8 @@ Public Class FrmDMTSMain
     Private Sub LocationTerminalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocationTerminalToolStripMenuItem.Click
         FrmLocTerminal.Show()
     End Sub
+
+    Private Sub TerminalCountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TerminalCountsToolStripMenuItem.Click
+        FrmTermCntRpt.Show()
+    End Sub
 End Class
