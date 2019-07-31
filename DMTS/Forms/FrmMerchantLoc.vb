@@ -6,7 +6,8 @@ Public Class FrmMerchantLoc
         Me.TableAdapterManager.UpdateAll(Me.MerchantLocDS)
         '- Below will record the position of last record added
         'LastPosition(cityBindingSource, cityDataGridView, "city_rec_no", 0)
-        GPosition = Merch_locBindingSource.Position
+        'GPosition = Merch_locBindingSource.Position
+        GPosition = MerchantmerchlocBindingSource.Position
 
         Me.Merch_locTableAdapter.Update(Me.MerchantLocDS.merch_loc)
         DoSave(merch_locBNavEditItem,
@@ -16,11 +17,13 @@ Public Class FrmMerchantLoc
               merch_locBNavCancel)
         HandleGrpInputCtrls(False)
 
-        Me.Merch_locTableAdapter.Fill(MerchantLocDS.merch_loc) '-- Refresh Dataset
+        '--Me.Merch_locTableAdapter.Fill(MerchantLocDS.merch_loc) '-- Refresh Dataset
 
         '- Below will move the cursor to the last recorded position
         'LastPosition(merchantBindingSource, merchantDataGridView, "merchant_rec_no", 1)
-        MerchantBindingSource.Position = GPosition
+        'MerchantBindingSource.Position = GPosition
+        MerchantmerchlocBindingSource.Position = GPosition
+
     End Sub
 
     Private Sub FrmMerchantLoc_Load(sender As Object, e As EventArgs) Handles MyBase.Load

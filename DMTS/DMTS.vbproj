@@ -272,6 +272,12 @@
     <Compile Include="Forms\FrmCity.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmCLoader.Designer.vb">
+      <DependentUpon>FrmCLoader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCLoader.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmCountry.Designer.vb">
       <DependentUpon>FrmCountry.vb</DependentUpon>
     </Compile>
@@ -386,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCity.resx">
       <DependentUpon>FrmCity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCLoader.resx">
+      <DependentUpon>FrmCLoader.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCountry.resx">
       <DependentUpon>FrmCountry.vb</DependentUpon>

@@ -48,6 +48,8 @@ Partial Class FrmDistrict
         Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.DistrictBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DistrictDataGridView = New System.Windows.Forms.DataGridView()
+        Me.District_rec_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DistrictBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
@@ -73,8 +75,6 @@ Partial Class FrmDistrict
         Me.TxtCSearch = New System.Windows.Forms.TextBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.ToolTip2 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.District_rec_no = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         DescriptionLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         Label2 = New System.Windows.Forms.Label()
@@ -207,6 +207,7 @@ Partial Class FrmDistrict
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
@@ -306,6 +307,22 @@ Partial Class FrmDistrict
         Me.DistrictDataGridView.Size = New System.Drawing.Size(243, 220)
         Me.DistrictDataGridView.TabIndex = 5
         '
+        'District_rec_no
+        '
+        Me.District_rec_no.DataPropertyName = "District_rec_no"
+        Me.District_rec_no.HeaderText = "District_rec_no"
+        Me.District_rec_no.Name = "District_rec_no"
+        Me.District_rec_no.ReadOnly = True
+        Me.District_rec_no.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "description"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "City/Town/Village"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 200
+        '
         'DistrictBindingNavigator
         '
         Me.DistrictBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -360,6 +377,7 @@ Partial Class FrmDistrict
         '
         Me.ToolStripTextBox1.AccessibleName = "Position"
         Me.ToolStripTextBox1.AutoSize = False
+        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(50, 23)
         Me.ToolStripTextBox1.Text = "0"
@@ -517,22 +535,6 @@ Partial Class FrmDistrict
         'ToolTip2
         '
         Me.ToolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
-        '
-        'District_rec_no
-        '
-        Me.District_rec_no.DataPropertyName = "District_rec_no"
-        Me.District_rec_no.HeaderText = "District_rec_no"
-        Me.District_rec_no.Name = "District_rec_no"
-        Me.District_rec_no.ReadOnly = True
-        Me.District_rec_no.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "description"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "City/Town/Village"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Width = 200
         '
         'FrmDistrict
         '
