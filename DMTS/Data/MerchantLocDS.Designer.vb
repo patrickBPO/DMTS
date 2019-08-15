@@ -345,6 +345,8 @@ Partial Public Class MerchantLocDS
         
         Private columnrate As Global.System.Data.DataColumn
         
+        Private columnstreet As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -469,6 +471,14 @@ Partial Public Class MerchantLocDS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property streetColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnstreet
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -505,9 +515,9 @@ Partial Public Class MerchantLocDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddmerchantRow(ByVal merchant_id As String, ByVal m_name As String, ByVal country_rec_no As Integer, ByVal district_rec_no As Integer, ByVal city_rec_no As Integer, ByVal m_contact As String, ByVal m_email As String, ByVal phone_1 As String, ByVal phone_2 As String, ByVal rate As Double) As merchantRow
+        Public Overloads Function AddmerchantRow(ByVal merchant_id As String, ByVal m_name As String, ByVal country_rec_no As Integer, ByVal district_rec_no As Integer, ByVal city_rec_no As Integer, ByVal m_contact As String, ByVal m_email As String, ByVal phone_1 As String, ByVal phone_2 As String, ByVal rate As Double, ByVal street As String) As merchantRow
             Dim rowmerchantRow As merchantRow = CType(Me.NewRow,merchantRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, merchant_id, m_name, country_rec_no, district_rec_no, city_rec_no, m_contact, m_email, phone_1, phone_2, rate}
+            Dim columnValuesArray() As Object = New Object() {Nothing, merchant_id, m_name, country_rec_no, district_rec_no, city_rec_no, m_contact, m_email, phone_1, phone_2, rate, street}
             rowmerchantRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowmerchantRow)
             Return rowmerchantRow
@@ -541,6 +551,7 @@ Partial Public Class MerchantLocDS
             Me.columnphone_1 = MyBase.Columns("phone_1")
             Me.columnphone_2 = MyBase.Columns("phone_2")
             Me.columnrate = MyBase.Columns("rate")
+            Me.columnstreet = MyBase.Columns("street")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -568,6 +579,8 @@ Partial Public Class MerchantLocDS
             MyBase.Columns.Add(Me.columnphone_2)
             Me.columnrate = New Global.System.Data.DataColumn("rate", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnrate)
+            Me.columnstreet = New Global.System.Data.DataColumn("street", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnstreet)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnmerchant_rec_no}, false))
             Me.columnmerchant_rec_no.AutoIncrement = true
             Me.columnmerchant_rec_no.AutoIncrementSeed = -1
@@ -579,6 +592,7 @@ Partial Public Class MerchantLocDS
             Me.columnm_email.MaxLength = 240
             Me.columnphone_1.MaxLength = 60
             Me.columnphone_2.MaxLength = 60
+            Me.columnstreet.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -740,6 +754,8 @@ Partial Public Class MerchantLocDS
         
         Private columnshadow_acc As Global.System.Data.DataColumn
         
+        Private columnstreet As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -872,6 +888,14 @@ Partial Public Class MerchantLocDS
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property streetColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnstreet
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -908,9 +932,9 @@ Partial Public Class MerchantLocDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function Addmerch_locRow(ByVal parentmerchantRowBymerchant_merch_loc As merchantRow, ByVal ml_id As String, ByVal ml_name As String, ByVal country_rec_no As Integer, ByVal district_rec_no As Integer, ByVal city_rec_no As Integer, ByVal m_contact As String, ByVal m_email As String, ByVal phone_1 As String, ByVal phone_2 As String, ByVal shadow_acc As String) As merch_locRow
+        Public Overloads Function Addmerch_locRow(ByVal parentmerchantRowBymerchant_merch_loc As merchantRow, ByVal ml_id As String, ByVal ml_name As String, ByVal country_rec_no As Integer, ByVal district_rec_no As Integer, ByVal city_rec_no As Integer, ByVal m_contact As String, ByVal m_email As String, ByVal phone_1 As String, ByVal phone_2 As String, ByVal shadow_acc As String, ByVal street As String) As merch_locRow
             Dim rowmerch_locRow As merch_locRow = CType(Me.NewRow,merch_locRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, ml_id, ml_name, country_rec_no, district_rec_no, city_rec_no, m_contact, m_email, phone_1, phone_2, shadow_acc}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, ml_id, ml_name, country_rec_no, district_rec_no, city_rec_no, m_contact, m_email, phone_1, phone_2, shadow_acc, street}
             If (Not (parentmerchantRowBymerchant_merch_loc) Is Nothing) Then
                 columnValuesArray(1) = parentmerchantRowBymerchant_merch_loc(0)
             End If
@@ -948,6 +972,7 @@ Partial Public Class MerchantLocDS
             Me.columnphone_1 = MyBase.Columns("phone_1")
             Me.columnphone_2 = MyBase.Columns("phone_2")
             Me.columnshadow_acc = MyBase.Columns("shadow_acc")
+            Me.columnstreet = MyBase.Columns("street")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -977,6 +1002,8 @@ Partial Public Class MerchantLocDS
             MyBase.Columns.Add(Me.columnphone_2)
             Me.columnshadow_acc = New Global.System.Data.DataColumn("shadow_acc", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnshadow_acc)
+            Me.columnstreet = New Global.System.Data.DataColumn("street", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnstreet)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnml_rec_no}, false))
             Me.columnml_rec_no.AutoIncrement = true
             Me.columnml_rec_no.AutoIncrementSeed = -1
@@ -989,6 +1016,7 @@ Partial Public Class MerchantLocDS
             Me.columnphone_1.MaxLength = 60
             Me.columnphone_2.MaxLength = 60
             Me.columnshadow_acc.MaxLength = 80
+            Me.columnstreet.MaxLength = 100
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1300,6 +1328,21 @@ Partial Public Class MerchantLocDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property street() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablemerchant.streetColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'street' in table 'merchant' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemerchant.streetColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function Ismerchant_rec_noNull() As Boolean
             Return Me.IsNull(Me.tablemerchant.merchant_rec_noColumn)
         End Function
@@ -1428,6 +1471,18 @@ Partial Public Class MerchantLocDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetrateNull()
             Me(Me.tablemerchant.rateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsstreetNull() As Boolean
+            Return Me.IsNull(Me.tablemerchant.streetColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetstreetNull()
+            Me(Me.tablemerchant.streetColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1638,6 +1693,21 @@ Partial Public Class MerchantLocDS
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property street() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablemerch_loc.streetColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'street' in table 'merch_loc' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablemerch_loc.streetColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property merchantRow() As merchantRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("merchant_merch_loc")),merchantRow)
@@ -1789,6 +1859,18 @@ Partial Public Class MerchantLocDS
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub Setshadow_accNull()
             Me(Me.tablemerch_loc.shadow_accColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsstreetNull() As Boolean
+            Return Me.IsNull(Me.tablemerch_loc.streetColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetstreetNull()
+            Me(Me.tablemerch_loc.streetColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2005,6 +2087,7 @@ Namespace MerchantLocDSTableAdapters
             tableMapping.ColumnMappings.Add("phone_1", "phone_1")
             tableMapping.ColumnMappings.Add("phone_2", "phone_2")
             tableMapping.ColumnMappings.Add("rate", "rate")
+            tableMapping.ColumnMappings.Add("street", "street")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -2021,7 +2104,9 @@ Namespace MerchantLocDSTableAdapters
             Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT * FROM `merchant`"
+            Me._commandCollection(0).CommandText = "SELECT        city_rec_no, country_rec_no, district_rec_no, m_contact, m_email, m"& _ 
+                "_name, merchant_id, merchant_rec_no, phone_1, phone_2, rate, street"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM       "& _ 
+                "     merchant"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -2189,6 +2274,7 @@ Namespace MerchantLocDSTableAdapters
             tableMapping.ColumnMappings.Add("phone_1", "phone_1")
             tableMapping.ColumnMappings.Add("phone_2", "phone_2")
             tableMapping.ColumnMappings.Add("shadow_acc", "shadow_acc")
+            tableMapping.ColumnMappings.Add("street", "street")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -2199,7 +2285,7 @@ Namespace MerchantLocDSTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO merch_loc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (merchant_rec_no, ml_id, ml_name,"& _ 
                 " country_rec_no, district_rec_no, city_rec_no, m_contact, m_email, phone_1, phon"& _ 
-                "e_2, shadow_acc)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "e_2, shadow_acc, street)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("merchant_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "merchant_rec_no", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ml_id", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ml_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -2212,12 +2298,13 @@ Namespace MerchantLocDSTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("phone_1", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone_1", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("phone_2", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone_2", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("shadow_acc", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "shadow_acc", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("street", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "street", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.Odbc.OdbcCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE       merch_loc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                merchant_rec_no = ?, ml_id = ?, ml_nam"& _ 
                 "e = ?, country_rec_no = ?, district_rec_no = ?, city_rec_no = ?, m_contact = ?, "& _ 
-                "m_email = ?, phone_1 = ?, phone_2 = ?, shadow_acc = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (ml_rec_no ="& _ 
-                " ?)"
+                "m_email = ?, phone_1 = ?, phone_2 = ?, shadow_acc = ?, street = ?"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        "& _ 
+                "(ml_rec_no = ?)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("merchant_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "merchant_rec_no", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("ml_id", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ml_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -2230,6 +2317,7 @@ Namespace MerchantLocDSTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("phone_1", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone_1", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("phone_2", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "phone_2", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("shadow_acc", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "shadow_acc", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("street", Global.System.Data.Odbc.OdbcType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "street", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.Odbc.OdbcParameter("Original_ml_rec_no", Global.System.Data.Odbc.OdbcType.Int, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ml_rec_no", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
@@ -2247,8 +2335,7 @@ Namespace MerchantLocDSTableAdapters
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        ml_rec_no, merchant_rec_no, ml_id, ml_name, country_rec_no, distric"& _ 
-                "t_rec_no, city_rec_no, m_contact, m_email, phone_1, phone_2, shadow_acc"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM   "& _ 
-                "         merch_loc"
+                "t_rec_no, city_rec_no, m_contact, m_email, phone_1, phone_2, shadow_acc, street"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            merch_loc"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

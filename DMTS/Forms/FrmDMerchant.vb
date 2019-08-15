@@ -3,7 +3,12 @@ Public Class FrmDMerchant
     Private Sub MerchantBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles merchantBNavSaveItem.Click
         Me.Validate()
         Me.MerchantBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.MerchantDS)
+        Try
+            Me.TableAdapterManager.UpdateAll(Me.MerchantDS)
+
+        Catch ex As Exception
+            'Do nothing
+        End Try
 
         '- Below will record the position of last record added
         'LastPosition(cityBindingSource, cityDataGridView, "city_rec_no", 0)

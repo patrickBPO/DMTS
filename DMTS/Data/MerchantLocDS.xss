@@ -7,7 +7,7 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="0" ViewPortY="32" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:merchant" ZOrder="3" X="350" Y="50" Height="286" Width="203" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
-    <Shape ID="DesignTable:merch_loc" ZOrder="2" X="656" Y="213" Height="305" Width="203" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:merch_loc" ZOrder="2" X="656" Y="164" Height="362" Width="203" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="311" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:merchant_merch_loc" ZOrder="1" LineWidth="11">
@@ -22,7 +22,7 @@
         </Point>
         <Point>
           <X>695</X>
-          <Y>213</Y>
+          <Y>164</Y>
         </Point>
       </RoutePoints>
     </Connector>

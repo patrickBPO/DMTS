@@ -12,7 +12,8 @@
               <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT * FROM `merch_loc`</CommandText>
+                    <CommandText>SELECT        city_rec_no, country_rec_no, district_rec_no, m_contact, m_email, merchant_rec_no, ml_id, ml_name, ml_rec_no, phone_1, phone_2, shadow_acc, street
+FROM            merch_loc</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -31,6 +32,7 @@
               <Mapping SourceColumn="phone_1" DataSetColumn="phone_1" />
               <Mapping SourceColumn="phone_2" DataSetColumn="phone_2" />
               <Mapping SourceColumn="shadow_acc" DataSetColumn="shadow_acc" />
+              <Mapping SourceColumn="street" DataSetColumn="street" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -92,7 +94,8 @@ WHERE        (lt_rec_no = ?)</CommandText>
               <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT * FROM `merchant`</CommandText>
+                    <CommandText>SELECT        city_rec_no, country_rec_no, district_rec_no, m_contact, m_email, m_name, merchant_id, merchant_rec_no, phone_1, phone_2, rate, street
+FROM            merchant</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -110,6 +113,7 @@ WHERE        (lt_rec_no = ?)</CommandText>
               <Mapping SourceColumn="phone_1" DataSetColumn="phone_1" />
               <Mapping SourceColumn="phone_2" DataSetColumn="phone_2" />
               <Mapping SourceColumn="rate" DataSetColumn="rate" />
+              <Mapping SourceColumn="street" DataSetColumn="street" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -121,7 +125,7 @@ WHERE        (lt_rec_no = ?)</CommandText>
   <xs:element name="LocTerminalDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="LocTerminalDS" msprop:Generator_UserDSName="LocTerminalDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="merch_loc" msprop:Generator_TableClassName="merch_locDataTable" msprop:Generator_TableVarName="tablemerch_loc" msprop:Generator_RowChangedName="merch_locRowChanged" msprop:Generator_TablePropName="merch_loc" msprop:Generator_RowDeletingName="merch_locRowDeleting" msprop:Generator_RowChangingName="merch_locRowChanging" msprop:Generator_RowEvHandlerName="merch_locRowChangeEventHandler" msprop:Generator_RowDeletedName="merch_locRowDeleted" msprop:Generator_RowClassName="merch_locRow" msprop:Generator_UserTableName="merch_loc" msprop:Generator_RowEvArgName="merch_locRowChangeEvent">
+        <xs:element name="merch_loc" msprop:Generator_TableClassName="merch_locDataTable" msprop:Generator_TableVarName="tablemerch_loc" msprop:Generator_TablePropName="merch_loc" msprop:Generator_RowDeletingName="merch_locRowDeleting" msprop:Generator_RowChangingName="merch_locRowChanging" msprop:Generator_RowEvHandlerName="merch_locRowChangeEventHandler" msprop:Generator_RowDeletedName="merch_locRowDeleted" msprop:Generator_UserTableName="merch_loc" msprop:Generator_RowChangedName="merch_locRowChanged" msprop:Generator_RowEvArgName="merch_locRowChangeEvent" msprop:Generator_RowClassName="merch_locRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ml_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnml_rec_no" msprop:Generator_ColumnPropNameInRow="ml_rec_no" msprop:Generator_ColumnPropNameInTable="ml_rec_noColumn" msprop:Generator_UserColumnName="ml_rec_no" type="xs:int" minOccurs="0" />
@@ -178,10 +182,17 @@ WHERE        (lt_rec_no = ?)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="street" msprop:Generator_ColumnVarNameInTable="columnstreet" msprop:Generator_ColumnPropNameInRow="street" msprop:Generator_ColumnPropNameInTable="streetColumn" msprop:Generator_UserColumnName="street" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="loc_terminal" msprop:Generator_TableClassName="loc_terminalDataTable" msprop:Generator_TableVarName="tableloc_terminal" msprop:Generator_TablePropName="loc_terminal" msprop:Generator_RowDeletingName="loc_terminalRowDeleting" msprop:Generator_RowChangingName="loc_terminalRowChanging" msprop:Generator_RowEvHandlerName="loc_terminalRowChangeEventHandler" msprop:Generator_RowDeletedName="loc_terminalRowDeleted" msprop:Generator_UserTableName="loc_terminal" msprop:Generator_RowChangedName="loc_terminalRowChanged" msprop:Generator_RowEvArgName="loc_terminalRowChangeEvent" msprop:Generator_RowClassName="loc_terminalRow">
+        <xs:element name="loc_terminal" msprop:Generator_TableClassName="loc_terminalDataTable" msprop:Generator_TableVarName="tableloc_terminal" msprop:Generator_RowChangedName="loc_terminalRowChanged" msprop:Generator_TablePropName="loc_terminal" msprop:Generator_RowDeletingName="loc_terminalRowDeleting" msprop:Generator_RowChangingName="loc_terminalRowChanging" msprop:Generator_RowEvHandlerName="loc_terminalRowChangeEventHandler" msprop:Generator_RowDeletedName="loc_terminalRowDeleted" msprop:Generator_RowClassName="loc_terminalRow" msprop:Generator_UserTableName="loc_terminal" msprop:Generator_RowEvArgName="loc_terminalRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="lt_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnlt_rec_no" msprop:Generator_ColumnPropNameInRow="lt_rec_no" msprop:Generator_ColumnPropNameInTable="lt_rec_noColumn" msprop:Generator_UserColumnName="lt_rec_no" type="xs:int" minOccurs="0" />
@@ -203,7 +214,7 @@ WHERE        (lt_rec_no = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="merchant" msprop:Generator_TableClassName="merchantDataTable" msprop:Generator_TableVarName="tablemerchant" msprop:Generator_RowChangedName="merchantRowChanged" msprop:Generator_TablePropName="merchant" msprop:Generator_RowDeletingName="merchantRowDeleting" msprop:Generator_RowChangingName="merchantRowChanging" msprop:Generator_RowEvHandlerName="merchantRowChangeEventHandler" msprop:Generator_RowDeletedName="merchantRowDeleted" msprop:Generator_RowClassName="merchantRow" msprop:Generator_UserTableName="merchant" msprop:Generator_RowEvArgName="merchantRowChangeEvent">
+        <xs:element name="merchant" msprop:Generator_TableClassName="merchantDataTable" msprop:Generator_TableVarName="tablemerchant" msprop:Generator_TablePropName="merchant" msprop:Generator_RowDeletingName="merchantRowDeleting" msprop:Generator_RowChangingName="merchantRowChanging" msprop:Generator_RowEvHandlerName="merchantRowChangeEventHandler" msprop:Generator_RowDeletedName="merchantRowDeleted" msprop:Generator_UserTableName="merchant" msprop:Generator_RowChangedName="merchantRowChanged" msprop:Generator_RowEvArgName="merchantRowChangeEvent" msprop:Generator_RowClassName="merchantRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="merchant_rec_no" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnmerchant_rec_no" msprop:Generator_ColumnPropNameInRow="merchant_rec_no" msprop:Generator_ColumnPropNameInTable="merchant_rec_noColumn" msprop:Generator_UserColumnName="merchant_rec_no" type="xs:int" minOccurs="0" />
@@ -253,6 +264,13 @@ WHERE        (lt_rec_no = ?)</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="rate" msprop:Generator_ColumnVarNameInTable="columnrate" msprop:Generator_ColumnPropNameInRow="rate" msprop:Generator_ColumnPropNameInTable="rateColumn" msprop:Generator_UserColumnName="rate" type="xs:double" minOccurs="0" />
+              <xs:element name="street" msprop:Generator_ColumnVarNameInTable="columnstreet" msprop:Generator_ColumnPropNameInRow="street" msprop:Generator_ColumnPropNameInTable="streetColumn" msprop:Generator_UserColumnName="street" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -273,8 +291,8 @@ WHERE        (lt_rec_no = ?)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="merch_loc_loc_terminal" msdata:parent="merch_loc" msdata:child="loc_terminal" msdata:parentkey="ml_rec_no" msdata:childkey="ml_rec_no" msprop:Generator_UserChildTable="loc_terminal" msprop:Generator_ChildPropName="Getloc_terminalRows" msprop:Generator_UserRelationName="merch_loc_loc_terminal" msprop:Generator_ParentPropName="merch_locRow" msprop:Generator_RelationVarName="relationmerch_loc_loc_terminal" msprop:Generator_UserParentTable="merch_loc" />
-      <msdata:Relationship name="merchant_merch_loc" msdata:parent="merchant" msdata:child="merch_loc" msdata:parentkey="merchant_rec_no" msdata:childkey="merchant_rec_no" msprop:Generator_UserChildTable="merch_loc" msprop:Generator_ChildPropName="Getmerch_locRows" msprop:Generator_UserRelationName="merchant_merch_loc" msprop:Generator_ParentPropName="merchantRow" msprop:Generator_RelationVarName="relationmerchant_merch_loc" msprop:Generator_UserParentTable="merchant" />
+      <msdata:Relationship name="merch_loc_loc_terminal" msdata:parent="merch_loc" msdata:child="loc_terminal" msdata:parentkey="ml_rec_no" msdata:childkey="ml_rec_no" msprop:Generator_UserChildTable="loc_terminal" msprop:Generator_ChildPropName="Getloc_terminalRows" msprop:Generator_UserRelationName="merch_loc_loc_terminal" msprop:Generator_RelationVarName="relationmerch_loc_loc_terminal" msprop:Generator_UserParentTable="merch_loc" msprop:Generator_ParentPropName="merch_locRow" />
+      <msdata:Relationship name="merchant_merch_loc" msdata:parent="merchant" msdata:child="merch_loc" msdata:parentkey="merchant_rec_no" msdata:childkey="merchant_rec_no" msprop:Generator_UserChildTable="merch_loc" msprop:Generator_ChildPropName="Getmerch_locRows" msprop:Generator_UserRelationName="merchant_merch_loc" msprop:Generator_RelationVarName="relationmerchant_merch_loc" msprop:Generator_UserParentTable="merchant" msprop:Generator_ParentPropName="merchantRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

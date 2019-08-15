@@ -42,8 +42,10 @@ Partial Class FrmLocTerminal
         Dim District_rec_noLabel1 As System.Windows.Forms.Label
         Dim City_rec_noLabel1 As System.Windows.Forms.Label
         Dim Label5 As System.Windows.Forms.Label
+        Dim StreetLabel As System.Windows.Forms.Label
+        Dim StreetLabel1 As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLocTerminal))
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.Merch_locBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
@@ -66,6 +68,7 @@ Partial Class FrmLocTerminal
         Me.TxtMLSearch = New System.Windows.Forms.TextBox()
         Me.Merchant_rec_noTextBox = New System.Windows.Forms.TextBox()
         Me.GCMLocation = New DevExpress.XtraEditors.GroupControl()
+        Me.StreetTextBox1 = New System.Windows.Forms.TextBox()
         Me.Country_rec_noComboBox = New System.Windows.Forms.ComboBox()
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Country = New DMTS.Country()
@@ -114,6 +117,7 @@ Partial Class FrmLocTerminal
         Me.Loc_terminalTableAdapter = New DMTS.LocTerminalDSTableAdapters.loc_terminalTableAdapter()
         Me.GroupControl3 = New DevExpress.XtraEditors.GroupControl()
         Me.GCMerchant = New DevExpress.XtraEditors.GroupControl()
+        Me.StreetTextBox = New System.Windows.Forms.TextBox()
         Me.District_rec_noComboBox1 = New System.Windows.Forms.ComboBox()
         Me.DistrictBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Country_rec_noComboBox1 = New System.Windows.Forms.ComboBox()
@@ -156,6 +160,8 @@ Partial Class FrmLocTerminal
         District_rec_noLabel1 = New System.Windows.Forms.Label()
         City_rec_noLabel1 = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
+        StreetLabel = New System.Windows.Forms.Label()
+        StreetLabel1 = New System.Windows.Forms.Label()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.Merch_locBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -230,10 +236,10 @@ Partial Class FrmLocTerminal
         '
         City_rec_noLabel.AutoSize = True
         City_rec_noLabel.BackColor = System.Drawing.Color.Transparent
-        City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel.Location = New System.Drawing.Point(66, 88)
+        City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        City_rec_noLabel.Location = New System.Drawing.Point(127, 101)
         City_rec_noLabel.Name = "City_rec_noLabel"
-        City_rec_noLabel.Size = New System.Drawing.Size(46, 13)
+        City_rec_noLabel.Size = New System.Drawing.Size(53, 16)
         City_rec_noLabel.TabIndex = 21
         City_rec_noLabel.Text = "Branch"
         '
@@ -264,7 +270,7 @@ Partial Class FrmLocTerminal
         Label1.AutoSize = True
         Label1.BackColor = System.Drawing.Color.Transparent
         Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Label1.Location = New System.Drawing.Point(132, 29)
+        Label1.Location = New System.Drawing.Point(135, 29)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(147, 13)
         Label1.TabIndex = 27
@@ -363,7 +369,7 @@ Partial Class FrmLocTerminal
         Country_rec_noLabel1.AutoSize = True
         Country_rec_noLabel1.BackColor = System.Drawing.Color.Transparent
         Country_rec_noLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Country_rec_noLabel1.Location = New System.Drawing.Point(352, 83)
+        Country_rec_noLabel1.Location = New System.Drawing.Point(60, 9)
         Country_rec_noLabel1.Name = "Country_rec_noLabel1"
         Country_rec_noLabel1.Size = New System.Drawing.Size(52, 13)
         Country_rec_noLabel1.TabIndex = 6
@@ -373,10 +379,10 @@ Partial Class FrmLocTerminal
         '
         District_rec_noLabel1.AutoSize = True
         District_rec_noLabel1.BackColor = System.Drawing.Color.Transparent
-        District_rec_noLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        District_rec_noLabel1.Location = New System.Drawing.Point(683, 83)
+        District_rec_noLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        District_rec_noLabel1.Location = New System.Drawing.Point(391, 5)
         District_rec_noLabel1.Name = "District_rec_noLabel1"
-        District_rec_noLabel1.Size = New System.Drawing.Size(46, 13)
+        District_rec_noLabel1.Size = New System.Drawing.Size(56, 16)
         District_rec_noLabel1.TabIndex = 8
         District_rec_noLabel1.Text = "Branch"
         '
@@ -385,7 +391,7 @@ Partial Class FrmLocTerminal
         City_rec_noLabel1.AutoSize = True
         City_rec_noLabel1.BackColor = System.Drawing.Color.Transparent
         City_rec_noLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel1.Location = New System.Drawing.Point(485, 83)
+        City_rec_noLabel1.Location = New System.Drawing.Point(193, 9)
         City_rec_noLabel1.Name = "City_rec_noLabel1"
         City_rec_noLabel1.Size = New System.Drawing.Size(108, 13)
         City_rec_noLabel1.TabIndex = 10
@@ -402,6 +408,28 @@ Partial Class FrmLocTerminal
         Label5.Size = New System.Drawing.Size(59, 17)
         Label5.TabIndex = 34
         Label5.Text = "Search"
+        '
+        'StreetLabel
+        '
+        StreetLabel.AutoSize = True
+        StreetLabel.BackColor = System.Drawing.Color.Transparent
+        StreetLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        StreetLabel.Location = New System.Drawing.Point(15, 135)
+        StreetLabel.Name = "StreetLabel"
+        StreetLabel.Size = New System.Drawing.Size(43, 13)
+        StreetLabel.TabIndex = 11
+        StreetLabel.Text = "Street"
+        '
+        'StreetLabel1
+        '
+        StreetLabel1.AutoSize = True
+        StreetLabel1.BackColor = System.Drawing.Color.Transparent
+        StreetLabel1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        StreetLabel1.Location = New System.Drawing.Point(123, 130)
+        StreetLabel1.Name = "StreetLabel1"
+        StreetLabel1.Size = New System.Drawing.Size(43, 13)
+        StreetLabel1.TabIndex = 21
+        StreetLabel1.Text = "Street"
         '
         'GroupControl1
         '
@@ -420,11 +448,11 @@ Partial Class FrmLocTerminal
         Me.GroupControl1.Controls.Add(Me.GCMLocation)
         Me.GroupControl1.Controls.Add(Me.GCMDetails)
         Me.GroupControl1.Controls.Add(Me.GroupControl2)
-        Me.GroupControl1.Location = New System.Drawing.Point(14, 146)
+        Me.GroupControl1.Location = New System.Drawing.Point(14, 169)
         Me.GroupControl1.LookAndFeel.SkinName = "Office 2010 Blue"
         Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(801, 535)
+        Me.GroupControl1.Size = New System.Drawing.Size(806, 567)
         Me.GroupControl1.TabIndex = 1
         Me.GroupControl1.Text = "MERCHANT LOCATION"
         '
@@ -443,7 +471,7 @@ Partial Class FrmLocTerminal
         Me.Merch_locBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.Merch_locBindingNavigator.Name = "Merch_locBindingNavigator"
         Me.Merch_locBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.Merch_locBindingNavigator.Size = New System.Drawing.Size(797, 25)
+        Me.Merch_locBindingNavigator.Size = New System.Drawing.Size(802, 25)
         Me.Merch_locBindingNavigator.TabIndex = 2
         Me.Merch_locBindingNavigator.Text = "BindingNavigator1"
         '
@@ -568,9 +596,9 @@ Partial Class FrmLocTerminal
         Me.PictureBox2.BackColor = System.Drawing.Color.White
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(497, 214)
+        Me.PictureBox2.Location = New System.Drawing.Point(497, 245)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(292, 308)
+        Me.PictureBox2.Size = New System.Drawing.Size(302, 308)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 36
         Me.PictureBox2.TabStop = False
@@ -608,9 +636,21 @@ Partial Class FrmLocTerminal
         Me.GCMLocation.Enabled = False
         Me.GCMLocation.Location = New System.Drawing.Point(497, 86)
         Me.GCMLocation.Name = "GCMLocation"
-        Me.GCMLocation.Size = New System.Drawing.Size(292, 122)
+        Me.GCMLocation.Size = New System.Drawing.Size(302, 153)
         Me.GCMLocation.TabIndex = 28
         Me.GCMLocation.Text = "Location"
+        '
+        'StreetTextBox1
+        '
+        Me.StreetTextBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.StreetTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.StreetTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "street", True))
+        Me.StreetTextBox1.Enabled = False
+        Me.StreetTextBox1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.StreetTextBox1.Location = New System.Drawing.Point(169, 127)
+        Me.StreetTextBox1.Name = "StreetTextBox1"
+        Me.StreetTextBox1.Size = New System.Drawing.Size(296, 21)
+        Me.StreetTextBox1.TabIndex = 22
         '
         'Country_rec_noComboBox
         '
@@ -623,7 +663,7 @@ Partial Class FrmLocTerminal
         Me.Country_rec_noComboBox.FormattingEnabled = True
         Me.Country_rec_noComboBox.Location = New System.Drawing.Point(115, 31)
         Me.Country_rec_noComboBox.Name = "Country_rec_noComboBox"
-        Me.Country_rec_noComboBox.Size = New System.Drawing.Size(167, 21)
+        Me.Country_rec_noComboBox.Size = New System.Drawing.Size(178, 21)
         Me.Country_rec_noComboBox.TabIndex = 9
         Me.Country_rec_noComboBox.ValueMember = "country_rec_no"
         '
@@ -648,7 +688,7 @@ Partial Class FrmLocTerminal
         Me.District_rec_noComboBox.FormattingEnabled = True
         Me.District_rec_noComboBox.Location = New System.Drawing.Point(115, 58)
         Me.District_rec_noComboBox.Name = "District_rec_noComboBox"
-        Me.District_rec_noComboBox.Size = New System.Drawing.Size(167, 21)
+        Me.District_rec_noComboBox.Size = New System.Drawing.Size(178, 21)
         Me.District_rec_noComboBox.TabIndex = 10
         Me.District_rec_noComboBox.ValueMember = "District_rec_no"
         '
@@ -669,11 +709,11 @@ Partial Class FrmLocTerminal
         Me.City_rec_noComboBox.DataSource = Me.CityBindingSource
         Me.City_rec_noComboBox.DisplayMember = "Description"
         Me.City_rec_noComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
-        Me.City_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.City_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.City_rec_noComboBox.FormattingEnabled = True
-        Me.City_rec_noComboBox.Location = New System.Drawing.Point(115, 85)
+        Me.City_rec_noComboBox.Location = New System.Drawing.Point(7, 122)
         Me.City_rec_noComboBox.Name = "City_rec_noComboBox"
-        Me.City_rec_noComboBox.Size = New System.Drawing.Size(167, 21)
+        Me.City_rec_noComboBox.Size = New System.Drawing.Size(286, 25)
         Me.City_rec_noComboBox.TabIndex = 11
         Me.City_rec_noComboBox.ValueMember = "City_rec_no"
         '
@@ -691,7 +731,9 @@ Partial Class FrmLocTerminal
         '
         Me.GCMDetails.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GCMDetails.AppearanceCaption.Options.UseFont = True
+        Me.GCMDetails.Controls.Add(StreetLabel1)
         Me.GCMDetails.Controls.Add(Label1)
+        Me.GCMDetails.Controls.Add(Me.StreetTextBox1)
         Me.GCMDetails.Controls.Add(Label3)
         Me.GCMDetails.Controls.Add(Me.TextBox1)
         Me.GCMDetails.Controls.Add(Me.MaskedTextBox3)
@@ -708,7 +750,7 @@ Partial Class FrmLocTerminal
         Me.GCMDetails.Enabled = False
         Me.GCMDetails.Location = New System.Drawing.Point(13, 86)
         Me.GCMDetails.Name = "GCMDetails"
-        Me.GCMDetails.Size = New System.Drawing.Size(478, 122)
+        Me.GCMDetails.Size = New System.Drawing.Size(478, 153)
         Me.GCMDetails.TabIndex = 3
         Me.GCMDetails.Text = "Location Details"
         '
@@ -739,7 +781,7 @@ Partial Class FrmLocTerminal
         Me.TextBox2.BackColor = System.Drawing.Color.LightBlue
         Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "ml_name", True))
-        Me.TextBox2.Location = New System.Drawing.Point(133, 47)
+        Me.TextBox2.Location = New System.Drawing.Point(136, 47)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(144, 21)
@@ -761,7 +803,7 @@ Partial Class FrmLocTerminal
         Me.TextBox7.BackColor = System.Drawing.Color.LightBlue
         Me.TextBox7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox7.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Merch_locBindingSource, "m_contact", True))
-        Me.TextBox7.Location = New System.Drawing.Point(319, 47)
+        Me.TextBox7.Location = New System.Drawing.Point(321, 47)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(144, 21)
@@ -797,7 +839,7 @@ Partial Class FrmLocTerminal
         Me.GroupControl2.Controls.Add(Me.Loc_terminalDataGridView)
         Me.GroupControl2.Controls.Add(Label12)
         Me.GroupControl2.Controls.Add(Me.TxtLTSearch)
-        Me.GroupControl2.Location = New System.Drawing.Point(13, 214)
+        Me.GroupControl2.Location = New System.Drawing.Point(13, 245)
         Me.GroupControl2.Name = "GroupControl2"
         Me.GroupControl2.Size = New System.Drawing.Size(478, 308)
         Me.GroupControl2.TabIndex = 0
@@ -952,10 +994,10 @@ Partial Class FrmLocTerminal
         Me.Loc_terminalDataGridView.Location = New System.Drawing.Point(12, 73)
         Me.Loc_terminalDataGridView.Name = "Loc_terminalDataGridView"
         Me.Loc_terminalDataGridView.ReadOnly = True
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightBlue
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
-        Me.Loc_terminalDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(7, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(150, Byte), Integer))
+        Me.Loc_terminalDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.Loc_terminalDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.Loc_terminalDataGridView.Size = New System.Drawing.Size(453, 220)
         Me.Loc_terminalDataGridView.TabIndex = 32
@@ -1033,13 +1075,12 @@ Partial Class FrmLocTerminal
         '
         Me.GroupControl3.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GroupControl3.AppearanceCaption.Options.UseFont = True
+        Me.GroupControl3.Controls.Add(StreetLabel)
         Me.GroupControl3.Controls.Add(Me.GCMerchant)
+        Me.GroupControl3.Controls.Add(Me.StreetTextBox)
         Me.GroupControl3.Controls.Add(Me.MerchantBindingNavigator)
         Me.GroupControl3.Controls.Add(Label5)
         Me.GroupControl3.Controls.Add(Me.TxtMSearch)
-        Me.GroupControl3.Controls.Add(City_rec_noLabel1)
-        Me.GroupControl3.Controls.Add(District_rec_noLabel1)
-        Me.GroupControl3.Controls.Add(Country_rec_noLabel1)
         Me.GroupControl3.Controls.Add(M_nameLabel)
         Me.GroupControl3.Controls.Add(Me.M_nameTextBox)
         Me.GroupControl3.Controls.Add(Merchant_idLabel)
@@ -1048,7 +1089,7 @@ Partial Class FrmLocTerminal
         Me.GroupControl3.LookAndFeel.SkinName = "Office 2010 Blue"
         Me.GroupControl3.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl3.Name = "GroupControl3"
-        Me.GroupControl3.Size = New System.Drawing.Size(801, 139)
+        Me.GroupControl3.Size = New System.Drawing.Size(806, 160)
         Me.GroupControl3.TabIndex = 2
         Me.GroupControl3.Text = "MERCHANT"
         '
@@ -1059,15 +1100,30 @@ Partial Class FrmLocTerminal
         Me.GCMerchant.Controls.Add(Me.District_rec_noComboBox1)
         Me.GCMerchant.Controls.Add(Me.Country_rec_noComboBox1)
         Me.GCMerchant.Controls.Add(Me.City_rec_noComboBox1)
+        Me.GCMerchant.Controls.Add(City_rec_noLabel1)
+        Me.GCMerchant.Controls.Add(Country_rec_noLabel1)
+        Me.GCMerchant.Controls.Add(District_rec_noLabel1)
         Me.GCMerchant.Enabled = False
         Me.GCMerchant.Location = New System.Drawing.Point(292, 101)
         Me.GCMerchant.LookAndFeel.SkinName = "Office 2010 Blue"
         Me.GCMerchant.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GCMerchant.Name = "GCMerchant"
         Me.GCMerchant.ShowCaption = False
-        Me.GCMerchant.Size = New System.Drawing.Size(498, 31)
+        Me.GCMerchant.Size = New System.Drawing.Size(509, 54)
         Me.GCMerchant.TabIndex = 37
         Me.GCMerchant.Text = "Location"
+        '
+        'StreetTextBox
+        '
+        Me.StreetTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.StreetTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.StreetTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "street", True))
+        Me.StreetTextBox.Enabled = False
+        Me.StreetTextBox.Location = New System.Drawing.Point(64, 132)
+        Me.StreetTextBox.Name = "StreetTextBox"
+        Me.StreetTextBox.ReadOnly = True
+        Me.StreetTextBox.Size = New System.Drawing.Size(214, 21)
+        Me.StreetTextBox.TabIndex = 12
         '
         'District_rec_noComboBox1
         '
@@ -1077,7 +1133,7 @@ Partial Class FrmLocTerminal
         Me.District_rec_noComboBox1.DisplayMember = "description"
         Me.District_rec_noComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.District_rec_noComboBox1.FormattingEnabled = True
-        Me.District_rec_noComboBox1.Location = New System.Drawing.Point(170, 5)
+        Me.District_rec_noComboBox1.Location = New System.Drawing.Point(171, 26)
         Me.District_rec_noComboBox1.Name = "District_rec_noComboBox1"
         Me.District_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
         Me.District_rec_noComboBox1.TabIndex = 9
@@ -1096,7 +1152,7 @@ Partial Class FrmLocTerminal
         Me.Country_rec_noComboBox1.DisplayMember = "description"
         Me.Country_rec_noComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
         Me.Country_rec_noComboBox1.FormattingEnabled = True
-        Me.Country_rec_noComboBox1.Location = New System.Drawing.Point(5, 5)
+        Me.Country_rec_noComboBox1.Location = New System.Drawing.Point(6, 26)
         Me.Country_rec_noComboBox1.Name = "Country_rec_noComboBox1"
         Me.Country_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
         Me.Country_rec_noComboBox1.TabIndex = 7
@@ -1114,10 +1170,11 @@ Partial Class FrmLocTerminal
         Me.City_rec_noComboBox1.DataSource = Me.CityBindingSource1
         Me.City_rec_noComboBox1.DisplayMember = "Description"
         Me.City_rec_noComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple
+        Me.City_rec_noComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.City_rec_noComboBox1.FormattingEnabled = True
-        Me.City_rec_noComboBox1.Location = New System.Drawing.Point(335, 5)
+        Me.City_rec_noComboBox1.Location = New System.Drawing.Point(336, 26)
         Me.City_rec_noComboBox1.Name = "City_rec_noComboBox1"
-        Me.City_rec_noComboBox1.Size = New System.Drawing.Size(159, 21)
+        Me.City_rec_noComboBox1.Size = New System.Drawing.Size(169, 21)
         Me.City_rec_noComboBox1.TabIndex = 11
         Me.City_rec_noComboBox1.ValueMember = "City_rec_no"
         '
@@ -1141,7 +1198,7 @@ Partial Class FrmLocTerminal
         Me.MerchantBindingNavigator.MovePreviousItem = Me.ToolStripButton8
         Me.MerchantBindingNavigator.Name = "MerchantBindingNavigator"
         Me.MerchantBindingNavigator.PositionItem = Me.ToolStripTextBox2
-        Me.MerchantBindingNavigator.Size = New System.Drawing.Size(797, 25)
+        Me.MerchantBindingNavigator.Size = New System.Drawing.Size(802, 25)
         Me.MerchantBindingNavigator.TabIndex = 35
         Me.MerchantBindingNavigator.Text = "BindingNavigator1"
         '
@@ -1280,7 +1337,7 @@ Partial Class FrmLocTerminal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(829, 698)
+        Me.ClientSize = New System.Drawing.Size(829, 739)
         Me.Controls.Add(Me.GroupControl3)
         Me.Controls.Add(Me.GroupControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1322,6 +1379,7 @@ Partial Class FrmLocTerminal
         Me.GroupControl3.PerformLayout()
         CType(Me.GCMerchant, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GCMerchant.ResumeLayout(False)
+        Me.GCMerchant.PerformLayout()
         CType(Me.DistrictBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CountryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CityBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1425,4 +1483,6 @@ Partial Class FrmLocTerminal
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents StreetTextBox As TextBox
+    Friend WithEvents StreetTextBox1 As TextBox
 End Class

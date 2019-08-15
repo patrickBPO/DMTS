@@ -35,6 +35,7 @@ Partial Class FrmDMerchant
         Dim Phone_1Label1 As System.Windows.Forms.Label
         Dim Phone_2Label1 As System.Windows.Forms.Label
         Dim Label4 As System.Windows.Forms.Label
+        Dim StreetLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmDMerchant))
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.TxtSearch = New System.Windows.Forms.TextBox()
@@ -49,6 +50,7 @@ Partial Class FrmDMerchant
         Me.RateTextBox = New System.Windows.Forms.TextBox()
         Me.M_emailTextBox = New System.Windows.Forms.TextBox()
         Me.GCMLocation = New DevExpress.XtraEditors.GroupControl()
+        Me.StreetTextBox = New System.Windows.Forms.TextBox()
         Me.Country_rec_noComboBox = New System.Windows.Forms.ComboBox()
         Me.CountryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Country = New DMTS.Country()
@@ -91,6 +93,7 @@ Partial Class FrmDMerchant
         Phone_1Label1 = New System.Windows.Forms.Label()
         Phone_2Label1 = New System.Windows.Forms.Label()
         Label4 = New System.Windows.Forms.Label()
+        StreetLabel = New System.Windows.Forms.Label()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.GCMDetails, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,10 +203,10 @@ Partial Class FrmDMerchant
         '
         City_rec_noLabel.AutoSize = True
         City_rec_noLabel.BackColor = System.Drawing.Color.Transparent
-        City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        City_rec_noLabel.Location = New System.Drawing.Point(66, 88)
+        City_rec_noLabel.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        City_rec_noLabel.Location = New System.Drawing.Point(122, 96)
         City_rec_noLabel.Name = "City_rec_noLabel"
-        City_rec_noLabel.Size = New System.Drawing.Size(46, 13)
+        City_rec_noLabel.Size = New System.Drawing.Size(53, 16)
         City_rec_noLabel.TabIndex = 21
         City_rec_noLabel.Text = "Branch"
         '
@@ -240,6 +243,17 @@ Partial Class FrmDMerchant
         Label4.TabIndex = 29
         Label4.Text = "Search"
         '
+        'StreetLabel
+        '
+        StreetLabel.AutoSize = True
+        StreetLabel.BackColor = System.Drawing.Color.Transparent
+        StreetLabel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        StreetLabel.Location = New System.Drawing.Point(120, 125)
+        StreetLabel.Name = "StreetLabel"
+        StreetLabel.Size = New System.Drawing.Size(43, 13)
+        StreetLabel.TabIndex = 21
+        StreetLabel.Text = "Street"
+        '
         'GroupControl1
         '
         Me.GroupControl1.Appearance.BackColor = System.Drawing.Color.Transparent
@@ -260,7 +274,7 @@ Partial Class FrmDMerchant
         Me.GroupControl1.LookAndFeel.SkinName = "Office 2010 Blue"
         Me.GroupControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(769, 221)
+        Me.GroupControl1.Size = New System.Drawing.Size(794, 230)
         Me.GroupControl1.TabIndex = 0
         Me.GroupControl1.Text = "MERCHANTS"
         '
@@ -277,7 +291,9 @@ Partial Class FrmDMerchant
         '
         Me.GCMDetails.AppearanceCaption.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GCMDetails.AppearanceCaption.Options.UseFont = True
+        Me.GCMDetails.Controls.Add(StreetLabel)
         Me.GCMDetails.Controls.Add(M_nameLabel)
+        Me.GCMDetails.Controls.Add(Me.StreetTextBox)
         Me.GCMDetails.Controls.Add(Phone_2Label1)
         Me.GCMDetails.Controls.Add(Me.Merchant_idTextBox)
         Me.GCMDetails.Controls.Add(Me.Phone_2MaskedTextBox)
@@ -294,7 +310,7 @@ Partial Class FrmDMerchant
         Me.GCMDetails.Enabled = False
         Me.GCMDetails.Location = New System.Drawing.Point(14, 77)
         Me.GCMDetails.Name = "GCMDetails"
-        Me.GCMDetails.Size = New System.Drawing.Size(439, 122)
+        Me.GCMDetails.Size = New System.Drawing.Size(439, 148)
         Me.GCMDetails.TabIndex = 1
         Me.GCMDetails.Text = "Merchant Details"
         '
@@ -383,9 +399,18 @@ Partial Class FrmDMerchant
         Me.GCMLocation.Enabled = False
         Me.GCMLocation.Location = New System.Drawing.Point(459, 77)
         Me.GCMLocation.Name = "GCMLocation"
-        Me.GCMLocation.Size = New System.Drawing.Size(292, 122)
+        Me.GCMLocation.Size = New System.Drawing.Size(321, 148)
         Me.GCMLocation.TabIndex = 27
         Me.GCMLocation.Text = "Location"
+        '
+        'StreetTextBox
+        '
+        Me.StreetTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.StreetTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.MerchantBindingSource, "street", True))
+        Me.StreetTextBox.Location = New System.Drawing.Point(170, 122)
+        Me.StreetTextBox.Name = "StreetTextBox"
+        Me.StreetTextBox.Size = New System.Drawing.Size(259, 21)
+        Me.StreetTextBox.TabIndex = 22
         '
         'Country_rec_noComboBox
         '
@@ -395,7 +420,7 @@ Partial Class FrmDMerchant
         Me.Country_rec_noComboBox.FormattingEnabled = True
         Me.Country_rec_noComboBox.Location = New System.Drawing.Point(116, 31)
         Me.Country_rec_noComboBox.Name = "Country_rec_noComboBox"
-        Me.Country_rec_noComboBox.Size = New System.Drawing.Size(166, 21)
+        Me.Country_rec_noComboBox.Size = New System.Drawing.Size(195, 21)
         Me.Country_rec_noComboBox.TabIndex = 9
         Me.Country_rec_noComboBox.ValueMember = "country_rec_no"
         '
@@ -417,7 +442,7 @@ Partial Class FrmDMerchant
         Me.District_rec_noComboBox.FormattingEnabled = True
         Me.District_rec_noComboBox.Location = New System.Drawing.Point(116, 58)
         Me.District_rec_noComboBox.Name = "District_rec_noComboBox"
-        Me.District_rec_noComboBox.Size = New System.Drawing.Size(166, 21)
+        Me.District_rec_noComboBox.Size = New System.Drawing.Size(195, 21)
         Me.District_rec_noComboBox.TabIndex = 10
         Me.District_rec_noComboBox.ValueMember = "District_rec_no"
         '
@@ -433,14 +458,18 @@ Partial Class FrmDMerchant
         '
         'City_rec_noComboBox
         '
+        Me.City_rec_noComboBox.BackColor = System.Drawing.Color.LightSlateGray
         Me.City_rec_noComboBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.MerchantBindingSource, "city_rec_no", True))
         Me.City_rec_noComboBox.DataSource = Me.CityBindingSource
         Me.City_rec_noComboBox.DisplayMember = "Description"
+        Me.City_rec_noComboBox.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.City_rec_noComboBox.ForeColor = System.Drawing.Color.White
         Me.City_rec_noComboBox.FormattingEnabled = True
-        Me.City_rec_noComboBox.Location = New System.Drawing.Point(116, 85)
+        Me.City_rec_noComboBox.Location = New System.Drawing.Point(7, 117)
         Me.City_rec_noComboBox.Name = "City_rec_noComboBox"
-        Me.City_rec_noComboBox.Size = New System.Drawing.Size(166, 21)
+        Me.City_rec_noComboBox.Size = New System.Drawing.Size(304, 24)
         Me.City_rec_noComboBox.TabIndex = 11
+        Me.City_rec_noComboBox.Text = "JAGA TOWN"
         Me.City_rec_noComboBox.ValueMember = "City_rec_no"
         '
         'CityBindingSource
@@ -468,7 +497,7 @@ Partial Class FrmDMerchant
         Me.MerchantBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.MerchantBindingNavigator.Name = "MerchantBindingNavigator"
         Me.MerchantBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
-        Me.MerchantBindingNavigator.Size = New System.Drawing.Size(765, 25)
+        Me.MerchantBindingNavigator.Size = New System.Drawing.Size(790, 25)
         Me.MerchantBindingNavigator.TabIndex = 0
         Me.MerchantBindingNavigator.Text = "BindingNavigator1"
         '
@@ -623,7 +652,7 @@ Partial Class FrmDMerchant
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(797, 246)
+        Me.ClientSize = New System.Drawing.Size(819, 246)
         Me.Controls.Add(Me.GroupControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmDMerchant"
@@ -695,4 +724,5 @@ Partial Class FrmDMerchant
     Friend WithEvents merchantBNavEditItem As ToolStripButton
     Friend WithEvents merchantBNavCancel As ToolStripButton
     Friend WithEvents TxtSearch As TextBox
+    Friend WithEvents StreetTextBox As TextBox
 End Class
