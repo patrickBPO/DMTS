@@ -1,4 +1,6 @@
 ﻿Imports DMTS.ExcelToDb
+Imports System.Text.RegularExpressions
+Imports DMTS.MySQLCom
 Public Class FrmDloader
 
     Dim open As New OpenFileDialog
@@ -41,6 +43,13 @@ Public Class FrmDloader
         Dim OLEdt As New DataTable
         Dim sql As String
         Dim resul As Boolean
+        Dim Conn As New MySqlConnection
+        Dim Comm As New MySqlCommand
+
+        If ConnToServer(Conn) Then
+            Comm.Connection = Conn
+
+        End If
 
         Try
             OLEcon.Open()
@@ -52,9 +61,15 @@ Public Class FrmDloader
             OLEda.Fill(OLEdt)
 
             For Each r As DataRow In OLEdt.Rows
+                '-- Extract merchant id
+                'Dim MerchantId As String = Regex.Match(r(0).ToString, "([0-9][0-9][0-9]+)").Groups(0).ToString()
+                Dim MerchantId As String = Strings.Left(r(1).ToString, 4)
+                Dim MerchantRec As Int16 = GetMerchRec(MerchantId)
+                Dim MerchantLocRec As Int16 = GetMerchLocRec(Strings.Mid(r(1).ToString, 5, 2), MerchantRec)
+                Dim LocationTermRec As Int16 = GetLocTermRec(Strings.Right(r(1).ToString, 2), MerchantLocRec)
 
                 sql = "INSERT INTO d_transactions (lt_rec_no,t_count,amount, t_date) 
-                            VALUES (CAST('" & r(1).ToString & "' AS UNSIGNED),CAST('" & r(2).ToString & "' AS UNSIGNED),'" & r(3).ToString & "' + 0.0 ,STR_TO_DATE('" & DateTimePicker1.Text & "','%m-%d-%Y'))"
+                            VALUES (" & LocationTermRec & ",CAST('" & r(2).ToString & "' AS UNSIGNED),'" & r(3).ToString & "' + 0.0 ,STR_TO_DATE('" & DateTimePicker1.Text & "','%m-%d-%Y'))"
                 resul = SaveData(sql)
                 If resul Then
                     Timer1.Start()
@@ -63,8 +78,10 @@ Public Class FrmDloader
             Next
         Catch ex As Exception
             MessageBox.Show(ex.Message)
+            Conn.Close()
         Finally
             OLEcon.Close()
+            Conn.Close()
         End Try
 
     End Sub
