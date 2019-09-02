@@ -155,20 +155,19 @@ Partial Class FrmDMTSMain
         'FileLoaderToolStripMenuItem
         '
         Me.FileLoaderToolStripMenuItem.Name = "FileLoaderToolStripMenuItem"
-        Me.FileLoaderToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.FileLoaderToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FileLoaderToolStripMenuItem.Text = "Load Credits"
         '
         'LoadDebitsToolStripMenuItem
         '
-        Me.LoadDebitsToolStripMenuItem.Enabled = False
         Me.LoadDebitsToolStripMenuItem.Name = "LoadDebitsToolStripMenuItem"
-        Me.LoadDebitsToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.LoadDebitsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LoadDebitsToolStripMenuItem.Text = "Load Debits"
         '
         'FileConverterToolStripMenuItem
         '
         Me.FileConverterToolStripMenuItem.Name = "FileConverterToolStripMenuItem"
-        Me.FileConverterToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.FileConverterToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.FileConverterToolStripMenuItem.Text = "File Converter"
         '
         'ReportsToolStripMenuItem
@@ -181,13 +180,13 @@ Partial Class FrmDMTSMain
         'ViewTransactionsToolStripMenuItem
         '
         Me.ViewTransactionsToolStripMenuItem.Name = "ViewTransactionsToolStripMenuItem"
-        Me.ViewTransactionsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ViewTransactionsToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.ViewTransactionsToolStripMenuItem.Text = "Transactions Report"
         '
         'TerminalCountsToolStripMenuItem
         '
         Me.TerminalCountsToolStripMenuItem.Name = "TerminalCountsToolStripMenuItem"
-        Me.TerminalCountsToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TerminalCountsToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
         Me.TerminalCountsToolStripMenuItem.Text = "Terminal Counts"
         '
         'HelpToolStripMenuItem

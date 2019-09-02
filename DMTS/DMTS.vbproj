@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{ED220512-166F-4FB9-AA13-9471B5159C5A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>DMTS.FrmDloader</StartupObject>
     <RootNamespace>DMTS</RootNamespace>
     <AssemblyName>DMTS</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -186,6 +186,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ClsControls.vb" />
+    <Compile Include="Classes\ExcelToDb.vb" />
     <Compile Include="Data\CardTypeDS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -272,12 +273,6 @@
     <Compile Include="Forms\FrmCity.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmCLoader.Designer.vb">
-      <DependentUpon>FrmCLoader.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmCLoader.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Forms\FrmCountry.Designer.vb">
       <DependentUpon>FrmCountry.vb</DependentUpon>
     </Compile>
@@ -288,6 +283,12 @@
       <DependentUpon>FrmDistrict.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmDistrict.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDloader.Designer.vb">
+      <DependentUpon>FrmDloader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDloader.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmDMerchant.Designer.vb">
@@ -393,14 +394,14 @@
     <EmbeddedResource Include="Forms\FrmCity.resx">
       <DependentUpon>FrmCity.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmCLoader.resx">
-      <DependentUpon>FrmCLoader.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCountry.resx">
       <DependentUpon>FrmCountry.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDistrict.resx">
       <DependentUpon>FrmDistrict.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDloader.resx">
+      <DependentUpon>FrmDloader.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDMerchant.resx">
       <DependentUpon>FrmDMerchant.vb</DependentUpon>

@@ -22,7 +22,7 @@ Partial Class FrmFLoader
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFLoader))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmFLoader))
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -97,9 +97,9 @@ Partial Class FrmFLoader
         Me.BtnLdFile.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003
         Me.BtnLdFile.Location = New System.Drawing.Point(8, 11)
         Me.BtnLdFile.Name = "BtnLdFile"
-        Me.BtnLdFile.Size = New System.Drawing.Size(75, 23)
+        Me.BtnLdFile.Size = New System.Drawing.Size(93, 23)
         Me.BtnLdFile.TabIndex = 8
-        Me.BtnLdFile.Text = "&Load File"
+        Me.BtnLdFile.Text = "&Load Credits"
         '
         'GroupBox1
         '
@@ -112,7 +112,7 @@ Partial Class FrmFLoader
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         '
-        'frmFLoader
+        'FrmFLoader
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -126,9 +126,9 @@ Partial Class FrmFLoader
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "frmFLoader"
+        Me.Name = "FrmFLoader"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
-        Me.Text = "File Loader"
+        Me.Text = "Credits File Loader"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
