@@ -227,6 +227,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSMLocTermCnt.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\DTransactionDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DTransactionDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\LocTerminalDS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -297,6 +302,12 @@
     <Compile Include="Forms\FrmDMerchant.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmDTransReport.Designer.vb">
+      <DependentUpon>FrmDTransReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDTransReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmFParser.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +366,12 @@
     <Compile Include="Forms\FrmTransReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmViewDTrans.Designer.vb">
+      <DependentUpon>FrmViewDTrans.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewDTrans.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmViewTrans.Designer.vb">
       <DependentUpon>FrmViewTrans.vb</DependentUpon>
     </Compile>
@@ -406,6 +423,9 @@
     <EmbeddedResource Include="Forms\FrmDMerchant.resx">
       <DependentUpon>FrmDMerchant.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDTransReport.resx">
+      <DependentUpon>FrmDTransReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmFParser.resx">
       <DependentUpon>FrmFParser.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -435,6 +455,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTransReport.resx">
       <DependentUpon>FrmTransReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewDTrans.resx">
+      <DependentUpon>FrmViewDTrans.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmViewTrans.resx">
       <DependentUpon>FrmViewTrans.vb</DependentUpon>
@@ -535,6 +558,17 @@
     </None>
     <None Include="Data\DSMLocTermCnt.xss">
       <DependentUpon>DSMLocTermCnt.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DTransactionDS.xsc">
+      <DependentUpon>DTransactionDS.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DTransactionDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DTransactionDS.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Data\DTransactionDS.xss">
+      <DependentUpon>DTransactionDS.xsd</DependentUpon>
     </None>
     <None Include="Data\LocTerminalDS.xsc">
       <DependentUpon>LocTerminalDS.xsd</DependentUpon>

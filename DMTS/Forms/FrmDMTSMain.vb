@@ -84,7 +84,7 @@ Public Class FrmDMTSMain
     End Sub
 
     Private Sub ViewEditTransactionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewEditTransactionsToolStripMenuItem.Click
-        FrmViewTrans.Show()
+        'FrmViewTrans.Show()
     End Sub
 
     Private Sub FileLoaderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FileLoaderToolStripMenuItem.Click
@@ -120,7 +120,7 @@ Public Class FrmDMTSMain
     End Sub
 
     Private Sub ViewTransactionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewTransactionsToolStripMenuItem.Click
-        FrmTransReport.Show()
+        'FrmTransReport.Show()
     End Sub
 
     Private Sub LocationTerminalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocationTerminalToolStripMenuItem.Click
@@ -129,5 +129,21 @@ Public Class FrmDMTSMain
 
     Private Sub TerminalCountsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TerminalCountsToolStripMenuItem.Click
         FrmTermCntRpt.Show()
+    End Sub
+
+    Private Sub DebitsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DebitsToolStripMenuItem.Click
+        FrmViewTrans.Show()
+    End Sub
+
+    Private Sub DebitsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DebitsToolStripMenuItem1.Click
+        FrmViewDTrans.Show()
+    End Sub
+
+    Private Sub CreditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreditToolStripMenuItem.Click
+        FrmTransReport.Show()
+    End Sub
+
+    Private Sub DebitsToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles DebitsToolStripMenuItem2.Click
+        FrmDTransReport.Show()
     End Sub
 End Class

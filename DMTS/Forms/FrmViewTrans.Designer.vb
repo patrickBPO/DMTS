@@ -36,10 +36,10 @@ Partial Class FrmViewTrans
         Me.colcurrency_code = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colamount = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.ct_desc = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.m_name = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RICboCardType = New DevExpress.XtraEditors.Repository.RepositoryItemComboBox()
         Me.TransactionsTableAdapter = New DMTS.TransactionsDSTableAdapters.transactionsTableAdapter()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
-        Me.m_name = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransactionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TransactionsDS, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -171,6 +171,15 @@ Partial Class FrmViewTrans
         Me.ct_desc.VisibleIndex = 4
         Me.ct_desc.Width = 63
         '
+        'm_name
+        '
+        Me.m_name.Caption = "Merchant"
+        Me.m_name.FieldName = "m_name"
+        Me.m_name.Name = "m_name"
+        Me.m_name.Visible = True
+        Me.m_name.VisibleIndex = 2
+        Me.m_name.Width = 167
+        '
         'RICboCardType
         '
         Me.RICboCardType.AutoHeight = False
@@ -196,15 +205,6 @@ Partial Class FrmViewTrans
         Me.GroupControl1.TabIndex = 1
         Me.GroupControl1.Text = "Terminal Transaction History"
         '
-        'm_name
-        '
-        Me.m_name.Caption = "Merchant"
-        Me.m_name.FieldName = "m_name"
-        Me.m_name.Name = "m_name"
-        Me.m_name.Visible = True
-        Me.m_name.VisibleIndex = 2
-        Me.m_name.Width = 167
-        '
         'FrmViewTrans
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -213,7 +213,7 @@ Partial Class FrmViewTrans
         Me.Controls.Add(Me.GroupControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmViewTrans"
-        Me.Text = "Transaction Viewer"
+        Me.Text = "Credits Transaction Viewer"
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransactionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TransactionsDS, System.ComponentModel.ISupportInitialize).EndInit()
