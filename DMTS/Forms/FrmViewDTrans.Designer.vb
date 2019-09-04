@@ -89,6 +89,7 @@ Partial Class FrmViewDTrans
         Me.colt_count.Caption = "Count"
         Me.colt_count.FieldName = "t_count"
         Me.colt_count.Name = "colt_count"
+        Me.colt_count.OptionsColumn.AllowEdit = False
         Me.colt_count.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "t_count", "Count ={0:###,###}")})
         Me.colt_count.Visible = True
         Me.colt_count.VisibleIndex = 4
@@ -99,6 +100,7 @@ Partial Class FrmViewDTrans
         Me.colamount.Caption = "Amount"
         Me.colamount.FieldName = "amount"
         Me.colamount.Name = "colamount"
+        Me.colamount.OptionsColumn.AllowEdit = False
         Me.colamount.Summary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", "Grand Tot={0:$#,###,##0.00}")})
         Me.colamount.Visible = True
         Me.colamount.VisibleIndex = 5
@@ -109,6 +111,7 @@ Partial Class FrmViewDTrans
         Me.colt_date.Caption = "Date"
         Me.colt_date.FieldName = "t_date"
         Me.colt_date.Name = "colt_date"
+        Me.colt_date.OptionsColumn.AllowEdit = False
         Me.colt_date.Visible = True
         Me.colt_date.VisibleIndex = 0
         Me.colt_date.Width = 92
@@ -118,6 +121,7 @@ Partial Class FrmViewDTrans
         Me.colm_name.Caption = "Merchant"
         Me.colm_name.FieldName = "m_name"
         Me.colm_name.Name = "colm_name"
+        Me.colm_name.OptionsColumn.AllowEdit = False
         Me.colm_name.Visible = True
         Me.colm_name.VisibleIndex = 1
         Me.colm_name.Width = 166
@@ -127,6 +131,7 @@ Partial Class FrmViewDTrans
         Me.colml_name.Caption = "Location"
         Me.colml_name.FieldName = "ml_name"
         Me.colml_name.Name = "colml_name"
+        Me.colml_name.OptionsColumn.AllowEdit = False
         Me.colml_name.Visible = True
         Me.colml_name.VisibleIndex = 2
         Me.colml_name.Width = 179
@@ -136,6 +141,7 @@ Partial Class FrmViewDTrans
         Me.collt_desc.Caption = "Terminal"
         Me.collt_desc.FieldName = "lt_desc"
         Me.collt_desc.Name = "collt_desc"
+        Me.collt_desc.OptionsColumn.AllowEdit = False
         Me.collt_desc.Visible = True
         Me.collt_desc.VisibleIndex = 3
         Me.collt_desc.Width = 129

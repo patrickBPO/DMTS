@@ -176,6 +176,7 @@ Partial Class FrmViewTrans
         Me.m_name.Caption = "Merchant"
         Me.m_name.FieldName = "m_name"
         Me.m_name.Name = "m_name"
+        Me.m_name.OptionsColumn.AllowEdit = False
         Me.m_name.Visible = True
         Me.m_name.VisibleIndex = 2
         Me.m_name.Width = 167

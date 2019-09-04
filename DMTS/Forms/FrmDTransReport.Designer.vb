@@ -109,6 +109,8 @@ Partial Class FrmDTransReport
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupSummary.AddRange(New DevExpress.XtraGrid.GridSummaryItem() {New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "t_count", Nothing, "(Count ={0:###,###})"), New DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "amount", Nothing, "(Total={0:$###,##0.00})")})
         Me.GridView1.Name = "GridView1"
+        Me.GridView1.OptionsPrint.RtfPageFooter = resources.GetString("GridView1.OptionsPrint.RtfPageFooter")
+        Me.GridView1.OptionsPrint.RtfReportHeader = resources.GetString("GridView1.OptionsPrint.RtfReportHeader")
         Me.GridView1.OptionsView.ShowFooter = True
         '
         'colt_count
